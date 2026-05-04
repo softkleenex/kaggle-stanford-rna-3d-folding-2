@@ -1,0 +1,56 @@
+TASK: Implement the following strategy into our RNA folding script: "STRATEGY: Implement a 17.5 Å distance constraint between phosphorus atoms P(i) and P(j) of base-paired residues to stabilize the inter-strand backbone separation and reinforce the characteristic A-form helical diameter."
+BASE SCRIPT: !pip install --no-index --no-deps /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+
+!pip install --no-index --no-deps /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+
+!pip install --no-index --no-deps /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl
+
+
+import os
+import sys
+import pandas as pd
+
+# ── Local vs Kaggle mode ─────────────────────────────────────────────────────
+# On Kaggle competition rerun, KAGGLE_IS_COMPETITION_RERUN is set to a truthy value.
+# When running locally we do NOT exit — instead we cap the test set to a small
+# number of samples so the notebook finishes quickly.
+
+IS_KAGGLE = True #bool(os.environ.get("KAGGLE_IS_COMPETITION_RERUN", ""))
+
+# How many test samples to use when running locally
+LOCAL_N_SAMPLES = None
+
+if IS_KAGGLE:
+    print("Running in KAGGLE COMPETITION mode — all test targets will be processed.")
+else:
+    print(f"Running in LOCAL mode — only the first {LOCAL_N_SAMPLES} test targets "
+          f"will be processed to save time.")
+
+import gc
+import json
+import os
+import time
+
+os.environ["LAYERNORM_TYPE"] = "torch"
+os.environ.setdefault("RNA_MSA_DEPTH_LIMIT", "512")
+
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+from Bio.Align import PairwiseAligner
+from tqdm import tqdm
+
+def get_c1_mask(data: dict, atom_array) -> torch.Tensor:
+    # 1. Try atom_array attributes first
+    if atom_array is not None:
+        try:
+            if hasattr(atom_array, "centre_atom_mask"):
+                m = atom_array.centre_atom_mask == 1... (rest of code)
+RULES:
+1. Maintain all offline installers and chunking logic.
+2. CRITICAL: Use dynamic path resolution (e.g., Path('/kaggle/input').rglob('*.csv')) to find datasets. NEVER hardcode paths like '/kaggle/input/stanford-rna-3d-folding-2/'.
+3. Ensure 100% syntactically valid Python 3.12.
+4. Save the full code to 'notebooks/script_v350.py'.

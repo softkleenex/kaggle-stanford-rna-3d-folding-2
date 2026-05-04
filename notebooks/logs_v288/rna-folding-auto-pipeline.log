@@ -1,0 +1,88 @@
+[{"stream_name":"stderr","time":6.55843603,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.558494495,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.558500873,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.558504902,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.148047578,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.148080093,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.148086328,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.14809049,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":26.081925817,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":26.230107397,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":26.28433892,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":26.284366186,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":27.301055854,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":27.503090307,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":28.377557606,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":28.579680674,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":30.215186147,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":30.417395907,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":31.839849508,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":32.042306289,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":32.955353891,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":33.157423024,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":34.10069413,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":34.303305886,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":35.396906386,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":35.599837916,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":36.485169935,"data":"Running in KAGGLE COMPETITION mode — all test targets will be processed.\n"}
+,{"stream_name":"stdout","time":44.791895568,"data":"Missing checkpoint: /kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust/Protenix-v1/checkpoint/protenix_base_20250630_v1.0.0.pt\n"}
+,{"stream_name":"stdout","time":44.791929115,"data":"\n"}
+,{"stream_name":"stdout","time":44.79194239,"data":"Loading TBM templates …\n"}
+,{"stream_name":"stderr","time":53.865004529,"data":"/tmp/ipykernel_24/2585886692.py:763: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":53.865043398,"data":"  train_coords = process_labels(pd.concat([pd.read_csv(DEFAULT_TRAIN_LBLS), pd.read_csv(DEFAULT_VAL_LBLS)], ignore_index=True))\n"}
+,{"stream_name":"stderr","time":53.865050951,"data":"\n"}
+,{"stream_name":"stderr","time":53.865054234,"data":"/tmp/ipykernel_24/2585886692.py:763: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":53.865056925,"data":"  train_coords = process_labels(pd.concat([pd.read_csv(DEFAULT_TRAIN_LBLS), pd.read_csv(DEFAULT_VAL_LBLS)], ignore_index=True))\n"}
+,{"stream_name":"stdout","time":79.950610022,"data":"\n"}
+,{"stream_name":"stdout","time":79.950644932,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":79.950651182,"data":"PHASE 1: Template-Based Modeling\n"}
+,{"stream_name":"stdout","time":79.950656376,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":80.523931057,"data":"  8ZNQ: 2 TBM → need 3 Protenix\n"}
+,{"stream_name":"stdout","time":81.734712088,"data":"  9IWF: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":85.483652683,"data":"  9JGM: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1764.172534379,"data":"  9MME: 4 TBM → need 1 Protenix\n"}
+,{"stream_name":"stdout","time":1779.682325787,"data":"  9J09: 1 TBM → need 4 Protenix\n"}
+,{"stream_name":"stdout","time":1780.920227358,"data":"  9E9Q: 4 TBM → need 1 Protenix\n"}
+,{"stream_name":"stdout","time":1781.890327979,"data":"  9CFN: 2 TBM → need 3 Protenix\n"}
+,{"stream_name":"stdout","time":1782.792582499,"data":"  9OBM: 3 TBM → need 2 Protenix\n"}
+,{"stream_name":"stdout","time":1784.110329669,"data":"  9G4P: 4 TBM → need 1 Protenix\n"}
+,{"stream_name":"stdout","time":1785.06496763,"data":"  9G4Q: 2 TBM → need 3 Protenix\n"}
+,{"stream_name":"stdout","time":1785.733154826,"data":"  9G4R: 1 TBM → need 4 Protenix\n"}
+,{"stream_name":"stdout","time":1786.41830683,"data":"  9RVP: 4 TBM → need 1 Protenix\n"}
+,{"stream_name":"stdout","time":1798.274456857,"data":"  9JFS: 1 TBM → need 4 Protenix\n"}
+,{"stream_name":"stdout","time":1801.76608506,"data":"  9LEC: 2 TBM → need 3 Protenix\n"}
+,{"stream_name":"stdout","time":1805.726977172,"data":"  9LEL: 2 TBM → need 3 Protenix\n"}
+,{"stream_name":"stdout","time":1806.310903893,"data":"  9I9W: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1807.054676737,"data":"  9HRO: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1807.550928705,"data":"  9QZJ: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1812.549042214,"data":"  9JFO: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1813.05987288,"data":"  9OD4: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1814.121778282,"data":"  9WHV: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1820.013496868,"data":"  9E74: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1821.663979641,"data":"  9E75: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1833.724271863,"data":"  9G4J: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1840.032016837,"data":"  9KGG: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1840.950155673,"data":"  9EBP: 1 TBM → need 4 Protenix\n"}
+,{"stream_name":"stdout","time":1842.151704599,"data":"  9LJN: all 5 TBM ✓\n"}
+,{"stream_name":"stdout","time":1879.489577197,"data":"  9ZCC: 2 TBM → need 3 Protenix\n"}
+,{"stream_name":"stdout","time":1879.48961144,"data":"\n"}
+,{"stream_name":"stdout","time":1879.489615755,"data":"Phase 1 done in 1799.5s\n"}
+,{"stream_name":"stdout","time":1879.489619124,"data":"\n"}
+,{"stream_name":"stdout","time":1879.48962225,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":1879.489625508,"data":"PHASE 3: Combine Results\n"}
+,{"stream_name":"stdout","time":1879.48962867,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":1925.764577644,"data":"\n"}
+,{"stream_name":"stdout","time":1925.764610683,"data":"✓ Saved submission to /kaggle/working/submission.csv\n"}
+,{"stream_name":"stderr","time":1929.28270678,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1929.2827379,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1929.425186347,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1929.42521346,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1930.012041162,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":1930.012078317,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":1930.042178076,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1930.329003149,"data":"[NbConvertApp] Writing 49600 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1932.661598822,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":1932.661640096,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":1932.683277342,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1933.638721295,"data":"[NbConvertApp] Writing 493690 bytes to __results__.html\n"}
+]

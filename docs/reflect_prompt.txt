@@ -1,0 +1,15 @@
+We just received a new score (could be Kaggle LB or Local Validation). Here is our history:
+v334 | LOCAL_FAILED | N/A | STRATEGY: STRATEGY: Implement a 4.1 Å distance constraint between the O2' atoms of adjacent residues (i, i+1) to stabilize the intra-strand ribose-ribose orientation and reinforce the characteristic A-form C3'-endo sugar pucker.
+v335 | LOCAL_FAILED | N/A | STRATEGY: MCP context refresh complete.
+v336 | LOCAL_FAILED | N/A | STRATEGY: STRATEGY: Implement a 16.0 Å distance constraint between phosphorus atoms P(i) and P(i+3) to accurately reflect the 2.8 Å helical rise and stabilize the intra-strand backbone periodicity of A-form RNA.
+v337 | LOCAL_FAILED | N/A | STRATEGY: STRATEGY: Implement a 10.5 Å distance constraint between the C1' atoms of base-paired residues to stabilize Watson-Crick geometry and maintain a consistent A-form helical diameter.
+v338 | LOCAL_FAILED | N/A | STRATEGY: STRATEGY: Implement a 12.0 Å distance constraint between the C2' atoms of Watson-Crick paired residues to stabilize the characteristic A-form minor groove width and ensure consistent ribose-ribose spacing across the helix.
+v339 | SCORED |  | STRATEGY: STRATEGY: Implement a 17.5 Å distance constraint between phosphorus atoms of base-paired residues P(i) and P(j) to stabilize the inter-strand backbone separation and reinforce the characteristic A-form helical diameter.
+v340 | SCORED |  | STRATEGY: STRATEGY: Implement a 14.2 Å distance constraint between phosphorus atoms P(i) and P(j) of base-paired residues across the major groove to stabilize the characteristic A-form groove width and helical inclination.
+v341 | SCORED |  | STRATEGY: STRATEGY: Implement a 15.5 Å distance constraint between phosphorus atoms P(i) and P(j-1) to stabilize the A-form minor groove width and refine the inter-strand backbone positioning.
+v342 | SCORED |  | STRATEGY: STRATEGY: Implement a 13.5 Å distance constraint between phosphorus atoms P(i) and P(j-2) to stabilize the A-form minor groove width and refine the inter-strand backbone curvature.
+v343 | SCORED |  | STRATEGY: STRATEGY: Implement a 11.5 Å distance constraint between phosphorus atoms P(i) and P(j-3) to stabilize the inter-strand backbone compression and refine the characteristic A-form helical winding.
+
+Based on the score trajectory, did the last strategy work or fail? 
+Extract ONE concise, permanent technical lesson from this attempt (e.g., "Do not use RMSD scaling for X" or "Increasing chunk overlap improves score"). 
+Keep it under 2 sentences.

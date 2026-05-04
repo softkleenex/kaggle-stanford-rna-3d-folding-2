@@ -1,0 +1,125 @@
+[{"stream_name":"stderr","time":7.125659517,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.12572898,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.125733603,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.125736203,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.713108611,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.713138554,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.713143405,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.713147835,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":25.184143458,"data":"2026-03-03 15:20:05.116219: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.184366306,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":25.18438035,"data":"E0000 00:00:1772551205.297346      24 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.184386323,"data":"E0000 00:00:1772551205.347567      24 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.184391403,"data":"W0000 00:00:1772551205.774204      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.184396919,"data":"W0000 00:00:1772551205.774246      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.184402135,"data":"W0000 00:00:1772551205.774249      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.184549276,"data":"W0000 00:00:1772551205.774251      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386721732,"data":"2026-03-03 15:20:05.116219: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.386750874,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":25.3867569,"data":"E0000 00:00:1772551205.297346      24 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.386762587,"data":"E0000 00:00:1772551205.347567      24 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.386767727,"data":"W0000 00:00:1772551205.774204      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386785319,"data":"W0000 00:00:1772551205.774246      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386789472,"data":"W0000 00:00:1772551205.774249      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386793764,"data":"W0000 00:00:1772551205.774251      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386799287,"data":"\n"}
+,{"stream_name":"stderr","time":25.386802353,"data":"2026-03-03 15:20:05.116219: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.386805267,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":25.386807732,"data":"E0000 00:00:1772551205.297346      24 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.386810266,"data":"E0000 00:00:1772551205.347567      24 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\n"}
+,{"stream_name":"stderr","time":25.386814039,"data":"W0000 00:00:1772551205.774204      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386816921,"data":"W0000 00:00:1772551205.774246      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.38681953,"data":"W0000 00:00:1772551205.774249      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stderr","time":25.386822127,"data":"W0000 00:00:1772551205.774251      24 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n"}
+,{"stream_name":"stdout","time":38.714716037,"data":"Device: cuda, Dtype: torch.float16\n"}
+,{"stream_name":"stdout","time":38.714772659,"data":"Loading Model: /kaggle/input/qwen2-5-math-7b-instruct on cuda...\n"}
+,{"stream_name":"stderr","time":38.732290393,"data":"`torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":38.732311909,"data":"\n"}
+,{"stream_name":"stderr","time":38.732316909,"data":"`torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":96.377990116,"data":"WARNING:accelerate.big_modeling:Some parameters are on the meta device because they were offloaded to the cpu.\n"}
+,{"stream_name":"stderr","time":96.378030905,"data":"\n"}
+,{"stream_name":"stderr","time":96.378036914,"data":"WARNING:accelerate.big_modeling:Some parameters are on the meta device because they were offloaded to the cpu.\n"}
+,{"stream_name":"stderr","time":96.846033681,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":96.846067736,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":96.846086892,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":96.846091083,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":97.054485624,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":97.054515204,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":97.054520169,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":97.054523992,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":97.054528305,"data":"\n"}
+,{"stream_name":"stderr","time":97.054532041,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":97.054536004,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":97.054540471,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":97.054544783,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":97.919905485,"data":"--- DIAGNOSTIC INFO ---\n"}
+,{"stream_name":"stdout","time":97.91993373,"data":"Current working directory: /kaggle/working\n"}
+,{"stream_name":"stdout","time":97.919939101,"data":"Contents of /kaggle/input/:\n"}
+,{"stream_name":"stdout","time":97.919942891,"data":"  aimo-pp3-source/\n"}
+,{"stream_name":"stdout","time":97.919946245,"data":"  competitions/\n"}
+,{"stream_name":"stdout","time":97.919949604,"data":"    - ai-mathematical-olympiad-progress-prize-3\n"}
+,{"stream_name":"stdout","time":97.919953098,"data":"  notebooks/\n"}
+,{"stream_name":"stdout","time":97.919957425,"data":"  qwen2-5-math-7b-instruct/\n"}
+,{"stream_name":"stdout","time":97.919960665,"data":"    - .msc\n"}
+,{"stream_name":"stdout","time":97.919964263,"data":"    - .mv\n"}
+,{"stream_name":"stdout","time":97.919967507,"data":"    - LICENSE\n"}
+,{"stream_name":"stdout","time":97.91997086800001,"data":"    - README.md\n"}
+,{"stream_name":"stdout","time":97.919974289,"data":"    - config.json\n"}
+,{"stream_name":"stdout","time":97.919977785,"data":"    - configuration.json\n"}
+,{"stream_name":"stdout","time":97.919981224,"data":"    - generation_config.json\n"}
+,{"stream_name":"stdout","time":97.919984633,"data":"    - merges.txt\n"}
+,{"stream_name":"stdout","time":97.91998789,"data":"    - model-00001-of-00004.safetensors\n"}
+,{"stream_name":"stdout","time":97.919991324,"data":"    - model-00002-of-00004.safetensors\n"}
+,{"stream_name":"stdout","time":97.91999501,"data":"    - model-00003-of-00004.safetensors\n"}
+,{"stream_name":"stdout","time":97.919998517,"data":"    - model-00004-of-00004.safetensors\n"}
+,{"stream_name":"stdout","time":97.920001767,"data":"    - model.safetensors.index.json\n"}
+,{"stream_name":"stdout","time":97.920005527,"data":"    - tokenizer.json\n"}
+,{"stream_name":"stdout","time":97.920008967,"data":"    - tokenizer_config.json\n"}
+,{"stream_name":"stdout","time":97.92001262,"data":"    - vocab.json\n"}
+,{"stream_name":"stdout","time":97.920016173,"data":"\n"}
+,{"stream_name":"stdout","time":97.920019827,"data":"Environment variables:\n"}
+,{"stream_name":"stdout","time":97.920023662,"data":"COLAB_DEBUG_ADAPTER_MUX_PATH=/usr/local/bin/dap_multiplexer\n"}
+,{"stream_name":"stdout","time":97.920040338,"data":"CUDA_HOME=/usr/local/cuda\n"}
+,{"stream_name":"stdout","time":97.920050406,"data":"HOME=/root\n"}
+,{"stream_name":"stdout","time":97.920054881,"data":"KAGGLE_API_V1_TOKEN=/etc/secrets/kaggle/api-v1-token\n"}
+,{"stream_name":"stdout","time":97.920059298,"data":"KAGGLE_CONTAINER_NAME=kaggle_6gWGt8szQCu3gJit1Gv2nP2xtDVtUcMqovHhqdqcZk-301233451-webtier\n"}
+,{"stream_name":"stdout","time":97.920063483,"data":"KAGGLE_DATA_PROXY_PROJECT=kaggle-161607\n"}
+,{"stream_name":"stdout","time":97.920069527,"data":"KAGGLE_DATA_PROXY_TOKEN=eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0.CqptduDYOubxV2AA6oDEl48_02T4S68y1Xxnj6NC486K35Q1Z1R1xg.WED0CoAmnDC2JalmTVpHjg.eF63IQ6ih1u4Z1d8sC8DMJSjoUPRy1EINt2GXJpAW0QlcWTQS8PdhWvWO1FIR4Jix4ass2faixWLbLHKZpqCTNroUTIaIn6EpdgcPKXQY9hPlJtilM2kFk7MIpJhLmJYR3g8mSVOI9X3NBVCvHLvZ6bngK1ATnVhHIVXYF6dzhzXvRICAT-QB0Vw6IJ-OXwuNPEHw7ao8AsglpI1E7_PZs1yGYiuUsvJcj5evFV70pHId3QuPV4zkbk-__7p67sNv0CKd21PDLpcsHQWnuNTOI4eW_WibOE-yu-PzmPMykgIxRk3lYukN3g6SLzlkGHr.K2XzNZ0UDJrrXTjRMPb2Dw\n"}
+,{"stream_name":"stdout","time":97.920081154,"data":"KAGGLE_DATA_PROXY_URL=https://dp.kaggle.net\n"}
+,{"stream_name":"stdout","time":97.920085035,"data":"KAGGLE_DOCKER_IMAGE=gcr.io/kaggle-gpu-images/python@sha256:58f63ed194fa7d5c55181f1e8ec0be141e9211efa23bc7501c1c865f7e00057d\n"}
+,{"stream_name":"stdout","time":97.920088786,"data":"KAGGLE_GCP_ZONE=us-west1-a\n"}
+,{"stream_name":"stdout","time":97.920092532,"data":"KAGGLE_GRPC_DATA_PROXY_URL=dp.kaggle.net:443\n"}
+,{"stream_name":"stdout","time":97.920096405,"data":"KAGGLE_KERNEL_INTEGRATIONS=\n"}
+,{"stream_name":"stdout","time":97.920100452,"data":"KAGGLE_KERNEL_RUN_TYPE=Batch\n"}
+,{"stream_name":"stdout","time":97.92010417,"data":"KAGGLE_URL_BASE=https://api.kaggle.com\n"}
+,{"stream_name":"stdout","time":97.920108278,"data":"KAGGLE_USER_SECRETS_TOKEN=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..3-d7SGE7caWzG9C-hFWTVQ.1fHqVCw6e8EoYVb9McoIFCAjlaUV-SpEBL1_iR_Mke4_Vy4EYHeXibSzxVppfxwmwKao76u0xkXYmSnlrgGJxRIUuu8cKOyrs31jTNu6S-xVMJn7FXi-ClD2zqtrue7BLjkcgAghYb0wDvingVcFcQ.r1ePcn3J3FbONf0bU_oWkw\n"}
+,{"stream_name":"stdout","time":97.920114689,"data":"LD_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64\n"}
+,{"stream_name":"stdout","time":97.920118548,"data":"LIBRARY_PATH=/usr/local/cuda/lib64/stubs\n"}
+,{"stream_name":"stdout","time":97.920122012,"data":"PATH=/opt/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/tools/node/bin:/tools/google-cloud-sdk/bin\n"}
+,{"stream_name":"stdout","time":97.92012584,"data":"PYTHONPATH=/kaggle/lib/kagglegym:/kaggle/lib:/kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3\n"}
+,{"stream_name":"stdout","time":97.920129403,"data":"QT_QPA_PLATFORM_PLUGIN_PATH=/usr/local/lib/python3.12/dist-packages/cv2/qt/plugins\n"}
+,{"stream_name":"stdout","time":97.920132002,"data":"TCLLIBPATH=/usr/share/tcltk/tcllib1.20\n"}
+,{"stream_name":"stdout","time":97.920134432,"data":"TESSERACT_PATH=/usr/bin/tesseract\n"}
+,{"stream_name":"stdout","time":97.92013686,"data":"--- END DIAGNOSTIC INFO ---\n"}
+,{"stream_name":"stdout","time":98.530556292,"data":"\n"}
+,{"stream_name":"stdout","time":98.530600234,"data":"--- Solving: What is $0\\times10$?... ---\n"}
+,{"stream_name":"stdout","time":290.443798399,"data":"Result: 0 (Votes: {0: 3})\n"}
+,{"stream_name":"stdout","time":290.44383296,"data":"\n"}
+,{"stream_name":"stdout","time":290.44383861,"data":"--- Solving: Solve $4+x=4$ for $x$.... ---\n"}
+,{"stream_name":"stdout","time":487.178454563,"data":"Result: 0 (Votes: {0: 3})\n"}
+,{"stream_name":"stdout","time":487.178493304,"data":"\n"}
+,{"stream_name":"stdout","time":487.178500033,"data":"--- Solving: What is $1-1$?... ---\n"}
+,{"stream_name":"stdout","time":628.989128071,"data":"Result: 0 (Votes: {0: 3})\n"}
+,{"stream_name":"stderr","time":634.995478502,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":634.995509633,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":635.143254932,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":635.143279887,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":635.807804333,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":635.807837977,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":635.839796283,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":636.15560328,"data":"[NbConvertApp] Writing 36461 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":638.715287498,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":638.715326124,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":638.740283808,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":639.551921583,"data":"[NbConvertApp] Writing 345513 bytes to __results__.html\n"}
+]

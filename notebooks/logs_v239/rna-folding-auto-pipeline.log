@@ -1,0 +1,151 @@
+[{"stream_name":"stderr","time":6.440747725,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.44085029,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.440854913,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.440857567,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.0359141,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.035957144,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.035963237,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.035967386,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.025458771,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":10.105079461,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":10.228455845,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":10.228485368,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":11.311987136,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":11.514329943,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":12.434619134,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":12.636670212,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":13.705284546,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":13.907345323,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":14.793220857,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":14.995844626,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":15.904249122,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":16.106464196,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":16.71085445,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":16.913297328,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":17.971807709,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":18.180197624,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":19.103132401,"data":"Running in KAGGLE COMPETITION mode — all test targets will be processed.\n"}
+,{"stream_name":"stdout","time":22.67656342,"data":"\n"}
+,{"stream_name":"stdout","time":22.676599787,"data":"Loading TBM templates …\n"}
+,{"stream_name":"stderr","time":22.6776065,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.67764304,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677648382,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677652563,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677657161,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677661211,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677665134,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677669527,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677673473,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677677331,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677681762,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677685915,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677689752,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677694035000002,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677697741,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677701653,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677706106,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677710278,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677715035,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.67771976,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677723834,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677727788,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677732218,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677736338,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677748873,"data":"\n"}
+,{"stream_name":"stderr","time":22.677753174,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677758091,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677762193,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.67776576,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677769921,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677773948,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677798317,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677803629,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677807924,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677811752,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677825796,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677829964,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677833808,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677839022,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.67784308,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677846882,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677851122,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677855047,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677858729,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677863371,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677867273,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":22.677870974,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":22.677880802,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":22.677885109,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":24.208186381,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":24.208218774,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":24.208226057,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":24.208354334,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":24.208374607,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":24.208535859,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":24.208901212,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":24.208913785,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":24.208919535,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":24.208924526,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":24.208929146,"data":"FileNotFoundError                         Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":24.208934019,"data":"/tmp/ipykernel_24/4206543190.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":24.20893898,"data":"    841 \n"}
+,{"stream_name":"stderr","time":24.208943679,"data":"    842 if __name__ == \"__main__\":\n"}
+,{"stream_name":"stderr","time":24.208950132,"data":"--\u003e 843     main()\n"}
+,{"stream_name":"stderr","time":24.208953617,"data":"\n"}
+,{"stream_name":"stderr","time":24.208957955,"data":"/tmp/ipykernel_24/4206543190.py in main()\n"}
+,{"stream_name":"stderr","time":24.208964293,"data":"    807 \n"}
+,{"stream_name":"stderr","time":24.208969391,"data":"    808     print(\"\\nLoading TBM templates \\u2026\")\n"}
+,{"stream_name":"stderr","time":24.208975419,"data":"--\u003e 809     train_seqs = pd.concat([pd.read_csv(DEFAULT_TRAIN_CSV), pd.read_csv(DEFAULT_VAL_CSV)], ignore_index=True)\n"}
+,{"stream_name":"stderr","time":24.2089818,"data":"    810     train_coords = process_labels(pd.concat([pd.read_csv(DEFAULT_TRAIN_LBLS), pd.read_csv(DEFAULT_VAL_LBLS)], ignore_index=True))\n"}
+,{"stream_name":"stderr","time":24.208987458,"data":"    811     segments_map, _ = build_segments_map(test_df)\n"}
+,{"stream_name":"stderr","time":24.208992032,"data":"\n"}
+,{"stream_name":"stderr","time":24.208999265,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in read_csv(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\n"}
+,{"stream_name":"stderr","time":24.209007907,"data":"   1024     kwds.update(kwds_defaults)\n"}
+,{"stream_name":"stderr","time":24.209012527,"data":"   1025 \n"}
+,{"stream_name":"stderr","time":24.209017047,"data":"-\u003e 1026     return _read(filepath_or_buffer, kwds)\n"}
+,{"stream_name":"stderr","time":24.209033233,"data":"   1027 \n"}
+,{"stream_name":"stderr","time":24.209036917,"data":"   1028 \n"}
+,{"stream_name":"stderr","time":24.209042125,"data":"\n"}
+,{"stream_name":"stderr","time":24.209045769,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in _read(filepath_or_buffer, kwds)\n"}
+,{"stream_name":"stderr","time":24.209048348,"data":"    618 \n"}
+,{"stream_name":"stderr","time":24.20905149,"data":"    619     # Create the parser.\n"}
+,{"stream_name":"stderr","time":24.209056742,"data":"--\u003e 620     parser = TextFileReader(filepath_or_buffer, **kwds)\n"}
+,{"stream_name":"stderr","time":24.209060369,"data":"    621 \n"}
+,{"stream_name":"stderr","time":24.209063869,"data":"    622     if chunksize or iterator:\n"}
+,{"stream_name":"stderr","time":24.209067539,"data":"\n"}
+,{"stream_name":"stderr","time":24.209071375,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in __init__(self, f, engine, **kwds)\n"}
+,{"stream_name":"stderr","time":24.209075858,"data":"   1618 \n"}
+,{"stream_name":"stderr","time":24.209080858,"data":"   1619         self.handles: IOHandles | None = None\n"}
+,{"stream_name":"stderr","time":24.209085082,"data":"-\u003e 1620         self._engine = self._make_engine(f, self.engine)\n"}
+,{"stream_name":"stderr","time":24.209088672,"data":"   1621 \n"}
+,{"stream_name":"stderr","time":24.209091987,"data":"   1622     def close(self) -\u003e None:\n"}
+,{"stream_name":"stderr","time":24.20909564,"data":"\n"}
+,{"stream_name":"stderr","time":24.209098956,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in _make_engine(self, f, engine)\n"}
+,{"stream_name":"stderr","time":24.20910261,"data":"   1878                 if \"b\" not in mode:\n"}
+,{"stream_name":"stderr","time":24.209106165,"data":"   1879                     mode += \"b\"\n"}
+,{"stream_name":"stderr","time":24.209109662,"data":"-\u003e 1880             self.handles = get_handle(\n"}
+,{"stream_name":"stderr","time":24.20911318,"data":"   1881                 f,\n"}
+,{"stream_name":"stderr","time":24.209116604,"data":"   1882                 mode,\n"}
+,{"stream_name":"stderr","time":24.209119999,"data":"\n"}
+,{"stream_name":"stderr","time":24.20912339,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/common.py in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\n"}
+,{"stream_name":"stderr","time":24.209127178,"data":"    871         if ioargs.encoding and \"b\" not in ioargs.mode:\n"}
+,{"stream_name":"stderr","time":24.209130819,"data":"    872             # Encoding\n"}
+,{"stream_name":"stderr","time":24.209134217,"data":"--\u003e 873             handle = open(\n"}
+,{"stream_name":"stderr","time":24.20913937,"data":"    874                 handle,\n"}
+,{"stream_name":"stderr","time":24.20914281,"data":"    875                 ioargs.mode,\n"}
+,{"stream_name":"stderr","time":24.209145499,"data":"\n"}
+,{"stream_name":"stderr","time":24.209147731,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/stanford-rna-3d-folding-2/train_sequences.csv'\n"}
+,{"stream_name":"stderr","time":24.209151277,"data":"\n"}
+,{"stream_name":"stderr","time":26.449955512,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":26.44998742,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":26.592308987,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":26.592348655,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":27.19336019,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":27.193396644,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":27.222146161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":27.510673458,"data":"[NbConvertApp] Writing 62143 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":29.92331975,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":29.923359736,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":29.947223841,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":30.974440975,"data":"[NbConvertApp] Writing 497381 bytes to __results__.html\n"}
+]

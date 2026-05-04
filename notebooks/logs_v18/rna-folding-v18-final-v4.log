@@ -1,0 +1,302 @@
+[{"stream_name":"stderr","time":9.397097103,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.397149232,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.397155677,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.397160206,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.12160075,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.121650268,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.121654016,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.121656568,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":11.677702687,"data":"--- STEP 1: INSTALLING DEPENDENCIES ---\n"}
+,{"stream_name":"stdout","time":11.677733982,"data":"Found 15 wheels. Installing...\n"}
+,{"stream_name":"stderr","time":38.206377045,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":38.206423521,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":38.206431317,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":38.206436334,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206442187,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206448375,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206453524,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.20645915,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206464477,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206642014,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206655339,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206660661,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206665787,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206670894,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206677712,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.206690562,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413489592,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":38.413521072,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":38.413525297,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":38.413528286,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413531088,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413533856,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413536518,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.41353952,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413542376,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413549178,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413552123,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.41355501,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413557754,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413560499,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413563056,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413565716,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413568263,"data":"\n"}
+,{"stream_name":"stderr","time":38.413570578,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":38.413573572,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":38.413577073,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":38.413579596,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413582086,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413599102,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413601993,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413622828,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.41363056,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413635148,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413640234,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413644306,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413648326,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413652168,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413661896,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":38.413668144,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":38.619753473,"data":"Verification: ALL libraries imported successfully!\n"}
+,{"stream_name":"stdout","time":38.619785801,"data":"--- STEP 2: AUTO-RESOLVING PATHS ---\n"}
+,{"stream_name":"stdout","time":39.950535809,"data":"Resolved DATA_BASE: /kaggle/input/competitions/stanford-rna-3d-folding-2\n"}
+,{"stream_name":"stdout","time":39.950562373,"data":"Resolved CODE_DIR: /kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1\n"}
+,{"stream_name":"stdout","time":41.407523274,"data":"Running in LOCAL mode — only the first 2 test targets will be processed to save time.\n"}
+,{"stream_name":"stderr","time":47.151519536,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151550356,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151553524,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151556961,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151562818,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151567168,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151571078,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151587909,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151591783,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151595114,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151599061,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151619506,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151624093,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151631554,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151636139,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151639569,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151643614,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151646991,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151651879,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151656353999996,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.15165983,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.15166959,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151673614,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151677058,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151680423,"data":"\n"}
+,{"stream_name":"stderr","time":47.151685207,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151688213,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151690465,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151692618,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151695164,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151697478,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151703072,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151708913,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151712368,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151716263,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.15172078,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151725338,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151729315,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151733738,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151737129,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151740381,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151744274,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151747672,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151750854,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151754719,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.151758188,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":47.151761448,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":47.151765321,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":47.15176872,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":47.179640876,"data":"Test targets : 2 (LOCAL MODE)\n"}
+,{"stream_name":"stdout","time":47.179668807,"data":"\n"}
+,{"stream_name":"stdout","time":47.179672518,"data":"Loading training data for TBM …\n"}
+,{"stream_name":"stderr","time":54.930682692,"data":"/tmp/ipykernel_24/2310641946.py:666: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":54.930724243,"data":"  train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)\n"}
+,{"stream_name":"stderr","time":54.930729352,"data":"\n"}
+,{"stream_name":"stderr","time":54.930732758,"data":"/tmp/ipykernel_24/2310641946.py:666: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":54.930755393,"data":"  train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)\n"}
+,{"stream_name":"stdout","time":81.211506302,"data":"Template pool: 5744 sequences, 5744 structures\n"}
+,{"stream_name":"stdout","time":81.211543254,"data":"\n"}
+,{"stream_name":"stdout","time":81.211549471,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":81.211554915,"data":"PHASE 1: Template-Based Modeling\n"}
+,{"stream_name":"stdout","time":81.211560165,"data":"  MIN_SIMILARITY = 0.0  |  MIN_PCT_IDENTITY = 50.0\n"}
+,{"stream_name":"stdout","time":81.211564818,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":81.731341066,"data":"  8ZNQ (30 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":82.533426183,"data":"  9IWF (69 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":82.533452711,"data":"\n"}
+,{"stream_name":"stdout","time":82.533459871,"data":"Phase 1 done in 1.3s\n"}
+,{"stream_name":"stdout","time":82.533464795,"data":"  Fully covered by TBM : 1\n"}
+,{"stream_name":"stdout","time":82.533470025,"data":"  Need Protenix        : 1\n"}
+,{"stream_name":"stdout","time":82.533474881,"data":"\n"}
+,{"stream_name":"stdout","time":82.533480653,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":82.53348588,"data":"PHASE 2: Protenix for 1 targets\n"}
+,{"stream_name":"stdout","time":82.533490669,"data":"============================================================\n"}
+,{"stream_name":"stderr","time":86.71646543,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":86.716496055,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.716502967,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":86.720170709,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":86.720187858,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":86.720193148,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":86.720196391,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":86.720199615,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":86.720202969,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":86.720206096,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":86.720209152,"data":"ImportError                               Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":86.720212216,"data":"/tmp/ipykernel_24/2310641946.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":86.720215702,"data":"    884 \n"}
+,{"stream_name":"stderr","time":86.720218725,"data":"    885 if __name__ == \"__main__\":\n"}
+,{"stream_name":"stderr","time":86.720221868,"data":"--\u003e 886     main()\n"}
+,{"stream_name":"stderr","time":86.720224947,"data":"    887 \n"}
+,{"stream_name":"stderr","time":86.720227957,"data":"    888 \n"}
+,{"stream_name":"stderr","time":86.720230898,"data":"\n"}
+,{"stream_name":"stderr","time":86.72023386,"data":"/tmp/ipykernel_24/2310641946.py in main()\n"}
+,{"stream_name":"stderr","time":86.720236906,"data":"    696         build_input_json(queue_df, input_json_path)\n"}
+,{"stream_name":"stderr","time":86.720248148,"data":"    697 \n"}
+,{"stream_name":"stderr","time":86.720251752,"data":"--\u003e 698         from protenix.data.inference.infer_dataloader import InferenceDataset\n"}
+,{"stream_name":"stderr","time":86.720256959,"data":"    699         from runner.inference import (InferenceRunner,\n"}
+,{"stream_name":"stderr","time":86.720261753,"data":"    700                                       update_gpu_compatible_configs,\n"}
+,{"stream_name":"stderr","time":86.720265934,"data":"\n"}
+,{"stream_name":"stderr","time":86.720269856,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.72027466,"data":"----\u003e 1 from .infer_dataloader import get_inference_dataloader\n"}
+,{"stream_name":"stderr","time":86.720278238,"data":"      2 from .json_maker import cif_to_input_json, merge_covalent_bonds\n"}
+,{"stream_name":"stderr","time":86.720281677,"data":"      3 from .json_parser import (\n"}
+,{"stream_name":"stderr","time":86.720285018,"data":"      4     add_entity_atom_array,\n"}
+,{"stream_name":"stderr","time":86.720288434,"data":"      5     lig_file_to_atom_info,\n"}
+,{"stream_name":"stderr","time":86.720293545,"data":"\n"}
+,{"stream_name":"stderr","time":86.720295987,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720298475,"data":"     25 from torch.utils.data import DataLoader, Dataset, DistributedSampler\n"}
+,{"stream_name":"stderr","time":86.720300747,"data":"     26 \n"}
+,{"stream_name":"stderr","time":86.720302892,"data":"---\u003e 27 from protenix.data.inference.json_to_feature import SampleDictToFeatures\n"}
+,{"stream_name":"stderr","time":86.720305404,"data":"     28 from protenix.data.msa.msa_featurizer import InferenceMSAFeaturizer\n"}
+,{"stream_name":"stderr","time":86.720307677,"data":"     29 from protenix.data.template.template_featurizer import InferenceTemplateFeaturizer\n"}
+,{"stream_name":"stderr","time":86.720309947,"data":"\n"}
+,{"stream_name":"stderr","time":86.720312045,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/json_to_feature.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720315317,"data":"     20 from biotite.structure import AtomArray\n"}
+,{"stream_name":"stderr","time":86.720317622,"data":"     21 \n"}
+,{"stream_name":"stderr","time":86.720319725,"data":"---\u003e 22 from protenix.data.constraint.constraint_featurizer import ConstraintFeatureGenerator\n"}
+,{"stream_name":"stderr","time":86.720322077,"data":"     23 from protenix.data.core.featurizer import Featurizer\n"}
+,{"stream_name":"stderr","time":86.720324327,"data":"     24 from protenix.data.core.parser import AddAtomArrayAnnot\n"}
+,{"stream_name":"stderr","time":86.720327011,"data":"\n"}
+,{"stream_name":"stderr","time":86.720329195,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720331615,"data":"----\u003e 1 from .constraint_featurizer import ConstraintFeatureGenerator\n"}
+,{"stream_name":"stderr","time":86.720333901,"data":"      2 \n"}
+,{"stream_name":"stderr","time":86.720336038,"data":"      3 __all__ = [\"ConstraintFeatureGenerator\"]\n"}
+,{"stream_name":"stderr","time":86.720341615,"data":"\n"}
+,{"stream_name":"stderr","time":86.720346562,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720350447,"data":"     22 import torch.nn.functional as F\n"}
+,{"stream_name":"stderr","time":86.720354562,"data":"     23 from biotite.structure import AtomArray\n"}
+,{"stream_name":"stderr","time":86.720358762,"data":"---\u003e 24 from scipy.spatial.distance import cdist\n"}
+,{"stream_name":"stderr","time":86.72036309,"data":"     25 \n"}
+,{"stream_name":"stderr","time":86.720366904,"data":"     26 from protenix.data.constants import ELEMS, STD_RESIDUES\n"}
+,{"stream_name":"stderr","time":86.720370325,"data":"\n"}
+,{"stream_name":"stderr","time":86.720373337,"data":"/usr/local/lib/python3.12/dist-packages/scipy/spatial/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720376882,"data":"    109 \"\"\"  # noqa: E501\n"}
+,{"stream_name":"stderr","time":86.720380308,"data":"    110 \n"}
+,{"stream_name":"stderr","time":86.720383608,"data":"--\u003e 111 from ._kdtree import *\n"}
+,{"stream_name":"stderr","time":86.720386962,"data":"    112 from ._ckdtree import *  # type: ignore[import-not-found]\n"}
+,{"stream_name":"stderr","time":86.720390486,"data":"    113 from ._qhull import *\n"}
+,{"stream_name":"stderr","time":86.720395349,"data":"\n"}
+,{"stream_name":"stderr","time":86.720397657,"data":"/usr/local/lib/python3.12/dist-packages/scipy/spatial/_kdtree.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720400013,"data":"      2 # Released under the scipy license\n"}
+,{"stream_name":"stderr","time":86.720402263,"data":"      3 import numpy as np\n"}
+,{"stream_name":"stderr","time":86.720404445,"data":"----\u003e 4 from ._ckdtree import cKDTree, cKDTreeNode  # type: ignore[import-not-found]\n"}
+,{"stream_name":"stderr","time":86.720413122,"data":"      5 \n"}
+,{"stream_name":"stderr","time":86.720415373,"data":"      6 __all__ = ['minkowski_distance_p', 'minkowski_distance',\n"}
+,{"stream_name":"stderr","time":86.720418008,"data":"\n"}
+,{"stream_name":"stderr","time":86.72042114999999,"data":"scipy/spatial/_ckdtree.pyx in init scipy.spatial._ckdtree()\n"}
+,{"stream_name":"stderr","time":86.720426575,"data":"\n"}
+,{"stream_name":"stderr","time":86.720430111,"data":"/usr/local/lib/python3.12/dist-packages/scipy/sparse/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720434148,"data":"    305 import importlib as _importlib\n"}
+,{"stream_name":"stderr","time":86.720437727,"data":"    306 \n"}
+,{"stream_name":"stderr","time":86.720441381,"data":"--\u003e 307 from ._base import *\n"}
+,{"stream_name":"stderr","time":86.720445419,"data":"    308 from ._csr import *\n"}
+,{"stream_name":"stderr","time":86.720448915,"data":"    309 from ._csc import *\n"}
+,{"stream_name":"stderr","time":86.720452493,"data":"\n"}
+,{"stream_name":"stderr","time":86.72045589,"data":"/usr/local/lib/python3.12/dist-packages/scipy/sparse/_base.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720459762,"data":"      6 import operator\n"}
+,{"stream_name":"stderr","time":86.720463461,"data":"      7 \n"}
+,{"stream_name":"stderr","time":86.720466962,"data":"----\u003e 8 from ._sputils import (asmatrix, check_reshape_kwargs, check_shape,\n"}
+,{"stream_name":"stderr","time":86.720470693,"data":"      9                        get_sum_dtype, isdense, isscalarlike, _todata,\n"}
+,{"stream_name":"stderr","time":86.720475164,"data":"     10                        matrix, validateaxis, getdtype, is_pydata_spmatrix)\n"}
+,{"stream_name":"stderr","time":86.720482263,"data":"\n"}
+,{"stream_name":"stderr","time":86.720485744,"data":"/usr/local/lib/python3.12/dist-packages/scipy/sparse/_sputils.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720489687,"data":"      8 from math import prod\n"}
+,{"stream_name":"stderr","time":86.720493328,"data":"      9 import scipy.sparse as sp\n"}
+,{"stream_name":"stderr","time":86.720497145,"data":"---\u003e 10 from scipy._lib._util import np_long, np_ulong\n"}
+,{"stream_name":"stderr","time":86.720500985,"data":"     11 \n"}
+,{"stream_name":"stderr","time":86.720504628,"data":"     12 \n"}
+,{"stream_name":"stderr","time":86.720508103,"data":"\n"}
+,{"stream_name":"stderr","time":86.720511493,"data":"/usr/local/lib/python3.12/dist-packages/scipy/_lib/_util.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720515313,"data":"     15 \n"}
+,{"stream_name":"stderr","time":86.720519058,"data":"     16 import numpy as np\n"}
+,{"stream_name":"stderr","time":86.720522892,"data":"---\u003e 17 from scipy._lib._array_api import (Array, array_namespace, is_lazy_array, is_numpy,\n"}
+,{"stream_name":"stderr","time":86.720526832,"data":"     18                                    is_marray, xp_size, xp_result_device, xp_result_type)\n"}
+,{"stream_name":"stderr","time":86.720530776,"data":"     19 from scipy._lib._docscrape import FunctionDoc, Parameter\n"}
+,{"stream_name":"stderr","time":86.72053495,"data":"\n"}
+,{"stream_name":"stderr","time":86.720538321,"data":"/usr/local/lib/python3.12/dist-packages/scipy/_lib/_array_api.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720542599,"data":"     22 import numpy.typing as npt\n"}
+,{"stream_name":"stderr","time":86.720546432,"data":"     23 \n"}
+,{"stream_name":"stderr","time":86.72054965,"data":"---\u003e 24 from scipy._lib.array_api_compat import (\n"}
+,{"stream_name":"stderr","time":86.72055309,"data":"     25     is_array_api_obj,\n"}
+,{"stream_name":"stderr","time":86.720556615,"data":"     26     is_lazy_array,\n"}
+,{"stream_name":"stderr","time":86.720560653,"data":"\n"}
+,{"stream_name":"stderr","time":86.720564339,"data":"/usr/local/lib/python3.12/dist-packages/scipy/_lib/array_api_compat/numpy/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720568677,"data":"      7 import numpy.typing  # noqa: F401\n"}
+,{"stream_name":"stderr","time":86.720572138,"data":"      8 \n"}
+,{"stream_name":"stderr","time":86.72057537,"data":"----\u003e 9 __all__ = clone_module(\"numpy\", globals())\n"}
+,{"stream_name":"stderr","time":86.72057895,"data":"     10 \n"}
+,{"stream_name":"stderr","time":86.720582097,"data":"     11 # These imports may overwrite names from the import * above.\n"}
+,{"stream_name":"stderr","time":86.72058557,"data":"\n"}
+,{"stream_name":"stderr","time":86.720588722,"data":"/usr/local/lib/python3.12/dist-packages/scipy/_lib/array_api_compat/_internal.py in clone_module(mod_name, globals_)\n"}
+,{"stream_name":"stderr","time":86.720592293,"data":"     62     # depending on various idiosyncrasies of the libraries we're wrapping.\n"}
+,{"stream_name":"stderr","time":86.720595747,"data":"     63     objs = {}\n"}
+,{"stream_name":"stderr","time":86.720598992,"data":"---\u003e 64     exec(f\"from {mod.__name__} import *\", objs)\n"}
+,{"stream_name":"stderr","time":86.720618097,"data":"     65 \n"}
+,{"stream_name":"stderr","time":86.720625329,"data":"     66     for n in dir(mod):\n"}
+,{"stream_name":"stderr","time":86.720628954,"data":"\n"}
+,{"stream_name":"stderr","time":86.720635732,"data":"\u003cstring\u003e in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720639312,"data":"\n"}
+,{"stream_name":"stderr","time":86.720642495,"data":"/usr/local/lib/python3.12/dist-packages/numpy/__init__.py in __getattr__(attr)\n"}
+,{"stream_name":"stderr","time":86.720645943,"data":"    365         promote_types,\n"}
+,{"stream_name":"stderr","time":86.72064917,"data":"    366         ptp,\n"}
+,{"stream_name":"stderr","time":86.720652358,"data":"--\u003e 367         put,\n"}
+,{"stream_name":"stderr","time":86.720655665,"data":"    368         putmask,\n"}
+,{"stream_name":"stderr","time":86.720659036,"data":"    369         rad2deg,\n"}
+,{"stream_name":"stderr","time":86.720662299,"data":"\n"}
+,{"stream_name":"stderr","time":86.720665488,"data":"/usr/local/lib/python3.12/dist-packages/numpy/char/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720670866,"data":"----\u003e 1 from numpy._core.defchararray import *\n"}
+,{"stream_name":"stderr","time":86.720674653,"data":"      2 from numpy._core.defchararray import __all__, __doc__\n"}
+,{"stream_name":"stderr","time":86.72067689,"data":"\n"}
+,{"stream_name":"stderr","time":86.720679055,"data":"/usr/local/lib/python3.12/dist-packages/numpy/_core/defchararray.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720681375,"data":"     21 from numpy._core import overrides\n"}
+,{"stream_name":"stderr","time":86.720683575,"data":"     22 from numpy._core.multiarray import compare_chararrays\n"}
+,{"stream_name":"stderr","time":86.720686487,"data":"---\u003e 23 from numpy._core.strings import (\n"}
+,{"stream_name":"stderr","time":86.720688863,"data":"     24     _join as join,\n"}
+,{"stream_name":"stderr","time":86.720691068,"data":"     25     _rsplit as rsplit,\n"}
+,{"stream_name":"stderr","time":86.720693228,"data":"\n"}
+,{"stream_name":"stderr","time":86.720695306,"data":"/usr/local/lib/python3.12/dist-packages/numpy/_core/strings.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":86.720697682,"data":"     20 from numpy._core.multiarray import _vec_string\n"}
+,{"stream_name":"stderr","time":86.720699868,"data":"     21 from numpy._core.overrides import array_function_dispatch, set_module\n"}
+,{"stream_name":"stderr","time":86.720702156,"data":"---\u003e 22 from numpy._core.umath import (\n"}
+,{"stream_name":"stderr","time":86.72070435,"data":"     23     _center,\n"}
+,{"stream_name":"stderr","time":86.72070658,"data":"     24     _expandtabs,\n"}
+,{"stream_name":"stderr","time":86.720708766,"data":"\n"}
+,{"stream_name":"stderr","time":86.720710922,"data":"ImportError: cannot import name '_center' from 'numpy._core.umath' (/usr/local/lib/python3.12/dist-packages/numpy/_core/umath.py)\n"}
+,{"stream_name":"stderr","time":86.720713292,"data":"\n"}
+,{"stream_name":"stderr","time":88.866692968,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":88.866720416,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":89.050828506,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":89.050854508,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":89.69492837,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":89.694974322,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":89.732959929,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":90.027597006,"data":"[NbConvertApp] Writing 74105 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":92.399939609,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":92.399976807,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":92.425155726,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":93.380446206,"data":"[NbConvertApp] Writing 486507 bytes to __results__.html\n"}
+]

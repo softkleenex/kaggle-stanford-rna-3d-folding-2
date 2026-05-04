@@ -1,0 +1,19 @@
+You are a Senior Structural Biologist. Review the following context:
+1. HISTORY: v183 | CANDIDATE | N/A | Implement a Right-handed Virtual-Bond Chirality Constraint and refined A-form C1' distances (i+3=16.3Å, i+4=20.3Å) with increased self-avoidance to 4.5Å in the physical refinement layer.
+v184 | CANDIDATE | N/A | STRATEGY: Implement 18.1 Å and 12.5 Å cross-strand C1'–C1' diagonal constraints to lock A-form base-pair step geometry and prevent helical sliding.
+v184 | CANDIDATE | N/A | STRATEGY: Implement 18.1 Å and 12.5 Å cross-strand C1'–C1' diagonal constraints to lock A-form base-pair step geometry and prevent helical sliding.
+v185 | CANDIDATE | N/A | STRATEGY: STRATEGY: Implement a 15.5 Å cross-strand P–P distance constraint across the minor groove to stabilize the characteristic wide-shallow A-form architecture and prevent helical over-winding.
+v185 | CANDIDATE | N/A | STRATEGY: STRATEGY: Implement a 15.5 Å cross-strand P–P distance constraint across the minor groove to stabilize the characteristic wide-shallow A-form architecture and prevent helical over-winding.
+2. COMPETITOR CONTEXT: 
+3. CURRENT PLAN: # Current Plan
+
+## KERNEL_ID
+KERNEL_ID=softkleenex/rna-folding-v27-top1-fixed
+
+## Status
+- **Goal**: Perfectly replicate the exact changes from the 0.448 scoring 'High Score Without Hash' notebook and fix the IndentationError from v22.
+- **Hypothesis**: v27 uses the Top 1 Solution logic with Kabsch alignment and chunk stitching, which is expected to be more robust for long sequences.
+- **Action**: Monitoring v27 execution via `ai_loop.sh`.
+
+TASK: Suggest ONE specific, physically-grounded improvement for our RNA folding script.
+OUTPUT: A brief 1-line strategy summary only.

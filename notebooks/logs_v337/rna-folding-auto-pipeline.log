@@ -1,0 +1,559 @@
+[{"stream_name":"stderr","time":8.031918175,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.032014858,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.032021024,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.032025282,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.686528131,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.686561272,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.686566978,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.686571155,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":21.78445193,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":21.876643212,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":21.986965031,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":21.986988592,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":23.004387239,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":23.206610755,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":24.115696973,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":24.317888809,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":25.33090267,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":25.533217518,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":26.460520255,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":26.662776692,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":27.620429577,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":27.822576337,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":28.250043124,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":28.452465427,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":29.799997373,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":30.002369977,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":31.023122268,"data":"Running in KAGGLE COMPETITION mode — all test targets will be processed.\n"}
+,{"stream_name":"stderr","time":36.646971466,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647023203,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647028023,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647034754,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647039133,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647042769,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647046219,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647050361,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647054259,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647057759,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647061857,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647065516,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647068948,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.64709225,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647096275,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647099844,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647104026,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647107726,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647112495,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647116681,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647120289,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647123764,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647134362,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647138269,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647141829,"data":"\n"}
+,{"stream_name":"stderr","time":36.64714926,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647153406,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647157081,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647161137,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647165201,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647168874,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647172334,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647176492,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647180188,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647183566,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647187717,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647191274,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647195333,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647199809,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647203408,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647207019,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647211074,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647214622999996,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647217977,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647222003,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647225583,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.647229342,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.647233508,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.647239903,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":36.670054166,"data":"Test targets : 28\n"}
+,{"stream_name":"stdout","time":36.670093363,"data":"\n"}
+,{"stream_name":"stdout","time":36.67010079,"data":"Loading training data for TBM …\n"}
+,{"stream_name":"stderr","time":44.410601428,"data":"/tmp/ipykernel_24/2488159412.py:738: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":44.410639222,"data":"  train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)\n"}
+,{"stream_name":"stderr","time":44.41064427,"data":"\n"}
+,{"stream_name":"stderr","time":44.410647429,"data":"/tmp/ipykernel_24/2488159412.py:738: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":44.410651398,"data":"  train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)\n"}
+,{"stream_name":"stdout","time":71.123450909,"data":"Template pool: 5744 sequences, 5744 structures\n"}
+,{"stream_name":"stdout","time":71.123490516,"data":"\n"}
+,{"stream_name":"stdout","time":71.123497962,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":71.123503175,"data":"PHASE 1: Template-Based Modeling\n"}
+,{"stream_name":"stdout","time":71.123509418,"data":"  MIN_SIMILARITY = 0.0  |  MIN_PCT_IDENTITY = 50.0\n"}
+,{"stream_name":"stdout","time":71.123514746,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":71.708976248,"data":"  8ZNQ (30 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":72.574774701,"data":"  9IWF (69 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":73.623481289,"data":"  9JGM (210 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":665.636969779,"data":"  9MME (4640 nt): 4 TBM → need 1 from Protenix\n"}
+,{"stream_name":"stdout","time":666.289803332,"data":"  9J09 (214 nt): 1 TBM → need 4 from Protenix\n"}
+,{"stream_name":"stdout","time":667.21538709,"data":"  9E9Q (101 nt): 4 TBM → need 1 from Protenix\n"}
+,{"stream_name":"stdout","time":668.013739586,"data":"  9CFN (59 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":668.819290131,"data":"  9OBM (73 nt): 3 TBM → need 2 from Protenix\n"}
+,{"stream_name":"stdout","time":669.631785078,"data":"  9G4P (68 nt): 4 TBM → need 1 from Protenix\n"}
+,{"stream_name":"stdout","time":670.515221869,"data":"  9G4Q (104 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":671.187880516,"data":"  9G4R (47 nt): 1 TBM → need 4 from Protenix\n"}
+,{"stream_name":"stdout","time":671.792853612,"data":"  9RVP (34 nt): 4 TBM → need 1 from Protenix\n"}
+,{"stream_name":"stdout","time":672.358417049,"data":"  9JFS (246 nt): 1 TBM → need 4 from Protenix\n"}
+,{"stream_name":"stdout","time":673.426986752,"data":"  9LEC (378 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":674.71146838,"data":"  9LEL (476 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":675.238983672,"data":"  9I9W (28 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":675.826854961,"data":"  9HRO (35 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":676.282836154,"data":"  9QZJ (19 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":676.992840354,"data":"  9JFO (195 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":677.46024465,"data":"  9OD4 (23 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":678.338778802,"data":"  9WHV (80 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":678.984803078,"data":"  9E74 (255 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":679.742926068,"data":"  9E75 (165 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":680.781847265,"data":"  9G4J (334 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":681.438272779,"data":"  9KGG (267 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":682.330746885,"data":"  9EBP (81 nt): 1 TBM → need 4 from Protenix\n"}
+,{"stream_name":"stdout","time":683.174255154,"data":"  9LJN (71 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":707.43043977,"data":"  9ZCC (1460 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":707.430488021,"data":"\n"}
+,{"stream_name":"stdout","time":707.430494767,"data":"Phase 1 done in 636.3s\n"}
+,{"stream_name":"stdout","time":707.430500183,"data":"  Fully covered by TBM : 13\n"}
+,{"stream_name":"stdout","time":707.43050486,"data":"  Need Protenix        : 15\n"}
+,{"stream_name":"stdout","time":707.430509347,"data":"\n"}
+,{"stream_name":"stdout","time":707.430513824,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":707.430518407,"data":"PHASE 2: Protenix for 15 targets\n"}
+,{"stream_name":"stdout","time":707.430523186,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":707.430527683,"data":"  8ZNQ (30 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430532325,"data":"  9MME (4640 nt): 12 chunks queued [(0, 512), (384, 896), (768, 1280), (1152, 1664), (1536, 2048), (1920, 2432), (2304, 2816), (2688, 3200), (3072, 3584), (3456, 3968), (3840, 4352), (4224, 4640)]\n"}
+,{"stream_name":"stdout","time":707.430538378,"data":"  9J09 (214 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430544671,"data":"  9E9Q (101 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430552253,"data":"  9CFN (59 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.43055542,"data":"  9OBM (73 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430558432,"data":"  9G4P (68 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430561557,"data":"  9G4Q (104 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430577687,"data":"  9G4R (47 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430583443,"data":"  9RVP (34 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430588592,"data":"  9JFS (246 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430593983,"data":"  9LEC (378 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430598517,"data":"  9LEL (476 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430602988,"data":"  9EBP (81 nt): single pass queued\n"}
+,{"stream_name":"stdout","time":707.430607563,"data":"  9ZCC (1460 nt): 4 chunks queued [(0, 512), (384, 896), (768, 1280), (1152, 1460)]\n"}
+,{"stream_name":"stderr","time":711.227551957,"data":"2026-03-21 22:51:02,274 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0\n"}
+,{"stream_name":"stderr","time":711.227589904,"data":"\n"}
+,{"stream_name":"stderr","time":711.227595062,"data":"2026-03-21 22:51:02,274 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0\n"}
+,{"stream_name":"stderr","time":711.368766588,"data":"2026-03-21 22:51:02,275 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n"}
+,{"stream_name":"stderr","time":711.368800426,"data":"\n"}
+,{"stream_name":"stderr","time":711.368803755,"data":"2026-03-21 22:51:02,275 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]\n"}
+,{"stream_name":"stderr","time":711.369529461,"data":"2026-03-21 22:51:02,416 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:127] INFO root: Finished environment initialization.\n"}
+,{"stream_name":"stderr","time":711.369541765,"data":"\n"}
+,{"stream_name":"stderr","time":711.369544268,"data":"2026-03-21 22:51:02,416 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:127] INFO root: Finished environment initialization.\n"}
+,{"stream_name":"stdout","time":711.571655417,"data":"train scheduler 16.0\n"}
+,{"stream_name":"stdout","time":711.571708458,"data":"inference scheduler 16.0\n"}
+,{"stream_name":"stdout","time":739.168841007,"data":"Diffusion Module has 16.0\n"}
+,{"stream_name":"stderr","time":787.619463332,"data":"2026-03-21 22:52:18,662 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Loading from /kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/checkpoint/protenix_base_20250630_v1.0.0.pt, strict: True\n"}
+,{"stream_name":"stderr","time":787.619506569,"data":"\n"}
+,{"stream_name":"stderr","time":787.61953025,"data":"2026-03-21 22:52:18,662 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Loading from /kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/checkpoint/protenix_base_20250630_v1.0.0.pt, strict: True\n"}
+,{"stream_name":"stderr","time":795.537156103,"data":"2026-03-21 22:52:26,578 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight\n"}
+,{"stream_name":"stderr","time":795.537198726,"data":"\n"}
+,{"stream_name":"stderr","time":795.537205584,"data":"2026-03-21 22:52:26,578 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight\n"}
+,{"stream_name":"stderr","time":795.681607056,"data":"2026-03-21 22:52:26,723 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.\n"}
+,{"stream_name":"stderr","time":795.681644266,"data":"\n"}
+,{"stream_name":"stderr","time":795.68164857,"data":"2026-03-21 22:52:26,723 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.\n"}
+,{"stream_name":"stderr","time":795.686899745,"data":"2026-03-21 22:52:26,734 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Model parameters: 368.48M\n"}
+,{"stream_name":"stderr","time":795.686951208,"data":"\n"}
+,{"stream_name":"stderr","time":795.68695989,"data":"2026-03-21 22:52:26,734 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/runner/inference.py:246] INFO runner.inference: Model parameters: 368.48M\n"}
+,{"stream_name":"stderr","time":795.734412885,"data":"\rProtenix Inference:   0%|          | 0/29 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":795.73546916,"data":"\rProtenix Inference:   0%|          | 0/29 [00:00\u003c?, ?it/s]2026-03-21 22:52:26,782 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 8ZNQ...\n"}
+,{"stream_name":"stderr","time":795.735495602,"data":"\n"}
+,{"stream_name":"stderr","time":795.735502295,"data":"2026-03-21 22:52:26,782 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 8ZNQ...\n"}
+,{"stream_name":"stderr","time":806.046588083,"data":"2026-03-21 22:52:37,093 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":806.046631844,"data":"\n"}
+,{"stream_name":"stderr","time":806.046638908,"data":"2026-03-21 22:52:37,093 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":806.089598244,"data":"2026-03-21 22:52:37,136 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":806.08962505,"data":"\n"}
+,{"stream_name":"stderr","time":806.089632994,"data":"2026-03-21 22:52:37,136 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":833.700642667,"data":"\rProtenix Inference:   3%|▎         | 1/29 [00:37\u003c17:42, 37.96s/it]\n"}
+,{"stream_name":"stderr","time":833.701546443,"data":"\rProtenix Inference:   3%|▎         | 1/29 [00:37\u003c17:42, 37.96s/it]2026-03-21 22:53:04,744 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk0...\n"}
+,{"stream_name":"stderr","time":833.701568845,"data":"\n"}
+,{"stream_name":"stderr","time":833.701574894,"data":"2026-03-21 22:53:04,744 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk0...\n"}
+,{"stream_name":"stderr","time":834.413157402,"data":"2026-03-21 22:53:05,459 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":834.413208521,"data":"\n"}
+,{"stream_name":"stderr","time":834.413212911,"data":"2026-03-21 22:53:05,459 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":835.626154954,"data":"2026-03-21 22:53:06,673 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":835.626192743,"data":"\n"}
+,{"stream_name":"stderr","time":835.626197331,"data":"2026-03-21 22:53:06,673 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1031.914046405,"data":"\rProtenix Inference:   7%|▋         | 2/29 [03:56\u003c59:30, 132.23s/it]\n"}
+,{"stream_name":"stderr","time":1031.915133258,"data":"\rProtenix Inference:   7%|▋         | 2/29 [03:56\u003c59:30, 132.23s/it]2026-03-21 22:56:22,954 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk1...\n"}
+,{"stream_name":"stderr","time":1031.915166833,"data":"\n"}
+,{"stream_name":"stderr","time":1031.915172111,"data":"2026-03-21 22:56:22,954 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk1...\n"}
+,{"stream_name":"stderr","time":1032.622957447,"data":"2026-03-21 22:56:23,669 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1032.623001511,"data":"\n"}
+,{"stream_name":"stderr","time":1032.623006573,"data":"2026-03-21 22:56:23,669 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1033.827803075,"data":"2026-03-21 22:56:24,874 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1033.827837943,"data":"\n"}
+,{"stream_name":"stderr","time":1033.827852589,"data":"2026-03-21 22:56:24,874 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1230.425993105,"data":"\rProtenix Inference:  10%|█         | 3/29 [07:14\u003c1:10:24, 162.49s/it]\n"}
+,{"stream_name":"stderr","time":1230.426927357,"data":"\rProtenix Inference:  10%|█         | 3/29 [07:14\u003c1:10:24, 162.49s/it]2026-03-21 22:59:41,469 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk2...\n"}
+,{"stream_name":"stderr","time":1230.426952206,"data":"\n"}
+,{"stream_name":"stderr","time":1230.426957356,"data":"2026-03-21 22:59:41,469 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk2...\n"}
+,{"stream_name":"stderr","time":1231.171773292,"data":"2026-03-21 22:59:42,218 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1231.171809776,"data":"\n"}
+,{"stream_name":"stderr","time":1231.171815141,"data":"2026-03-21 22:59:42,218 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1232.376300434,"data":"2026-03-21 22:59:43,423 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1232.376338531,"data":"\n"}
+,{"stream_name":"stderr","time":1232.376342915,"data":"2026-03-21 22:59:43,423 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1429.010564216,"data":"\rProtenix Inference:  14%|█▍        | 4/29 [10:33\u003c1:13:38, 176.74s/it]\n"}
+,{"stream_name":"stderr","time":1429.011491922,"data":"\rProtenix Inference:  14%|█▍        | 4/29 [10:33\u003c1:13:38, 176.74s/it]2026-03-21 23:03:00,053 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk3...\n"}
+,{"stream_name":"stderr","time":1429.011517565,"data":"\n"}
+,{"stream_name":"stderr","time":1429.011523656,"data":"2026-03-21 23:03:00,053 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk3...\n"}
+,{"stream_name":"stderr","time":1429.711327683,"data":"2026-03-21 23:03:00,757 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1429.711365479,"data":"\n"}
+,{"stream_name":"stderr","time":1429.711370784,"data":"2026-03-21 23:03:00,757 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1430.956805916,"data":"2026-03-21 23:03:02,002 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1430.956833711,"data":"\n"}
+,{"stream_name":"stderr","time":1430.956839119,"data":"2026-03-21 23:03:02,002 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1627.684450869,"data":"\rProtenix Inference:  17%|█▋        | 5/29 [13:51\u003c1:13:51, 184.65s/it]\n"}
+,{"stream_name":"stderr","time":1627.68535409,"data":"\rProtenix Inference:  17%|█▋        | 5/29 [13:51\u003c1:13:51, 184.65s/it]2026-03-21 23:06:18,726 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk4...\n"}
+,{"stream_name":"stderr","time":1627.685376779,"data":"\n"}
+,{"stream_name":"stderr","time":1627.685382283,"data":"2026-03-21 23:06:18,726 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk4...\n"}
+,{"stream_name":"stderr","time":1628.380140368,"data":"2026-03-21 23:06:19,426 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1628.380178248,"data":"\n"}
+,{"stream_name":"stderr","time":1628.380183936,"data":"2026-03-21 23:06:19,426 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1629.590673252,"data":"2026-03-21 23:06:20,637 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1629.590711154,"data":"\n"}
+,{"stream_name":"stderr","time":1629.590717608,"data":"2026-03-21 23:06:20,637 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1826.362089071,"data":"\rProtenix Inference:  21%|██        | 6/29 [17:10\u003c1:12:36, 189.42s/it]\n"}
+,{"stream_name":"stderr","time":1826.362947602,"data":"\rProtenix Inference:  21%|██        | 6/29 [17:10\u003c1:12:36, 189.42s/it]2026-03-21 23:09:37,404 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk5...\n"}
+,{"stream_name":"stderr","time":1826.362980636,"data":"\n"}
+,{"stream_name":"stderr","time":1826.36298501,"data":"2026-03-21 23:09:37,404 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk5...\n"}
+,{"stream_name":"stderr","time":1827.064242537,"data":"2026-03-21 23:09:38,110 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1827.064279197,"data":"\n"}
+,{"stream_name":"stderr","time":1827.064284786,"data":"2026-03-21 23:09:38,110 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":1828.27876356,"data":"2026-03-21 23:09:39,325 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":1828.278803513,"data":"\n"}
+,{"stream_name":"stderr","time":1828.278808993,"data":"2026-03-21 23:09:39,325 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2024.938320371,"data":"\rProtenix Inference:  24%|██▍       | 7/29 [20:29\u003c1:10:33, 192.41s/it]\n"}
+,{"stream_name":"stderr","time":2024.939143127,"data":"\rProtenix Inference:  24%|██▍       | 7/29 [20:29\u003c1:10:33, 192.41s/it]2026-03-21 23:12:55,980 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk6...\n"}
+,{"stream_name":"stderr","time":2024.939167127,"data":"\n"}
+,{"stream_name":"stderr","time":2024.93917342,"data":"2026-03-21 23:12:55,980 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk6...\n"}
+,{"stream_name":"stderr","time":2025.650546044,"data":"2026-03-21 23:12:56,697 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2025.650581417,"data":"\n"}
+,{"stream_name":"stderr","time":2025.650825515,"data":"2026-03-21 23:12:56,697 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2026.873914466,"data":"2026-03-21 23:12:57,920 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2026.873969132,"data":"\n"}
+,{"stream_name":"stderr","time":2026.873982497,"data":"2026-03-21 23:12:57,920 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2223.562676533,"data":"\rProtenix Inference:  28%|██▊       | 8/29 [23:47\u003c1:08:02, 194.39s/it]\n"}
+,{"stream_name":"stderr","time":2223.563597363,"data":"\rProtenix Inference:  28%|██▊       | 8/29 [23:47\u003c1:08:02, 194.39s/it]2026-03-21 23:16:14,605 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk7...\n"}
+,{"stream_name":"stderr","time":2223.563621382,"data":"\n"}
+,{"stream_name":"stderr","time":2223.563627084,"data":"2026-03-21 23:16:14,605 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk7...\n"}
+,{"stream_name":"stderr","time":2224.25065978,"data":"2026-03-21 23:16:15,297 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2224.250693206,"data":"\n"}
+,{"stream_name":"stderr","time":2224.250697963,"data":"2026-03-21 23:16:15,297 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2225.479973406,"data":"2026-03-21 23:16:16,526 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2225.480012208,"data":"\n"}
+,{"stream_name":"stderr","time":2225.480016579,"data":"2026-03-21 23:16:16,526 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2422.252900065,"data":"\rProtenix Inference:  31%|███       | 9/29 [27:06\u003c1:05:14, 195.73s/it]\n"}
+,{"stream_name":"stderr","time":2422.254032573,"data":"\rProtenix Inference:  31%|███       | 9/29 [27:06\u003c1:05:14, 195.73s/it]2026-03-21 23:19:33,291 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk8...\n"}
+,{"stream_name":"stderr","time":2422.254054043,"data":"\n"}
+,{"stream_name":"stderr","time":2422.254059389,"data":"2026-03-21 23:19:33,291 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk8...\n"}
+,{"stream_name":"stderr","time":2422.952764635,"data":"2026-03-21 23:19:33,999 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2422.952813263,"data":"\n"}
+,{"stream_name":"stderr","time":2422.952817111,"data":"2026-03-21 23:19:33,999 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2424.159050783,"data":"2026-03-21 23:19:35,205 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2424.159115672,"data":"\n"}
+,{"stream_name":"stderr","time":2424.159123263,"data":"2026-03-21 23:19:35,205 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2620.847458552,"data":"\rProtenix Inference:  34%|███▍      | 10/29 [30:25\u003c1:02:15, 196.62s/it]\n"}
+,{"stream_name":"stderr","time":2620.84849694,"data":"\rProtenix Inference:  34%|███▍      | 10/29 [30:25\u003c1:02:15, 196.62s/it]2026-03-21 23:22:51,889 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk9...\n"}
+,{"stream_name":"stderr","time":2620.848523148,"data":"\n"}
+,{"stream_name":"stderr","time":2620.84852978,"data":"2026-03-21 23:22:51,889 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk9...\n"}
+,{"stream_name":"stderr","time":2621.57653389,"data":"2026-03-21 23:22:52,623 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2621.576568805,"data":"\n"}
+,{"stream_name":"stderr","time":2621.576573894,"data":"2026-03-21 23:22:52,623 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2622.783054684,"data":"2026-03-21 23:22:53,829 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2622.78312326,"data":"\n"}
+,{"stream_name":"stderr","time":2622.783135021,"data":"2026-03-21 23:22:53,829 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2819.538568308,"data":"\rProtenix Inference:  38%|███▊      | 11/29 [33:43\u003c59:10, 197.25s/it]  \n"}
+,{"stream_name":"stderr","time":2819.539884601,"data":"\rProtenix Inference:  38%|███▊      | 11/29 [33:43\u003c59:10, 197.25s/it]  2026-03-21 23:26:10,575 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk10...\n"}
+,{"stream_name":"stderr","time":2819.539904002,"data":"\n"}
+,{"stream_name":"stderr","time":2819.539909337,"data":"2026-03-21 23:26:10,575 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk10...\n"}
+,{"stream_name":"stderr","time":2820.238458773,"data":"2026-03-21 23:26:11,285 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2820.238498995,"data":"\n"}
+,{"stream_name":"stderr","time":2820.238504959,"data":"2026-03-21 23:26:11,285 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":2821.498974969,"data":"2026-03-21 23:26:12,546 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":2821.499010541,"data":"\n"}
+,{"stream_name":"stderr","time":2821.49901735,"data":"2026-03-21 23:26:12,546 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3018.258910672,"data":"\rProtenix Inference:  41%|████▏     | 12/29 [37:02\u003c56:00, 197.70s/it]\n"}
+,{"stream_name":"stderr","time":3018.259994559,"data":"\rProtenix Inference:  41%|████▏     | 12/29 [37:02\u003c56:00, 197.70s/it]2026-03-21 23:29:29,296 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk11...\n"}
+,{"stream_name":"stderr","time":3018.260017357,"data":"\n"}
+,{"stream_name":"stderr","time":3018.260023645,"data":"2026-03-21 23:29:29,296 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9MME_chunk11...\n"}
+,{"stream_name":"stderr","time":3018.807340383,"data":"2026-03-21 23:29:29,854 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3018.807374865,"data":"\n"}
+,{"stream_name":"stderr","time":3018.807379932,"data":"2026-03-21 23:29:29,854 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3019.677349444,"data":"2026-03-21 23:29:30,724 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3019.677385562,"data":"\n"}
+,{"stream_name":"stderr","time":3019.67739057,"data":"2026-03-21 23:29:30,724 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3147.072795475,"data":"\rProtenix Inference:  45%|████▍     | 13/29 [39:11\u003c47:09, 176.83s/it]\n"}
+,{"stream_name":"stderr","time":3147.073680907,"data":"\rProtenix Inference:  45%|████▍     | 13/29 [39:11\u003c47:09, 176.83s/it]2026-03-21 23:31:38,114 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9J09...\n"}
+,{"stream_name":"stderr","time":3147.073703567,"data":"\n"}
+,{"stream_name":"stderr","time":3147.073715089,"data":"2026-03-21 23:31:38,114 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9J09...\n"}
+,{"stream_name":"stderr","time":3147.318716704,"data":"2026-03-21 23:31:38,365 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3147.31875383,"data":"\n"}
+,{"stream_name":"stderr","time":3147.318759522,"data":"2026-03-21 23:31:38,365 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3147.632805517,"data":"2026-03-21 23:31:38,679 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3147.632858519,"data":"\n"}
+,{"stream_name":"stderr","time":3147.632864469,"data":"2026-03-21 23:31:38,679 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3200.031004888,"data":"\rProtenix Inference:  48%|████▊     | 14/29 [40:04\u003c34:51, 139.41s/it]\n"}
+,{"stream_name":"stderr","time":3200.032231313,"data":"\rProtenix Inference:  48%|████▊     | 14/29 [40:04\u003c34:51, 139.41s/it]2026-03-21 23:32:31,068 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9E9Q...\n"}
+,{"stream_name":"stderr","time":3200.032274337,"data":"\n"}
+,{"stream_name":"stderr","time":3200.032279255,"data":"2026-03-21 23:32:31,068 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9E9Q...\n"}
+,{"stream_name":"stderr","time":3200.135547098,"data":"2026-03-21 23:32:31,182 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3200.135582324,"data":"\n"}
+,{"stream_name":"stderr","time":3200.135585994,"data":"2026-03-21 23:32:31,182 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3200.254578764,"data":"2026-03-21 23:32:31,300 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3200.254611775,"data":"\n"}
+,{"stream_name":"stderr","time":3200.254615753,"data":"2026-03-21 23:32:31,300 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3225.990843496,"data":"\rProtenix Inference:  52%|█████▏    | 15/29 [40:30\u003c24:33, 105.22s/it]\n"}
+,{"stream_name":"stderr","time":3225.991947435,"data":"\rProtenix Inference:  52%|█████▏    | 15/29 [40:30\u003c24:33, 105.22s/it]2026-03-21 23:32:57,038 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9CFN...\n"}
+,{"stream_name":"stderr","time":3225.991979325,"data":"\n"}
+,{"stream_name":"stderr","time":3225.991986359,"data":"2026-03-21 23:32:57,038 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9CFN...\n"}
+,{"stream_name":"stderr","time":3226.060810926,"data":"2026-03-21 23:32:57,108 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3226.060835291,"data":"\n"}
+,{"stream_name":"stderr","time":3226.060841874,"data":"2026-03-21 23:32:57,108 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3226.123510447,"data":"2026-03-21 23:32:57,170 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3226.123567037,"data":"\n"}
+,{"stream_name":"stderr","time":3226.123573812,"data":"2026-03-21 23:32:57,170 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3252.087104907,"data":"\rProtenix Inference:  55%|█████▌    | 16/29 [40:56\u003c17:38, 81.40s/it] \n"}
+,{"stream_name":"stderr","time":3252.087925964,"data":"\rProtenix Inference:  55%|█████▌    | 16/29 [40:56\u003c17:38, 81.40s/it] 2026-03-21 23:33:23,128 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9OBM...\n"}
+,{"stream_name":"stderr","time":3252.087949836,"data":"\n"}
+,{"stream_name":"stderr","time":3252.087956073,"data":"2026-03-21 23:33:23,128 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9OBM...\n"}
+,{"stream_name":"stderr","time":3252.158816562,"data":"2026-03-21 23:33:23,206 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3252.15884262,"data":"\n"}
+,{"stream_name":"stderr","time":3252.158849317,"data":"2026-03-21 23:33:23,206 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3252.239713153,"data":"2026-03-21 23:33:23,286 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3252.239744099,"data":"\n"}
+,{"stream_name":"stderr","time":3252.239749031,"data":"2026-03-21 23:33:23,286 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3278.202880976,"data":"\rProtenix Inference:  59%|█████▊    | 17/29 [41:22\u003c12:57, 64.78s/it]\n"}
+,{"stream_name":"stderr","time":3278.204073507,"data":"\rProtenix Inference:  59%|█████▊    | 17/29 [41:22\u003c12:57, 64.78s/it]2026-03-21 23:33:49,249 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9G4P...\n"}
+,{"stream_name":"stderr","time":3278.2041348,"data":"\n"}
+,{"stream_name":"stderr","time":3278.204139627,"data":"2026-03-21 23:33:49,249 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9G4P...\n"}
+,{"stream_name":"stderr","time":3278.278695066,"data":"2026-03-21 23:33:49,325 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3278.278735623,"data":"\n"}
+,{"stream_name":"stderr","time":3278.27874006,"data":"2026-03-21 23:33:49,325 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3278.347117646,"data":"2026-03-21 23:33:49,393 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3278.347164743,"data":"\n"}
+,{"stream_name":"stderr","time":3278.347170437,"data":"2026-03-21 23:33:49,393 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3304.047383245,"data":"\rProtenix Inference:  62%|██████▏   | 18/29 [41:48\u003c09:43, 53.08s/it]\n"}
+,{"stream_name":"stderr","time":3304.048281545,"data":"\rProtenix Inference:  62%|██████▏   | 18/29 [41:48\u003c09:43, 53.08s/it]2026-03-21 23:34:15,088 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9G4Q...\n"}
+,{"stream_name":"stderr","time":3304.048305185,"data":"\n"}
+,{"stream_name":"stderr","time":3304.04831063,"data":"2026-03-21 23:34:15,088 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9G4Q...\n"}
+,{"stream_name":"stderr","time":3304.152662494,"data":"2026-03-21 23:34:15,199 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3304.152688083,"data":"\n"}
+,{"stream_name":"stderr","time":3304.152692618,"data":"2026-03-21 23:34:15,199 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3304.27782884,"data":"2026-03-21 23:34:15,324 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3304.277863182,"data":"\n"}
+,{"stream_name":"stderr","time":3304.27786801,"data":"2026-03-21 23:34:15,324 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3331.777062122,"data":"\rProtenix Inference:  66%|██████▌   | 19/29 [42:16\u003c07:34, 45.47s/it]\n"}
+,{"stream_name":"stderr","time":3331.777919791,"data":"\rProtenix Inference:  66%|██████▌   | 19/29 [42:16\u003c07:34, 45.47s/it]2026-03-21 23:34:42,824 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9G4R...\n"}
+,{"stream_name":"stderr","time":3331.777941427,"data":"\n"}
+,{"stream_name":"stderr","time":3331.777948049,"data":"2026-03-21 23:34:42,824 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9G4R...\n"}
+,{"stream_name":"stderr","time":3331.831199332,"data":"2026-03-21 23:34:42,878 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3331.831228833,"data":"\n"}
+,{"stream_name":"stderr","time":3331.831235466,"data":"2026-03-21 23:34:42,878 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3331.879692755,"data":"2026-03-21 23:34:42,926 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3331.87971736,"data":"\n"}
+,{"stream_name":"stderr","time":3331.879722077,"data":"2026-03-21 23:34:42,926 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3358.315750149,"data":"\rProtenix Inference:  69%|██████▉   | 20/29 [42:42\u003c05:58, 39.78s/it]\n"}
+,{"stream_name":"stderr","time":3358.31683872,"data":"\rProtenix Inference:  69%|██████▉   | 20/29 [42:42\u003c05:58, 39.78s/it]2026-03-21 23:35:09,350 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9RVP...\n"}
+,{"stream_name":"stderr","time":3358.316866644,"data":"\n"}
+,{"stream_name":"stderr","time":3358.316873138,"data":"2026-03-21 23:35:09,350 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9RVP...\n"}
+,{"stream_name":"stderr","time":3358.350696019,"data":"2026-03-21 23:35:09,398 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3358.350721952,"data":"\n"}
+,{"stream_name":"stderr","time":3358.350743678,"data":"2026-03-21 23:35:09,398 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3358.385228074,"data":"2026-03-21 23:35:09,432 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3358.385248589,"data":"\n"}
+,{"stream_name":"stderr","time":3358.385253159,"data":"2026-03-21 23:35:09,432 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3383.757775042,"data":"\rProtenix Inference:  72%|███████▏  | 21/29 [43:08\u003c04:43, 35.48s/it]\n"}
+,{"stream_name":"stderr","time":3383.758640646,"data":"\rProtenix Inference:  72%|███████▏  | 21/29 [43:08\u003c04:43, 35.48s/it]2026-03-21 23:35:34,804 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9JFS...\n"}
+,{"stream_name":"stderr","time":3383.758664169,"data":"\n"}
+,{"stream_name":"stderr","time":3383.758670119,"data":"2026-03-21 23:35:34,804 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9JFS...\n"}
+,{"stream_name":"stderr","time":3384.052862741,"data":"2026-03-21 23:35:35,099 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3384.052912447,"data":"\n"}
+,{"stream_name":"stderr","time":3384.052920125,"data":"2026-03-21 23:35:35,099 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3384.442160892,"data":"2026-03-21 23:35:35,489 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3384.442197347,"data":"\n"}
+,{"stream_name":"stderr","time":3384.442203364,"data":"2026-03-21 23:35:35,489 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3448.296171203,"data":"\rProtenix Inference:  76%|███████▌  | 22/29 [44:12\u003c05:09, 44.20s/it]\n"}
+,{"stream_name":"stderr","time":3448.29702984,"data":"\rProtenix Inference:  76%|███████▌  | 22/29 [44:12\u003c05:09, 44.20s/it]2026-03-21 23:36:39,336 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9LEC...\n"}
+,{"stream_name":"stderr","time":3448.297065386,"data":"\n"}
+,{"stream_name":"stderr","time":3448.297070386,"data":"2026-03-21 23:36:39,336 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9LEC...\n"}
+,{"stream_name":"stderr","time":3448.767552302,"data":"2026-03-21 23:36:39,814 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3448.767585783,"data":"\n"}
+,{"stream_name":"stderr","time":3448.767589907,"data":"2026-03-21 23:36:39,814 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3449.511240316,"data":"2026-03-21 23:36:40,558 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3449.511282986,"data":"\n"}
+,{"stream_name":"stderr","time":3449.511288137,"data":"2026-03-21 23:36:40,558 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3570.90894856,"data":"\rProtenix Inference:  79%|███████▉  | 23/29 [46:15\u003c06:46, 67.73s/it]\n"}
+,{"stream_name":"stderr","time":3570.910279346,"data":"\rProtenix Inference:  79%|███████▉  | 23/29 [46:15\u003c06:46, 67.73s/it]2026-03-21 23:38:41,941 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9LEL...\n"}
+,{"stream_name":"stderr","time":3570.910300772,"data":"\n"}
+,{"stream_name":"stderr","time":3570.910305859,"data":"2026-03-21 23:38:41,941 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9LEL...\n"}
+,{"stream_name":"stderr","time":3571.572232554,"data":"2026-03-21 23:38:42,618 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3571.572269529,"data":"\n"}
+,{"stream_name":"stderr","time":3571.57227408,"data":"2026-03-21 23:38:42,618 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3572.635848082,"data":"2026-03-21 23:38:43,682 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3572.635909827,"data":"\n"}
+,{"stream_name":"stderr","time":3572.635917387,"data":"2026-03-21 23:38:43,682 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3765.861916764,"data":"\rProtenix Inference:  83%|████████▎ | 24/29 [49:30\u003c08:49, 105.90s/it]\n"}
+,{"stream_name":"stderr","time":3765.862798445,"data":"\rProtenix Inference:  83%|████████▎ | 24/29 [49:30\u003c08:49, 105.90s/it]2026-03-21 23:41:56,901 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9EBP...\n"}
+,{"stream_name":"stderr","time":3765.862819667,"data":"\n"}
+,{"stream_name":"stderr","time":3765.862825979,"data":"2026-03-21 23:41:56,901 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9EBP...\n"}
+,{"stream_name":"stderr","time":3765.944804908,"data":"2026-03-21 23:41:56,991 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3765.944831705,"data":"\n"}
+,{"stream_name":"stderr","time":3765.944838094,"data":"2026-03-21 23:41:56,991 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3766.046466411,"data":"2026-03-21 23:41:57,093 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3766.04650822,"data":"\n"}
+,{"stream_name":"stderr","time":3766.046514734,"data":"2026-03-21 23:41:57,093 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3793.149700424,"data":"\rProtenix Inference:  86%|████████▌ | 25/29 [49:57\u003c05:29, 82.32s/it] \n"}
+,{"stream_name":"stderr","time":3793.150800285,"data":"\rProtenix Inference:  86%|████████▌ | 25/29 [49:57\u003c05:29, 82.32s/it] 2026-03-21 23:42:24,196 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk0...\n"}
+,{"stream_name":"stderr","time":3793.150821687,"data":"\n"}
+,{"stream_name":"stderr","time":3793.150827029,"data":"2026-03-21 23:42:24,196 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk0...\n"}
+,{"stream_name":"stderr","time":3793.860800481,"data":"2026-03-21 23:42:24,907 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3793.860833129,"data":"\n"}
+,{"stream_name":"stderr","time":3793.860837247,"data":"2026-03-21 23:42:24,907 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":3795.077983918,"data":"2026-03-21 23:42:26,124 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":3795.078023878,"data":"\n"}
+,{"stream_name":"stderr","time":3795.078027739,"data":"2026-03-21 23:42:26,124 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4015.6317996,"data":"\rProtenix Inference:  90%|████████▉ | 26/29 [53:39\u003c06:13, 124.37s/it]\n"}
+,{"stream_name":"stderr","time":4015.632710878,"data":"\rProtenix Inference:  90%|████████▉ | 26/29 [53:39\u003c06:13, 124.37s/it]2026-03-21 23:46:06,671 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk1...\n"}
+,{"stream_name":"stderr","time":4015.632733283,"data":"\n"}
+,{"stream_name":"stderr","time":4015.632740893,"data":"2026-03-21 23:46:06,671 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk1...\n"}
+,{"stream_name":"stderr","time":4016.330093024,"data":"2026-03-21 23:46:07,376 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":4016.330129316,"data":"\n"}
+,{"stream_name":"stderr","time":4016.330134108,"data":"2026-03-21 23:46:07,376 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":4017.517706002,"data":"2026-03-21 23:46:08,564 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4017.517751767,"data":"\n"}
+,{"stream_name":"stderr","time":4017.517781396,"data":"2026-03-21 23:46:08,564 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4238.000551218,"data":"\rProtenix Inference:  93%|█████████▎| 27/29 [57:22\u003c05:07, 153.77s/it]\n"}
+,{"stream_name":"stderr","time":4238.001512199,"data":"\rProtenix Inference:  93%|█████████▎| 27/29 [57:22\u003c05:07, 153.77s/it]2026-03-21 23:49:49,034 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk2...\n"}
+,{"stream_name":"stderr","time":4238.001536914,"data":"\n"}
+,{"stream_name":"stderr","time":4238.001542549,"data":"2026-03-21 23:49:49,034 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk2...\n"}
+,{"stream_name":"stderr","time":4238.695179496,"data":"2026-03-21 23:49:49,741 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":4238.69521599,"data":"\n"}
+,{"stream_name":"stderr","time":4238.695221758,"data":"2026-03-21 23:49:49,741 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":4239.90506034,"data":"2026-03-21 23:49:50,951 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4239.905113668,"data":"\n"}
+,{"stream_name":"stderr","time":4239.9051199,"data":"2026-03-21 23:49:50,951 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4460.602409898,"data":"\rProtenix Inference:  97%|█████████▋| 28/29 [1:01:04\u003c02:54, 174.42s/it]\n"}
+,{"stream_name":"stderr","time":4460.603271663,"data":"\rProtenix Inference:  97%|█████████▋| 28/29 [1:01:04\u003c02:54, 174.42s/it]2026-03-21 23:53:31,641 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk3...\n"}
+,{"stream_name":"stderr","time":4460.603295527,"data":"\n"}
+,{"stream_name":"stderr","time":4460.603301092,"data":"2026-03-21 23:53:31,641 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py:281] INFO protenix.data.inference.infer_dataloader: Featurizing 9ZCC_chunk3...\n"}
+,{"stream_name":"stderr","time":4461.020097729,"data":"2026-03-21 23:53:32,067 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":4461.020138602,"data":"\n"}
+,{"stream_name":"stderr","time":4461.020142539,"data":"2026-03-21 23:53:32,067 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0\n"}
+,{"stream_name":"stderr","time":4461.558240036,"data":"2026-03-21 23:53:32,605 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4461.558277881,"data":"\n"}
+,{"stream_name":"stderr","time":4461.558286035,"data":"2026-03-21 23:53:32,605 [/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/template/template_featurizer.py:668] INFO protenix.data.template.template_featurizer: Calling InferenceTemplateFeaturizer.make_template_feature\n"}
+,{"stream_name":"stderr","time":4547.461165497,"data":"\rProtenix Inference: 100%|██████████| 29/29 [1:02:31\u003c00:00, 148.15s/it]\n"}
+,{"stream_name":"stderr","time":4547.462133847,"data":"\rProtenix Inference: 100%|██████████| 29/29 [1:02:31\u003c00:00, 148.15s/it]\rProtenix Inference: 100%|██████████| 29/29 [1:02:31\u003c00:00, 129.37s/it]\n"}
+,{"stream_name":"stderr","time":4547.667157906,"data":"\rProtenix Inference: 100%|██████████| 29/29 [1:02:31\u003c00:00, 129.37s/it]\n"}
+,{"stream_name":"stderr","time":4547.667188108,"data":"\n"}
+,{"stream_name":"stderr","time":4547.667194238,"data":"\n"}
+,{"stream_name":"stdout","time":4547.67212301,"data":"  8ZNQ: 3 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672144612,"data":"  9MME: 1 stitched predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672150393,"data":"  9J09: 4 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672155223,"data":"  9E9Q: 1 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672159959,"data":"  9CFN: 3 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672164664,"data":"  9OBM: 2 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672169295,"data":"  9G4P: 1 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672173855,"data":"  9G4Q: 3 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672178455,"data":"  9G4R: 4 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672183124,"data":"  9RVP: 1 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672187821,"data":"  9JFS: 4 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672192905,"data":"  9LEC: 3 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672197659,"data":"  9LEL: 3 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672202449,"data":"  9EBP: 4 predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672207101,"data":"  9ZCC: 3 stitched predictions generated\n"}
+,{"stream_name":"stdout","time":4547.672211913,"data":"\n"}
+,{"stream_name":"stdout","time":4547.672216432,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":4547.672221253,"data":"PHASE 3: Combine TBM + Protenix + de-novo fallback\n"}
+,{"stream_name":"stdout","time":4547.672243984,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":4548.110421168,"data":"\n"}
+,{"stream_name":"stdout","time":4548.110446987,"data":"✓ Saved submission to /kaggle/working/submission.csv  (9,762 rows)\n"}
+,{"stream_name":"stdout","time":4548.110453281,"data":"         ID resname  resid        x_1        y_1        z_1         x_2  \\\n"}
+,{"stream_name":"stdout","time":4548.110457545,"data":"0    8ZNQ_1       A      1  -2.052190 -15.063458  20.735767  146.017939   \n"}
+,{"stream_name":"stdout","time":4548.110461597,"data":"1    8ZNQ_2       C      2  -1.982681 -15.067537  15.340895  141.486966   \n"}
+,{"stream_name":"stdout","time":4548.11046578,"data":"2    8ZNQ_3       C      3  -3.337801 -13.507840  10.455502  138.496658   \n"}
+,{"stream_name":"stdout","time":4548.11047043,"data":"3    8ZNQ_4       G      4  -5.443241 -11.024343   6.592787  141.786700   \n"}
+,{"stream_name":"stdout","time":4548.110474593,"data":"4    8ZNQ_5       U      5  -6.349355  -6.245292   4.534730  143.592150   \n"}
+,{"stream_name":"stdout","time":4548.11047901,"data":"5    8ZNQ_6       G      6  -6.915104  -0.886885   3.228456  143.126043   \n"}
+,{"stream_name":"stdout","time":4548.110482408,"data":"6    8ZNQ_7       A      7  -4.528862   4.098989  -0.873886  141.538810   \n"}
+,{"stream_name":"stdout","time":4548.110487393,"data":"7    8ZNQ_8       C      8  -5.387198   9.757380   3.328872  138.567561   \n"}
+,{"stream_name":"stdout","time":4548.11049447,"data":"8    8ZNQ_9       G      9  -0.393024  10.586766   0.119525  135.889738   \n"}
+,{"stream_name":"stdout","time":4548.110497378,"data":"9   8ZNQ_10       G     10   3.933561   9.964060  -2.050513  135.705804   \n"}
+,{"stream_name":"stdout","time":4548.110499834,"data":"10  8ZNQ_11       G     11   7.970673   7.525594  -4.490945  134.392850   \n"}
+,{"stream_name":"stdout","time":4548.110502344,"data":"11  8ZNQ_12       C     12  10.173532   4.487577  -9.005623  133.055429   \n"}
+,{"stream_name":"stdout","time":4548.110504807,"data":"12  8ZNQ_13       C     13   9.862662   3.063457 -14.381444  129.211670   \n"}
+,{"stream_name":"stdout","time":4548.11050721,"data":"13  8ZNQ_14       U     14   7.554797   4.468687 -18.519453  126.844748   \n"}
+,{"stream_name":"stdout","time":4548.110509486,"data":"14  8ZNQ_15       U     15   8.333268  11.882386 -21.822098  125.691558   \n"}
+,{"stream_name":"stdout","time":4548.110511803,"data":"15  8ZNQ_16       U     16   0.148880  11.243857 -20.958102  132.049298   \n"}
+,{"stream_name":"stdout","time":4548.1105142,"data":"16  8ZNQ_17       U     17  -3.649644   8.231800 -15.697784  139.140540   \n"}
+,{"stream_name":"stdout","time":4548.110516576,"data":"17  8ZNQ_18       G     18  -0.869416   2.166376 -16.321267  143.483673   \n"}
+,{"stream_name":"stdout","time":4548.110518839,"data":"18  8ZNQ_19       G     19   2.342325  -0.755621 -13.478185  147.209610   \n"}
+,{"stream_name":"stdout","time":4548.110521196,"data":"19  8ZNQ_20       C     20   5.657730  -1.837619  -9.216892  149.672977   \n"}
+,{"stream_name":"stdout","time":4548.110523599,"data":"\n"}
+,{"stream_name":"stdout","time":4548.110525752,"data":"           y_2         z_2        x_3        y_3        z_3        x_4  \\\n"}
+,{"stream_name":"stdout","time":4548.110528248,"data":"0   184.345893  165.947318   6.807474 -14.117133   9.540752 -14.185090   \n"}
+,{"stream_name":"stdout","time":4548.110530597,"data":"1   184.627460  166.238905   1.947023 -12.312821  10.862600 -11.509432   \n"}
+,{"stream_name":"stdout","time":4548.110532934,"data":"2   185.987235  168.879651  -1.329791  -7.924165  12.293246  -6.603458   \n"}
+,{"stream_name":"stdout","time":4548.11053525,"data":"3   187.681911  173.650945  -2.172525  -2.434832  12.028301  -1.200902   \n"}
+,{"stream_name":"stdout","time":4548.110573193,"data":"4   190.366833  177.225852  -0.794073   1.922173   9.349121   2.718306   \n"}
+,{"stream_name":"stdout","time":4548.110578188,"data":"5   194.195924  179.488092   1.584314   4.794010   5.433321   5.533352   \n"}
+,{"stream_name":"stdout","time":4548.1105821,"data":"6   198.192563  182.179013   3.684764   5.452117   0.985993   6.567718   \n"}
+,{"stream_name":"stdout","time":4548.110586382,"data":"7   200.936424  181.912838   8.441807   7.979164  -2.968955  10.355997   \n"}
+,{"stream_name":"stdout","time":4548.110589952,"data":"8   200.828961  180.894781   8.607696   3.812326  -6.244676   2.365894   \n"}
+,{"stream_name":"stdout","time":4548.110593467,"data":"9   199.827210  177.865006   5.929059  -0.759530  -8.609074  -1.674954   \n"}
+,{"stream_name":"stdout","time":4548.110597007,"data":"10  196.775094  175.885522   1.196355  -3.422159 -10.366576  -3.300196   \n"}
+,{"stream_name":"stdout","time":4548.110602202,"data":"11  201.245232  176.281318  -4.125053  -2.838337 -11.466583  -2.000326   \n"}
+,{"stream_name":"stdout","time":4548.110605819,"data":"12  199.330526  177.472297  -8.704247   0.348972 -12.521378   1.663363   \n"}
+,{"stream_name":"stdout","time":4548.110610997,"data":"13  201.544517  175.749944 -10.954031   6.322965 -17.590073   6.987944   \n"}
+,{"stream_name":"stdout","time":4548.110614945,"data":"14  200.116968  173.908768 -13.330070   6.384401  -9.904716   8.807327   \n"}
+,{"stream_name":"stdout","time":4548.110618984,"data":"15  200.560529  170.182916  -6.649036   9.484850 -12.364367   9.870543   \n"}
+,{"stream_name":"stdout","time":4548.110623233,"data":"16  199.502128  172.132817  -6.523873  16.541725  -7.437342  17.360935   \n"}
+,{"stream_name":"stdout","time":4548.110627698,"data":"17  196.658121  171.423274  -9.861237   9.226397  -7.149597  11.471970   \n"}
+,{"stream_name":"stdout","time":4548.110632276,"data":"18  192.636295  168.812853  -9.565853   4.081190  -5.688254   6.593178   \n"}
+,{"stream_name":"stdout","time":4548.110636446,"data":"19  189.378114  164.609829  -7.468072  -0.997986  -4.936506   1.394424   \n"}
+,{"stream_name":"stdout","time":4548.110640055,"data":"\n"}
+,{"stream_name":"stdout","time":4548.110643485,"data":"         y_4        z_4        x_5        y_5        z_5  \n"}
+,{"stream_name":"stdout","time":4548.110646992,"data":"0  -1.822003  10.856150  -3.828002  -6.231516 -17.736465  \n"}
+,{"stream_name":"stdout","time":4548.110650489,"data":"1   2.831137  10.368052  -7.245135  -6.607382 -13.610305  \n"}
+,{"stream_name":"stdout","time":4548.110653867,"data":"2   5.418830  10.226254  -8.245136  -7.941626  -8.285300  \n"}
+,{"stream_name":"stdout","time":4548.110657229,"data":"3   5.230748   9.319294  -6.187958  -8.764270  -3.216650  \n"}
+,{"stream_name":"stdout","time":4548.110662473,"data":"4   2.699139   6.985501  -2.140049  -7.739979  -0.031078  \n"}
+,{"stream_name":"stdout","time":4548.110669067,"data":"5  -1.034335   3.920513   2.571327  -5.410203   1.642926  \n"}
+,{"stream_name":"stdout","time":4548.110683983,"data":"6  -4.182197   0.029298   6.577362  -2.058040   1.988084  \n"}
+,{"stream_name":"stdout","time":4548.110688067,"data":"7  -8.301104  -3.499740  12.305267   0.305938   5.515185  \n"}
+,{"stream_name":"stdout","time":4548.110692061,"data":"8  -8.928344  -4.503180  10.962111   3.071229  -1.801307  \n"}
+,{"stream_name":"stdout","time":4548.110695286,"data":"9  -6.609944  -7.943257   7.942863   7.592525  -3.640139  \n"}
+,{"stream_name":"stdout","time":4548.110698595,"data":"10 -2.516191 -11.329743   3.977560  11.452394  -2.869735  \n"}
+,{"stream_name":"stdout","time":4548.110701843,"data":"11  1.754442 -14.306107   0.708246  13.819950   0.598948  \n"}
+,{"stream_name":"stdout","time":4548.110713544,"data":"12  5.084043 -16.978949  -1.564141  14.838612   5.436422  \n"}
+,{"stream_name":"stdout","time":4548.110716964,"data":"13  5.818770 -23.318264  -0.717125  14.943951  10.486864  \n"}
+,{"stream_name":"stdout","time":4548.11072152,"data":"14  9.354634 -16.218323  -3.744565  14.276794  15.999039  \n"}
+,{"stream_name":"stdout","time":4548.110725027,"data":"15  1.928989 -17.277836   4.150636  12.993526  14.825565  \n"}
+,{"stream_name":"stdout","time":4548.110728517,"data":"16  0.448723 -13.280346   6.602951   6.197374  17.431437  \n"}
+,{"stream_name":"stdout","time":4548.110732172,"data":"17  5.475405 -13.043966  -0.148326   8.466873  13.693093  \n"}
+,{"stream_name":"stdout","time":4548.110735332,"data":"18  7.245074 -11.433475  -2.775071   8.359509   8.974145  \n"}
+,{"stream_name":"stdout","time":4548.110738682,"data":"19  6.825501  -9.715858  -3.927073   8.434448   3.380973  \n"}
+,{"stream_name":"stderr","time":4554.12947586,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4554.129513115,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4554.29976129,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4554.299788551,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4554.926989732,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":4554.927022778,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":4554.966795642,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":4555.29240086,"data":"[NbConvertApp] Writing 93212 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":4557.665470412,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":4557.665522128,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":4557.691293582,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4558.704903092,"data":"[NbConvertApp] Writing 529812 bytes to __results__.html\n"}
+]

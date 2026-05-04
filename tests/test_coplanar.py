@@ -1,0 +1,41 @@
+import numpy as np
+
+C = np.random.rand(10, 3)
+L = 10
+strength = 1.0
+
+active_pairs = np.zeros((L, L), dtype=bool)
+active_pairs[2, 7] = True
+active_pairs[7, 2] = True
+
+pairs_i, pairs_j = np.where(np.triu(active_pairs))
+if len(pairs_i) > 0:
+    valid = (pairs_i > 0) & (pairs_i < L - 1) & (pairs_j > 0) & (pairs_j < L - 1)
+    pi = pairs_i[valid]
+    pj = pairs_j[valid]
+    
+    if len(pi) > 0:
+        v_ij = C[pj] - C[pi]
+        t_i = C[pi+1] - C[pi-1]
+        t_j = C[pj+1] - C[pj-1]
+        
+        plane_dir = t_i - t_j
+        n = np.cross(v_ij, plane_dir)
+        n_norm = np.linalg.norm(n, axis=1, keepdims=True) + 1e-6
+        n = n / n_norm
+        
+        out_pi_plus = np.sum((C[pi+1] - C[pi]) * n, axis=1, keepdims=True) * n
+        out_pi_minus = np.sum((C[pi-1] - C[pi]) * n, axis=1, keepdims=True) * n
+        out_pj_plus = np.sum((C[pj+1] - C[pj]) * n, axis=1, keepdims=True) * n
+        out_pj_minus = np.sum((C[pj-1] - C[pj]) * n, axis=1, keepdims=True) * n
+        
+        coplanar_strength = 0.05 * strength
+        np.add.at(C, pi+1, -out_pi_plus * coplanar_strength)
+        np.add.at(C, pi-1, -out_pi_minus * coplanar_strength)
+        np.add.at(C, pj+1, -out_pj_plus * coplanar_strength)
+        np.add.at(C, pj-1, -out_pj_minus * coplanar_strength)
+        
+        np.add.at(C, pi, (out_pi_plus + out_pi_minus) * (coplanar_strength * 0.5))
+        np.add.at(C, pj, (out_pj_plus + out_pj_minus) * (coplanar_strength * 0.5))
+
+print("Success")

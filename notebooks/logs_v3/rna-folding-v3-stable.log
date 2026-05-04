@@ -1,0 +1,65 @@
+[{"stream_name":"stderr","time":6.429327495,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.429378392,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.429383819,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.429387627,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.006356206,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.006390398,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.006394334,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.006397034,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.226610326,"data":"Installing biopython from /kaggle/input/datasets/ogurtsov/biopython/biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":9.954527806,"data":"Looking in links: /kaggle/input/biopython\n"}
+,{"stream_name":"stderr","time":9.961859079,"data":"ERROR: biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":10.034439778,"data":"Looking in links: /kaggle/input/biopython\n"}
+,{"stream_name":"stderr","time":10.035321234,"data":"ERROR: biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":10.035337081,"data":"\n"}
+,{"stream_name":"stderr","time":10.035341373,"data":"ERROR: biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":10.264828752,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":10.264858394,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":10.264864242,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":10.264894101,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":10.264981134,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":10.265150712,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":10.265453304,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":10.265479926,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":10.265491088,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":10.265495171,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":10.265499003,"data":"ModuleNotFoundError                       Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":10.265502859,"data":"/tmp/ipykernel_24/2390764261.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":10.265506947,"data":"     12 try:\n"}
+,{"stream_name":"stderr","time":10.265510332,"data":"---\u003e 13     import Bio\n"}
+,{"stream_name":"stderr","time":10.265513947,"data":"     14     print(\"Biopython already installed.\")\n"}
+,{"stream_name":"stderr","time":10.265528877,"data":"\n"}
+,{"stream_name":"stderr","time":10.265532743,"data":"ModuleNotFoundError: No module named 'Bio'\n"}
+,{"stream_name":"stderr","time":10.265536416,"data":"\n"}
+,{"stream_name":"stderr","time":10.265539966,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":10.265543634,"data":"\n"}
+,{"stream_name":"stderr","time":10.26554877,"data":"CalledProcessError                        Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":10.26555246,"data":"/tmp/ipykernel_24/2390764261.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":10.265556254,"data":"     18         if os.path.exists(path):\n"}
+,{"stream_name":"stderr","time":10.26556161,"data":"     19             print(f\"Installing biopython from {path}...\")\n"}
+,{"stream_name":"stderr","time":10.265565558,"data":"---\u003e 20             subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", path, \"--no-index\", \"--find-links=/kaggle/input/biopython\"])\n"}
+,{"stream_name":"stderr","time":10.26557094,"data":"     21             installed = True\n"}
+,{"stream_name":"stderr","time":10.265575306,"data":"     22             break\n"}
+,{"stream_name":"stderr","time":10.265579749,"data":"\n"}
+,{"stream_name":"stderr","time":10.26558388,"data":"/usr/lib/python3.12/subprocess.py in check_call(*popenargs, **kwargs)\n"}
+,{"stream_name":"stderr","time":10.265587643,"data":"    411         if cmd is None:\n"}
+,{"stream_name":"stderr","time":10.265591148,"data":"    412             cmd = popenargs[0]\n"}
+,{"stream_name":"stderr","time":10.265594703,"data":"--\u003e 413         raise CalledProcessError(retcode, cmd)\n"}
+,{"stream_name":"stderr","time":10.265598446,"data":"    414     return 0\n"}
+,{"stream_name":"stderr","time":10.265601932,"data":"    415 \n"}
+,{"stream_name":"stderr","time":10.265605401,"data":"\n"}
+,{"stream_name":"stderr","time":10.265609753,"data":"CalledProcessError: Command '['/usr/bin/python3', '-m', 'pip', 'install', '/kaggle/input/datasets/ogurtsov/biopython/biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl', '--no-index', '--find-links=/kaggle/input/biopython']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":10.265615248,"data":"\n"}
+,{"stream_name":"stderr","time":12.512402381,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":12.512441771,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":12.661310622,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":12.661336582,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":13.255435251,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":13.255488151,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":13.287994922,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":13.587489435,"data":"[NbConvertApp] Writing 54253 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":15.971939514,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":15.971994064,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":15.995006674999999,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16.963586052,"data":"[NbConvertApp] Writing 462342 bytes to __results__.html\n"}
+]

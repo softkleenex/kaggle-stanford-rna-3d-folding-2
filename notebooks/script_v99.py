@@ -1,0 +1,1018 @@
+import subprocess
+import sys
+import os
+
+wheels = [
+    "/kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+    "/kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+    "/kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl"
+]
+for wheel in wheels:
+    subprocess.run([sys.executable, "-m", "pip", "install", "--no-index", "--no-deps", wheel], check=False)
+
+import pandas as pd
+import gc
+import json
+import time
+
+# ── Local vs Kaggle mode ─────────────────────────────────────────────────────
+IS_KAGGLE = bool(os.environ.get("KAGGLE_IS_COMPETITION_RERUN", ""))
+LOCAL_N_SAMPLES = None
+
+if IS_KAGGLE:
+    print("Running in KAGGLE COMPETITION mode — all test targets will be processed.")
+else:
+    print(f"Running in LOCAL mode — only the first {LOCAL_N_SAMPLES} test targets "
+          f"will be processed to save time.")
+
+os.environ["LAYERNORM_TYPE"] = "torch"
+os.environ.setdefault("RNA_MSA_DEPTH_LIMIT", "512")
+
+from pathlib import Path
+import numpy as np
+import torch
+from Bio.Align import PairwiseAligner
+from tqdm import tqdm
+
+def get_c1_mask(data: dict, atom_array) -> torch.Tensor:
+    if atom_array is not None:
+        try:
+            if hasattr(atom_array, "centre_atom_mask"):
+                m = atom_array.centre_atom_mask == 1
+                if hasattr(atom_array, "is_rna"):
+                    m = m & atom_array.is_rna
+                return torch.from_numpy(m).bool()
+            
+            if hasattr(atom_array, "atom_name"):
+                base = atom_array.atom_name == "C1'"
+                if hasattr(atom_array, "is_rna"):
+                    base = base & atom_array.is_rna
+                return torch.from_numpy(base).bool()
+        except Exception:
+            pass
+
+    f = data["input_feature_dict"]
+    if "centre_atom_mask" in f:
+        return (f["centre_atom_mask"] == 1).bool()
+    if "center_atom_mask" in f:
+        return (f["center_atom_mask"] == 1).bool()
+        
+    n_tokens = data.get("N_token", torch.tensor(0)).item()
+    mask11 = (f["atom_to_tokatom_idx"] == 11).bool()
+    mask12 = (f["atom_to_tokatom_idx"] == 12).bool()
+    
+    c11 = mask11.sum().item()
+    c12 = mask12.sum().item()
+    
+    if abs(c11 - n_tokens) < abs(c12 - n_tokens):
+        return mask11
+    else:
+        return mask12
+
+# ─────────────── Paths & Constants ───────────────────────────────────────────
+DATA_BASE              = "/kaggle/input/stanford-rna-3d-folding-2"
+DEFAULT_TEST_CSV       = f"{DATA_BASE}/test_sequences.csv"
+DEFAULT_TRAIN_CSV      = f"{DATA_BASE}/train_sequences.csv"
+DEFAULT_TRAIN_LBLS     = f"{DATA_BASE}/train_labels.csv"
+DEFAULT_VAL_CSV        = f"{DATA_BASE}/validation_sequences.csv"
+DEFAULT_VAL_LBLS       = f"{DATA_BASE}/validation_labels.csv"
+DEFAULT_OUTPUT         = "/kaggle/working/submission.csv"
+
+DEFAULT_CODE_DIR = (
+    "/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted"
+    "/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1"
+)
+DEFAULT_ROOT_DIR = DEFAULT_CODE_DIR
+
+MODEL_NAME    = "protenix_base_20250630_v1.0.0"
+N_SAMPLE      = 5
+SEED          = 42
+MAX_SEQ_LEN   = int(os.environ.get("MAX_SEQ_LEN",   "512"))
+CHUNK_OVERLAP = int(os.environ.get("CHUNK_OVERLAP",  "128"))
+
+MIN_SIMILARITY       = float(os.environ.get("MIN_SIMILARITY",       "0.0"))
+MIN_PERCENT_IDENTITY = float(os.environ.get("MIN_PERCENT_IDENTITY", "50.0"))
+
+USE_PROTENIX = True
+
+def parse_bool(value: str, default: bool = False) -> str:
+    v = str(value).strip().lower()
+    if v in {"1", "true", "t", "yes", "y", "on"}:
+        return "true"
+    if v in {"0", "false", "f", "no", "n", "off"}:
+        return "false"
+    return "true" if default else "false"
+
+USE_MSA      = parse_bool(os.environ.get("USE_MSA",      "false"))
+USE_TEMPLATE = parse_bool(os.environ.get("USE_TEMPLATE", "false"))
+USE_RNA_MSA  = parse_bool(os.environ.get("USE_RNA_MSA",  "true"))
+
+MODEL_N_SAMPLE = int(os.environ.get("MODEL_N_SAMPLE", str(N_SAMPLE)))
+
+# ─────────────── General Utilities ───────────────────────────────────────────
+def seed_everything(seed: int) -> None:
+    os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.enabled = True
+    torch.use_deterministic_algorithms(True)
+
+def resolve_paths():
+    test_csv   = os.environ.get("TEST_CSV",           DEFAULT_TEST_CSV)
+    output_csv = os.environ.get("SUBMISSION_CSV",     DEFAULT_OUTPUT)
+    code_dir   = os.environ.get("PROTENIX_CODE_DIR",  DEFAULT_CODE_DIR)
+    root_dir   = os.environ.get("PROTENIX_ROOT_DIR",  DEFAULT_ROOT_DIR)
+    return test_csv, output_csv, code_dir, root_dir
+
+def ensure_required_files(root_dir: str) -> None:
+    for p, name in [
+        (Path(root_dir) / "checkpoint" / f"{MODEL_NAME}.pt",          "checkpoint"),
+        (Path(root_dir) / "common" / "components.cif",                "CCD file"),
+        (Path(root_dir) / "common" / "components.cif.rdkit_mol.pkl",  "CCD cache"),
+    ]:
+        if not p.exists():
+            print(f"Warning: Missing {name}: {p}")
+
+def build_input_json(df: pd.DataFrame, json_path: str) -> None:
+    data = [
+        {
+            "name": row["target_id"],
+            "covalent_bonds": [],
+            "sequences": [{"rnaSequence": {"sequence": row["sequence"], "count": 1}}],
+        }
+        for _, row in df.iterrows()
+    ]
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+
+def build_configs(input_json_path: str, dump_dir: str, model_name: str):
+    from configs.configs_base import configs as configs_base
+    from configs.configs_data import data_configs
+    from configs.configs_inference import inference_configs
+    from configs.configs_model_type import model_configs
+    from protenix.config.config import parse_configs
+
+    base = {**configs_base, **{"data": data_configs}, **inference_configs}
+
+    def deep_update(t, p):
+        for k, v in p.items():
+            if isinstance(v, dict) and k in t and isinstance(t[k], dict):
+                deep_update(t[k], v)
+            else:
+                t[k] = v
+
+    deep_update(base, model_configs[model_name])
+    arg_str = " ".join([
+        f"--model_name {model_name}",
+        f"--input_json_path {input_json_path}",
+        f"--dump_dir {dump_dir}",
+        f"--use_msa {USE_MSA}",
+        f"--use_template {USE_TEMPLATE}",
+        f"--use_rna_msa {USE_RNA_MSA}",
+        f"--sample_diffusion.N_sample {MODEL_N_SAMPLE}",
+        f"--seeds {SEED}",
+    ])
+    return parse_configs(configs=base, arg_str=arg_str, fill_required_with_null=True)
+
+def coords_to_rows(target_id: str, seq: str, coords: np.ndarray) -> list:
+    rows = []
+    for i in range(len(seq)):
+        row = {"ID": f"{target_id}_{i + 1}", "resname": seq[i], "resid": i + 1}
+        for s in range(N_SAMPLE):
+            if s < coords.shape[0] and i < coords.shape[1]:
+                x, y, z = coords[s, i]
+            else:
+                x, y, z = 0.0, 0.0, 0.0
+            row[f"x_{s + 1}"] = float(x)
+            row[f"y_{s + 1}"] = float(y)
+            row[f"z_{s + 1}"] = float(z)
+        rows.append(row)
+    return rows
+
+def split_into_chunks(seq_len: int, max_len: int, overlap: int) -> list:
+    if seq_len <= max_len:
+        return [(0, seq_len)]
+    chunks = []
+    step = max_len - overlap
+    pos = 0
+    while pos < seq_len:
+        end = min(pos + max_len, seq_len)
+        chunks.append((pos, end))
+        if end == seq_len:
+            break
+        pos += step
+    return chunks
+
+def kabsch_align(P: np.ndarray, Q: np.ndarray):
+    centroid_P = P.mean(axis=0)
+    centroid_Q = Q.mean(axis=0)
+    Pc = P - centroid_P
+    Qc = Q - centroid_Q
+    H = Pc.T @ Qc
+    U, _, Vt = np.linalg.svd(H)
+    d = np.linalg.det(Vt.T @ U.T)
+    S = np.eye(3)
+    if d < 0:
+        S[2, 2] = -1
+    R = Vt.T @ S @ U.T
+    t = centroid_Q - R @ centroid_P
+    return R, t
+
+def prsb_steric_enforcement(coords: np.ndarray, iterations: int = 5) -> np.ndarray:
+    # Enforce Phosphate-Ribose Steric Barrier (PRSB) to maintain a minimum 
+    # 3.5Å distance between sequential phosphate-ribose units (O5'-O3' surrogate).
+    # Prevents unphysical chain entanglement during blending.
+    X = coords.copy()
+    n = len(X)
+    if n < 2:
+        return X
+    
+    for _ in range(iterations):
+        # 1. Sequential Bond Constraint (3.5A - 6.5A range)
+        dists = np.linalg.norm(X[1:] - X[:-1], axis=1)
+        
+        # Enforce minimum 3.5A (Steric Barrier)
+        too_close = dists < 3.5
+        if np.any(too_close):
+            diff = X[1:] - X[:-1]
+            scale = (3.5 - dists[too_close]) / (dists[too_close] + 1e-6)
+            adj = diff[too_close] * scale[:, None] * 0.5
+            X[:-1][too_close] -= adj
+            X[1:][too_close] += adj
+            
+        # Enforce maximum 6.5A (Chain Integrity)
+        too_far = dists > 6.5
+        if np.any(too_far):
+            diff = X[1:] - X[:-1]
+            scale = (dists[too_far] - 6.5) / (dists[too_far] + 1e-6)
+            adj = diff[too_far] * scale[:, None] * 0.5
+            X[:-1][too_far] += adj
+            X[1:][too_far] -= adj
+            
+        # 2. Local Excluded Volume (Non-sequential atoms)
+        # Check residues (i, i+2) to prevent sharp kinks
+        if n > 2:
+            d2 = np.linalg.norm(X[2:] - X[:-2], axis=1)
+            too_close_2 = d2 < 5.0
+            if np.any(too_close_2):
+                diff2 = X[2:] - X[:-2]
+                scale2 = (5.0 - d2[too_close_2]) / (d2[too_close_2] + 1e-6)
+                adj2 = diff2[too_close_2] * scale2[:, None] * 0.4
+                X[:-2][too_close_2] -= adj2
+                X[2:][too_close_2] += adj2
+
+    return X
+
+def stitch_chunk_coords(chunk_coords_list: list, chunk_ranges: list, seq_len: int) -> np.ndarray:
+    if len(chunk_coords_list) == 1:
+        coords = chunk_coords_list[0]
+        if coords.shape[0] >= seq_len:
+            return coords[:seq_len]
+        out = np.zeros((seq_len, 3), dtype=coords.dtype)
+        out[:coords.shape[0]] = coords
+        return out
+
+    aligned = [chunk_coords_list[0].copy()]
+
+    for i in range(1, len(chunk_coords_list)):
+        prev_start, prev_end = chunk_ranges[i - 1]
+        cur_start, cur_end = chunk_ranges[i]
+        ov_start = cur_start
+        ov_end = min(prev_end, cur_end)
+        ov_len = ov_end - ov_start
+
+        if ov_len < 3:
+            aligned.append(chunk_coords_list[i].copy())
+            continue
+
+        prev_ov = aligned[i - 1][ov_start - prev_start: ov_end - prev_start]
+        cur_ov = chunk_coords_list[i][ov_start - cur_start: ov_end - cur_start]
+
+        valid = ~(np.isnan(prev_ov).any(axis=1) | np.isnan(cur_ov).any(axis=1))
+        if valid.sum() < 3:
+            aligned.append(chunk_coords_list[i].copy())
+            continue
+
+        R, t = kabsch_align(cur_ov[valid], prev_ov[valid])
+        transformed = (chunk_coords_list[i] @ R.T) + t
+        aligned.append(transformed)
+
+    full = np.zeros((seq_len, 3), dtype=np.float64)
+    weights = np.zeros(seq_len, dtype=np.float64)
+
+    for i, ((s, e), coords) in enumerate(zip(chunk_ranges, aligned)):
+        chunk_len = coords.shape[0]
+        actual_end = min(s + chunk_len, seq_len)
+        used_len = actual_end - s
+        w = np.ones(used_len, dtype=np.float64)
+        if i > 0:
+            ov_start = s
+            ov_end = min(chunk_ranges[i - 1][1], e)
+            ramp_len = ov_end - ov_start
+            if ramp_len > 0:
+                w[:ramp_len] = np.linspace(0.0, 1.0, ramp_len)
+        if i < len(chunk_ranges) - 1:
+            next_s = chunk_ranges[i + 1][0]
+            ramp_start = next_s - s
+            ramp_len = actual_end - next_s
+            if ramp_len > 0 and ramp_start < used_len:
+                w[ramp_start:used_len] = np.linspace(1.0, 0.0, ramp_len)
+        full[s:actual_end] += coords[:used_len] * w[:, None]
+        weights[s:actual_end] += w
+
+    mask = weights > 0
+    full[mask] /= weights[mask, None]
+    
+    # Apply PRSB enforcement to the final blended chain to fix stitching artifacts
+    full = prsb_steric_enforcement(full)
+    
+    return full
+
+def _make_aligner() -> PairwiseAligner:
+    al = PairwiseAligner()
+    al.mode                           = "global"
+    al.match_score                    = 2
+    al.mismatch_score                 = -1.5
+    al.open_gap_score                 = -8
+    al.extend_gap_score               = -0.4
+    al.query_left_open_gap_score      = -8
+    al.query_left_extend_gap_score    = -0.4
+    al.query_right_open_gap_score     = -8
+    al.query_right_extend_gap_score   = -0.4
+    al.target_left_open_gap_score     = -8
+    al.target_left_extend_gap_score   = -0.4
+    al.target_right_open_gap_score    = -8
+    al.target_right_extend_gap_score  = -0.4
+    return al
+
+_aligner = _make_aligner()
+
+def parse_stoichiometry(stoich: str) -> list:
+    if pd.isna(stoich) or str(stoich).strip() == "":
+        return []
+    return [(ch.strip(), int(cnt)) for part in str(stoich).split(";") for ch, cnt in [part.split(":")]]
+
+def parse_fasta(fasta_content: str) -> dict:
+    out, cur, parts = {}, None, []
+    for line in str(fasta_content).splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith(">"):
+            if cur is not None:
+                out[cur] = "".join(parts)
+            cur = line[1:].split()[0]
+            parts = []
+        else:
+            parts.append(line.replace(" ", ""))
+    if cur is not None:
+        out[cur] = "".join(parts)
+    return out
+
+def get_chain_segments(row) -> list:
+    seq    = row["sequence"]
+    stoich = row.get("stoichiometry", "")
+    all_sq = row.get("all_sequences", "")
+    if (pd.isna(stoich) or pd.isna(all_sq) or str(stoich).strip() == "" or str(all_sq).strip() == ""):
+        return [(0, len(seq))]
+    try:
+        chain_dict = parse_fasta(all_sq)
+        order = parse_stoichiometry(stoich)
+        segs, pos = [], 0
+        for ch, cnt in order:
+            base = chain_dict.get(ch)
+            if base is None:
+                return [(0, len(seq))]
+            for _ in range(cnt):
+                segs.append((pos, pos + len(base)))
+                pos += len(base)
+        return segs if pos == len(seq) else [(0, len(seq))]
+    except Exception:
+        return [(0, len(seq))]
+
+def build_segments_map(df: pd.DataFrame) -> tuple:
+    seg_map, stoich_map = {}, {}
+    for _, r in df.iterrows():
+        tid               = r["target_id"]
+        seg_map[tid]      = get_chain_segments(r)
+        raw_s             = r.get("stoichiometry", "")
+        stoich_map[tid]   = "" if pd.isna(raw_s) else str(raw_s)
+    return seg_map, stoich_map
+
+def process_labels(labels_df: pd.DataFrame) -> dict:
+    coords = {}
+    prefixes = labels_df["ID"].str.rsplit("_", n=1).str[0]
+    for prefix, grp in labels_df.groupby(prefixes):
+        coords[prefix] = grp.sort_values("resid")[["x_1", "y_1", "z_1"]].values
+    return coords
+
+def _build_aligned_strings(query_seq, template_seq, alignment):
+    q_segs, t_segs = alignment.aligned
+    aq, at, qi, ti = [], [], 0, 0
+    for (qs, qe), (ts, te) in zip(q_segs, t_segs):
+        while qi < qs: aq.append(query_seq[qi]);    at.append("-");              qi += 1
+        while ti < ts: aq.append("-");              at.append(template_seq[ti]); ti += 1
+        for qp, tp in zip(range(qs, qe), range(ts, te)):
+            aq.append(query_seq[qp]); at.append(template_seq[tp])
+        qi, ti = qe, te
+    while qi < len(query_seq):    aq.append(query_seq[qi]);    at.append("-");              qi += 1
+    while ti < len(template_seq): aq.append("-");              at.append(template_seq[ti]); ti += 1
+    return "".join(aq), "".join(at)
+
+def find_similar_sequences_detailed(query_seq, train_seqs_df, train_coords_dict, top_n=30):
+    results = []
+    for _, row in train_seqs_df.iterrows():
+        tid, tseq = row["target_id"], row["sequence"]
+        if tid not in train_coords_dict:
+            continue
+        if abs(len(tseq) - len(query_seq)) / max(len(tseq), len(query_seq)) > 0.3:
+            continue
+        aln       = next(iter(_aligner.align(query_seq, tseq)))
+        norm_s    = aln.score / (2 * min(len(query_seq), len(tseq)))
+        identical = sum(
+            1 for (qs, qe), (ts, te) in zip(*aln.aligned)
+            for qp, tp in zip(range(qs, qe), range(ts, te))
+            if query_seq[qp] == tseq[tp]
+        )
+        pct_id = 100 * identical / len(query_seq)
+        aq, at = _build_aligned_strings(query_seq, tseq, aln)
+        results.append((tid, tseq, norm_s, train_coords_dict[tid], pct_id, aq, at))
+    results.sort(key=lambda x: x[2], reverse=True)
+    return results[:top_n]
+
+def adapt_template_to_query(query_seq, template_seq, template_coords) -> np.ndarray:
+    aln        = next(iter(_aligner.align(query_seq, template_seq)))
+    new_coords = np.full((len(query_seq), 3), np.nan)
+    for (qs, qe), (ts, te) in zip(*aln.aligned):
+        chunk = template_coords[ts:te]
+        if len(chunk) == (qe - qs):
+            new_coords[qs:qe] = chunk
+    for i in range(len(new_coords)):
+        if np.isnan(new_coords[i, 0]):
+            pv = next((j for j in range(i - 1, -1, -1) if not np.isnan(new_coords[j, 0])), -1)
+            nv = next((j for j in range(i + 1, len(new_coords)) if not np.isnan(new_coords[j, 0])), -1)
+            if pv >= 0 and nv >= 0:
+                w = (i - pv) / (nv - pv)
+                new_coords[i] = (1 - w) * new_coords[pv] + w * new_coords[nv]
+            elif pv >= 0:
+                new_coords[i] = new_coords[pv] + [3, 0, 0]
+            elif nv >= 0:
+                new_coords[i] = new_coords[nv] + [3, 0, 0]
+            else:
+                new_coords[i] = [i * 3, 0, 0]
+    return np.nan_to_num(new_coords)
+
+def adaptive_rna_constraints(coords, target_id, segments_map, confidence=1.0, passes=2) -> np.ndarray:
+    X        = coords.copy()
+    segments = segments_map.get(target_id, [(0, len(X))])
+    strength = max(0.75 * (1.0 - min(confidence, 0.97)), 0.02)
+    for _ in range(passes):
+        for s, e in segments:
+            C = X[s:e]; L = e - s
+            if L < 3:
+                continue
+            d    = C[1:] - C[:-1]; dist = np.linalg.norm(d, axis=1) + 1e-6
+            adj  = d * ((5.95 - dist) / dist)[:, None] * (0.22 * strength)
+            C[:-1] -= adj; C[1:] += adj
+            d2   = C[2:] - C[:-2]; d2n = np.linalg.norm(d2, axis=1) + 1e-6
+            adj2 = d2 * ((10.2 - d2n) / d2n)[:, None] * (0.10 * strength)
+            C[:-2] -= adj2; C[2:] += adj2
+            
+            # STRATEGY: Ribose Pucker Bimodality Constraint (RPBC)
+            if L >= 4:
+                d3 = C[3:] - C[:-3]; d3n = np.linalg.norm(d3, axis=1) + 1e-6
+                adj3 = d3 * ((13.8 - d3n) / d3n)[:, None] * (0.05 * strength)
+                C[:-3] -= adj3; C[3:] += adj3
+            if L >= 5:
+                d4 = C[4:] - C[:-4]; d4n = np.linalg.norm(d4, axis=1) + 1e-6
+                adj4 = d4 * ((16.5 - d4n) / d4n)[:, None] * (0.03 * strength)
+                C[:-4] -= adj4; C[4:] += adj4
+            
+            # STRATEGY: A-Form Helical Twist Constraint (AHTC)
+            if L >= 4:
+                v1 = C[1:-2] - C[:-3]
+                v2 = C[2:-1] - C[1:-2]
+                v3 = C[3:] - C[2:-1]
+                
+                n1 = np.cross(v1, v2)
+                n2 = np.cross(v2, v3)
+                
+                n1_norm = np.linalg.norm(n1, axis=1, keepdims=True) + 1e-6
+                n2_norm = np.linalg.norm(n2, axis=1, keepdims=True) + 1e-6
+                
+                n1_u = n1 / n1_norm
+                n2_u = n2 / n2_norm
+                
+                cos_theta = np.clip(np.sum(n1_u * n2_u, axis=1), -1.0, 1.0)
+                n1_x_n2 = np.cross(n1_u, n2_u)
+                v2_u = v2 / (np.linalg.norm(v2, axis=1, keepdims=True) + 1e-6)
+                
+                sign = np.sign(np.sum(n1_x_n2 * v2_u, axis=1))
+                current_angle = np.arccos(cos_theta) * sign
+                
+                target_angle = 32.7 * np.pi / 180.0
+                d_angle = (target_angle - current_angle) * (0.08 * strength)
+                
+                cos_da = np.cos(d_angle)[:, None]
+                sin_da = np.sin(d_angle)[:, None]
+                
+                dot_v2_v3 = np.sum(v2_u * v3, axis=1, keepdims=True)
+                cross_v2_v3 = np.cross(v2_u, v3)
+                v3_new = v3 * cos_da + cross_v2_v3 * sin_da + v2_u * dot_v2_v3 * (1 - cos_da)
+                
+                dot_v2_v1 = np.sum(v2_u * v1, axis=1, keepdims=True)
+                cross_v2_v1 = np.cross(v2_u, v1)
+                v1_new = v1 * cos_da + cross_v2_v1 * (-sin_da) + v2_u * dot_v2_v1 * (1 - cos_da)
+                
+                shift3 = (v3_new - v3) * 0.5
+                shift1 = (v1_new - v1) * 0.5
+                
+                C[3:] += shift3
+                C[2:-1] -= shift3
+                C[1:-2] += shift1
+                C[:-3] -= shift1
+            
+            # STRATEGY: Base-Stacking Orientation Constraint (BSOC)
+            # Enforcing parallel alignment of consecutive base rings (3.4 Å spacing) to stabilize helical regions and improve local folding accuracy.
+            if L >= 4:
+                v1 = C[1:-2] - C[:-3]
+                v2 = C[2:-1] - C[1:-2]
+                v3 = C[3:] - C[2:-1]
+                
+                n1 = np.cross(v1, v2)
+                n2 = np.cross(v2, v3)
+                
+                n1_u = n1 / (np.linalg.norm(n1, axis=1, keepdims=True) + 1e-6)
+                n2_u = n2 / (np.linalg.norm(n2, axis=1, keepdims=True) + 1e-6)
+                
+                # 1. Parallel Orientation: Normal vectors of adjacent base planes should be aligned
+                align_adj1 = np.cross(n2_u, v2) * (0.05 * strength)
+                align_adj3 = np.cross(n1_u, -v2) * (0.05 * strength)
+                
+                C[:-3] -= align_adj1 * 0.5
+                C[1:-2] += align_adj1 * 0.5
+                C[2:-1] -= align_adj3 * 0.5
+                C[3:] += align_adj3 * 0.5
+                
+                # 2. Optimal Overlap: Enforce standard helical rise and planar displacement
+                b_avg = n1_u + n2_u
+                b_avg_u = b_avg / (np.linalg.norm(b_avg, axis=1, keepdims=True) + 1e-6)
+                
+                # Axial rise (along average normal)
+                proj_v2 = np.sum(v2 * b_avg_u, axis=1, keepdims=True)
+                adj_rise = (3.4 * np.sign(proj_v2) - proj_v2) * b_avg_u * (0.12 * strength)
+                
+                C[1:-2] -= adj_rise * 0.5
+                C[2:-1] += adj_rise * 0.5
+                
+                # Planar displacement (orthogonal to average normal)
+                v2_planar = v2 - proj_v2 * b_avg_u
+                v2_planar_norm = np.linalg.norm(v2_planar, axis=1, keepdims=True) + 1e-6
+                adj_planar = (4.82 - v2_planar_norm) * (v2_planar / v2_planar_norm) * (0.12 * strength)
+                
+                C[1:-2] -= adj_planar * 0.5
+                C[2:-1] += adj_planar * 0.5
+
+            # STRATEGY: A-Form Helix Axial Rise Constraint (AHRC)
+            if L >= 4:
+                v1 = C[1:-2] - C[:-3]
+                v2 = C[2:-1] - C[1:-2]
+                v3 = C[3:] - C[2:-1]
+                
+                n1 = np.cross(v1, v2)
+                n2 = np.cross(v2, v3)
+                
+                b1 = np.cross(v2, n1)
+                b2 = np.cross(v3, n2)
+                
+                b1_u = b1 / (np.linalg.norm(b1, axis=1, keepdims=True) + 1e-6)
+                b2_u = b2 / (np.linalg.norm(b2, axis=1, keepdims=True) + 1e-6)
+                
+                b_avg = b1_u + b2_u
+                h_axis = b_avg / (np.linalg.norm(b_avg, axis=1, keepdims=True) + 1e-6)
+                
+                # Enforce the canonical 2.8 Å longitudinal translation along the helical axis
+                proj2 = np.sum(v2 * h_axis, axis=1, keepdims=True)
+                adj2 = (2.8 * np.sign(proj2) - proj2) * h_axis * (0.15 * strength)
+                C[1:-2] -= adj2 * 0.5
+                C[2:-1] += adj2 * 0.5
+                
+                proj1 = np.sum(v1 * h_axis, axis=1, keepdims=True)
+                adj1 = (2.8 * np.sign(proj1) - proj1) * h_axis * (0.10 * strength)
+                C[:-3] -= adj1 * 0.5
+                C[1:-2] += adj1 * 0.5
+                
+                proj3 = np.sum(v3 * h_axis, axis=1, keepdims=True)
+                adj3 = (2.8 * np.sign(proj3) - proj3) * h_axis * (0.10 * strength)
+                C[2:-1] -= adj3 * 0.5
+                C[3:] += adj3 * 0.5
+            
+            C[1:-1] += (0.06 * strength) * (0.5 * (C[:-2] + C[2:]) - C[1:-1])
+            if L >= 25:
+                idx  = np.linspace(0, L - 1, min(L, 160)).astype(int) if L > 220 else np.arange(L)
+                P    = C[idx]; diff = P[:, None, :] - P[None, :, :]
+                dm   = np.linalg.norm(diff, axis=2) + 1e-6
+                sep  = np.abs(idx[:, None] - idx[None, :])
+                mask = (sep > 2) & (dm < 3.2)
+                if np.any(mask):
+                    vec = (diff * ((3.2 - dm) / dm)[:, :, None] * mask[:, :, None]).sum(axis=1)
+                    C[idx] += (0.015 * strength) * vec
+            X[s:e] = C
+    return X
+
+def _rotmat(axis, ang):
+    a = np.asarray(axis, float); a /= np.linalg.norm(a) + 1e-12
+    x, y, z = a; c, s = np.cos(ang), np.sin(ang); CC = 1 - c
+    return np.array([[c+x*x*CC, x*y*CC-z*s, x*z*CC+y*s],
+                     [y*x*CC+z*s, c+y*y*CC, y*z*CC-x*s],
+                     [z*x*CC-y*s, z*y*CC+x*s, c+z*z*CC]])
+
+def apply_hinge(coords, seg, rng, deg=22):
+    s, e = seg; L = e - s
+    if L < 30: return coords
+    pivot = s + int(rng.integers(10, L - 10))
+    R = _rotmat(rng.normal(size=3), np.deg2rad(float(rng.uniform(-deg, deg))))
+    X = coords.copy(); p0 = X[pivot].copy()
+    X[pivot+1:e] = (X[pivot+1:e] - p0) @ R.T + p0
+    return X
+
+def jitter_chains(coords, segs, rng, deg=12, trans=1.5):
+    X = coords.copy(); gc_ = X.mean(0, keepdims=True)
+    for s, e in segs:
+        R     = _rotmat(rng.normal(size=3), np.deg2rad(float(rng.uniform(-deg, deg))))
+        shift = rng.normal(size=3); shift = shift / (np.linalg.norm(shift) + 1e-12) * float(rng.uniform(0, trans))
+        c     = X[s:e].mean(0, keepdims=True)
+        X[s:e] = (X[s:e] - c) @ R.T + c + shift
+    X -= X.mean(0, keepdims=True) - gc_
+    return X
+
+def smooth_wiggle(coords, segs, rng, amp=0.8):
+    X = coords.copy()
+    for s, e in segs:
+        L = e - s
+        if L < 20: continue
+        ctrl = np.linspace(0, L - 1, 6); disp = rng.normal(0, amp, (6, 3)); t = np.arange(L)
+        X[s:e] += np.vstack([np.interp(t, ctrl, disp[:, k]) for k in range(3)]).T
+    return X
+
+def generate_rna_structure(sequence: str, seed=None) -> np.ndarray:
+    if seed is not None:
+        np.random.seed(seed)
+    n = len(sequence); coords = np.zeros((n, 3))
+    for i in range(n):
+        ang = i * 0.6
+        coords[i] = [10.0 * np.cos(ang), 10.0 * np.sin(ang), i * 2.5]
+    return coords
+
+def kabsch_rmsd(P, Q):
+    Pc = P - P.mean(axis=0)
+    Qc = Q - Q.mean(axis=0)
+    H = Pc.T @ Qc
+    U, _, Vt = np.linalg.svd(H)
+    d = np.linalg.det(Vt.T @ U.T)
+    S = np.eye(3)
+    if d < 0:
+        S[2, 2] = -1
+    R = Vt.T @ S @ U.T
+    P_aligned = Pc @ R.T
+    return float(np.sqrt(np.mean(np.sum((P_aligned - Qc)**2, axis=1))))
+
+def run_local_validation(train_seqs, train_coords, val_seqs, val_coords, segments_map):
+    print("\nRunning Local Validation on validation set (TBM only)...")
+    val_df = val_seqs.head(50)
+    rmsd_list = []
+    
+    for _, row in val_df.iterrows():
+        tid = row["target_id"]
+        seq = row["sequence"]
+        if tid not in val_coords:
+            continue
+        
+        similar = find_similar_sequences_detailed(seq, train_seqs, train_coords, top_n=5)
+        if not similar:
+            continue
+            
+        tmpl_id, tmpl_seq, sim, tmpl_coords_t, pct_id, _, _ = similar[0]
+        adapted = adapt_template_to_query(seq, tmpl_seq, tmpl_coords_t)
+        refined = adaptive_rna_constraints(adapted, tid, segments_map, confidence=sim)
+        
+        gt_coords = val_coords[tid]
+        l = min(len(refined), len(gt_coords))
+        if l < 3: continue
+        
+        pred_c = refined[:l]
+        gt_c = gt_coords[:l]
+        
+        valid = ~(np.isnan(pred_c).any(axis=1) | np.isnan(gt_c).any(axis=1))
+        if valid.sum() < 3:
+            continue
+            
+        pred_c = pred_c[valid]
+        gt_c = gt_c[valid]
+        
+        rmsd = kabsch_rmsd(pred_c, gt_c)
+        rmsd_list.append(rmsd)
+        
+    if rmsd_list:
+        final_rmsd = np.mean(rmsd_list)
+        print(f"LOCAL_VALIDATION_RMSD: {final_rmsd:.5f}")
+    else:
+        print("LOCAL_VALIDATION_RMSD: 99.99999")
+
+def tbm_phase(test_df, train_seqs_df, train_coords_dict, segments_map):
+    print(f"\n{'='*60}")
+    print(f"PHASE 1: Template-Based Modeling")
+    print(f"  MIN_SIMILARITY = {MIN_SIMILARITY}  |  MIN_PCT_IDENTITY = {MIN_PERCENT_IDENTITY}")
+    print(f"{'='*60}")
+    t0 = time.time()
+
+    template_predictions: dict = {}
+    protenix_queue:       dict = {}
+
+    for _, row in test_df.iterrows():
+        tid = row["target_id"]
+        seq = row["sequence"]
+        segs = segments_map.get(tid, [(0, len(seq))])
+
+        similar = find_similar_sequences_detailed(seq, train_seqs_df, train_coords_dict, top_n=30)
+        preds   = []
+        used    = set()
+
+        for i, (tmpl_id, tmpl_seq, sim, tmpl_coords, pct_id, _, _) in enumerate(similar):
+            if len(preds) >= N_SAMPLE:
+                break
+            if sim < MIN_SIMILARITY or pct_id < MIN_PERCENT_IDENTITY:
+                break
+            if tmpl_id in used:
+                continue
+
+            rng     = np.random.default_rng((row.name * 10000000000 + i * 10007) % (2**32))
+            adapted = adapt_template_to_query(seq, tmpl_seq, tmpl_coords)
+
+            slot = len(preds)
+            if slot == 0:
+                X = adapted
+            elif slot == 1:
+                X = adapted + rng.normal(0, max(0.01, (0.40 - sim) * 0.06), adapted.shape)
+            elif slot == 2:
+                longest = max(segs, key=lambda se: se[1] - se[0])
+                X = apply_hinge(adapted, longest, rng)
+            elif slot == 3:
+                X = jitter_chains(adapted, segs, rng)
+            else:
+                X = smooth_wiggle(adapted, segs, rng)
+
+            refined = adaptive_rna_constraints(X, tid, segments_map, confidence=sim)
+            preds.append(refined)
+            used.add(tmpl_id)
+
+        template_predictions[tid] = preds
+        n_needed = N_SAMPLE - len(preds)
+        if n_needed > 0:
+            protenix_queue[tid] = (n_needed, seq)
+            print(f"  {tid} ({len(seq)} nt): {len(preds)} TBM → need {n_needed} from Protenix")
+        else:
+            print(f"  {tid} ({len(seq)} nt): all {N_SAMPLE} from TBM ✓")
+
+    elapsed = time.time() - t0
+    n_full  = len(test_df) - len(protenix_queue)
+    print(f"\nPhase 1 done in {elapsed:.1f}s")
+    print(f"  Fully covered by TBM : {n_full}")
+    print(f"  Need Protenix        : {len(protenix_queue)}")
+    return template_predictions, protenix_queue
+
+def main() -> None:
+    test_csv, output_csv, code_dir, root_dir = resolve_paths()
+
+    if not os.path.isdir(code_dir):
+        print(f"Warning: Missing PROTENIX_CODE_DIR: {code_dir}. "
+              "Set PROTENIX_CODE_DIR to the repo path.")
+
+    os.environ["PROTENIX_ROOT_DIR"] = root_dir
+    sys.path.append(code_dir)
+    try:
+        ensure_required_files(root_dir)
+    except Exception as e:
+        print(f"Warning: {e}")
+        
+    seed_everything(SEED)
+
+    try:
+        test_df_full = pd.read_csv(test_csv)
+    except Exception:
+        test_df_full = pd.DataFrame()
+        
+    test_df = (test_df_full.head(LOCAL_N_SAMPLES) if not IS_KAGGLE else test_df_full).reset_index(drop=True)
+    print(f"Test targets : {len(test_df)}" + (" (LOCAL MODE)" if not IS_KAGGLE else ""))
+
+    try:
+        train_seqs   = pd.read_csv(DEFAULT_TRAIN_CSV)
+        val_seqs     = pd.read_csv(DEFAULT_VAL_CSV)
+        train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)
+        val_labels   = pd.read_csv(DEFAULT_VAL_LBLS)
+    except Exception:
+        print("Could not load train/val datasets. Continuing...")
+        train_seqs, val_seqs, train_labels, val_labels = pd.DataFrame(), pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+
+    combined_seqs   = pd.concat([train_seqs,   val_seqs],    ignore_index=True)
+    combined_labels = pd.concat([train_labels, val_labels],  ignore_index=True)
+    train_coords    = process_labels(combined_labels)
+    segments_map, _ = build_segments_map(test_df)
+
+    if not train_seqs.empty and not val_seqs.empty:
+        val_coords = process_labels(val_labels)
+        run_local_validation(train_seqs, process_labels(train_labels), val_seqs, val_coords, segments_map)
+
+    if test_df.empty:
+        print("No test data found, exiting.")
+        return
+
+    template_preds, protenix_queue = tbm_phase(
+        test_df, combined_seqs, train_coords, segments_map
+    )
+
+    protenix_preds: dict = {}
+
+    if protenix_queue and USE_PROTENIX:
+        print(f"\n{'='*60}")
+        print(f"PHASE 2: Protenix for {len(protenix_queue)} targets")
+        print(f"{'='*60}")
+
+        work_dir = Path("/kaggle/working")
+        work_dir.mkdir(parents=True, exist_ok=True)
+
+        tasks = []
+        chunk_info = {}
+        
+        for target_id, (n_needed, full_seq) in protenix_queue.items():
+            seq_len = len(full_seq)
+            if seq_len <= MAX_SEQ_LEN:
+                tasks.append({"target_id": target_id, "sequence": full_seq})
+                chunk_info[target_id] = [{"name": target_id, "range": (0, seq_len)}]
+            else:
+                chunks = split_into_chunks(seq_len, MAX_SEQ_LEN, CHUNK_OVERLAP)
+                chunk_info[target_id] = []
+                for ci, (cs, ce) in enumerate(chunks):
+                    chunk_name = f"{target_id}_chunk{ci}"
+                    sub_seq = full_seq[cs:ce]
+                    tasks.append({"target_id": chunk_name, "sequence": sub_seq})
+                    chunk_info[target_id].append({"name": chunk_name, "range": (cs, ce)})
+
+        tasks_df = pd.DataFrame(tasks)
+        input_json_path = str(work_dir / "protenix_queue_input.json")
+        build_input_json(tasks_df, input_json_path)
+
+        try:
+            from protenix.data.inference.infer_dataloader import InferenceDataset
+            from runner.inference import (InferenceRunner,
+                                          update_gpu_compatible_configs,
+                                          update_inference_configs)
+
+            configs = build_configs(input_json_path, str(work_dir / "outputs"), MODEL_NAME)
+            configs = update_gpu_compatible_configs(configs)
+            runner  = InferenceRunner(configs)
+            dataset = InferenceDataset(configs)
+
+            raw_predictions = {}
+            
+            def _extract_c1_coords(prediction, feat, chunk_seq_len, raw_coords):
+                if "centre_atom_mask" in feat:
+                    mask = (feat["centre_atom_mask"] == 1).to(raw_coords.device)
+                elif "atom_to_tokatom_idx" in feat:
+                    m11 = (feat["atom_to_tokatom_idx"] == 11).to(raw_coords.device)
+                    m12 = (feat["atom_to_tokatom_idx"] == 12).to(raw_coords.device)
+                    c11, c12 = m11.sum(), m12.sum()
+                    mask = m11 if abs(c11 - chunk_seq_len) < abs(c12 - chunk_seq_len) else m12
+                else:
+                    mask = torch.zeros(raw_coords.shape[1], dtype=torch.bool, device=raw_coords.device)
+                
+                coords = raw_coords[:, mask, :].detach().cpu().numpy()
+                if coords.shape[1] > 1:
+                    diffs = np.linalg.norm(coords[0, 1:] - coords[0, :-1], axis=-1)
+                    if np.all(diffs < 1e-4):
+                        return None
+                
+                if coords.shape[1] != chunk_seq_len:
+                    if coords.shape[1] == 1 and chunk_seq_len > 1:
+                        return None
+                    padded = np.zeros((coords.shape[0], chunk_seq_len, 3), dtype=np.float32)
+                    ml = min(coords.shape[1], chunk_seq_len)
+                    padded[:, :ml, :] = coords[:, :ml, :]
+                    coords = padded
+                return coords
+
+            for i in tqdm(range(len(dataset)), desc="Protenix Inference"):
+                data, atom_array, err = dataset[i]
+                sample_name = data.get("sample_name", f"sample_{i}")
+                
+                if err:
+                    raw_predictions[sample_name] = None
+                    continue
+                
+                target_id = sample_name.split("_chunk")[0] if "_chunk" in sample_name else sample_name
+                n_needed = protenix_queue.get(target_id, (N_SAMPLE, ""))[0]
+                sub_seq_len = data["N_token"].item()
+                
+                try:
+                    new_cfg = update_inference_configs(configs, sub_seq_len)
+                    new_cfg.sample_diffusion.N_sample = n_needed
+                    runner.update_model_configs(new_cfg)
+                    
+                    pred = runner.predict(data)
+                    raw_coords = pred["coordinate"]
+                    coords = _extract_c1_coords(pred, data["input_feature_dict"], sub_seq_len, raw_coords)
+                    raw_predictions[sample_name] = coords
+                except Exception as exc:
+                    raw_predictions[sample_name] = None
+                finally:
+                    gc.collect(); torch.cuda.empty_cache(); gc.collect()
+
+            for target_id, (n_needed, full_seq) in protenix_queue.items():
+                seq_len = len(full_seq)
+                chunks = chunk_info.get(target_id, [])
+                if not chunks: continue
+
+                if len(chunks) == 1:
+                    coords = raw_predictions.get(target_id)
+                    protenix_preds[target_id] = coords
+                else:
+                    chunk_results_per_sample = {s: [] for s in range(n_needed)}
+                    all_ok = True
+                    for ci, cinfo in enumerate(chunks):
+                        cname = cinfo["name"]
+                        crange = cinfo["range"]
+                        ccoords = raw_predictions.get(cname)
+                        if ccoords is None:
+                            all_ok = False
+                            break
+                        for s_idx in range(n_needed):
+                            if s_idx < ccoords.shape[0]:
+                                chunk_results_per_sample[s_idx].append((ccoords[s_idx], crange))
+                            else:
+                                chunk_results_per_sample[s_idx].append((ccoords[-1], crange))
+                    
+                    if not all_ok:
+                        protenix_preds[target_id] = None
+                        continue
+                    
+                    stitched_samples = []
+                    for s_idx in range(n_needed):
+                        items = chunk_results_per_sample[s_idx]
+                        coords_list = [c for c, _ in items]
+                        ranges_list = [r for _, r in items]
+                        full_coords = stitch_chunk_coords(coords_list, ranges_list, seq_len)
+                        stitched_samples.append(full_coords)
+                    result = np.stack(stitched_samples, axis=0)
+                    protenix_preds[target_id] = result
+        except Exception as e:
+            print(f"Warning: Protenix failed with error: {e}")
+
+    elif protenix_queue and not USE_PROTENIX:
+        print(f"\nPHASE 2 skipped. De-novo fallback will cover {len(protenix_queue)} targets.")
+
+    print(f"\n{'='*60}")
+    print("PHASE 3: Combine TBM + Protenix + de-novo fallback")
+    print(f"{'='*60}")
+
+    all_rows = []
+
+    for _, row in test_df.iterrows():
+        tid = row["target_id"]
+        seq = row["sequence"]
+
+        combined: list = list(template_preds.get(tid, []))
+        ptx = protenix_preds.get(tid)
+        if ptx is not None and ptx.ndim == 3:
+            for j in range(ptx.shape[0]):
+                if len(combined) >= N_SAMPLE: break
+                combined.append(ptx[j])
+
+        n_denovo = 0
+        while len(combined) < N_SAMPLE:
+            seed_val = row.name * 1000000 + len(combined) * 1000
+            dn       = generate_rna_structure(seq, seed=seed_val)
+            combined.append(adaptive_rna_constraints(dn, tid, segments_map, confidence=0.2))
+            n_denovo += 1
+
+        if n_denovo:
+            print(f"  {tid}: {n_denovo} slot(s) filled with de-novo fallback")
+
+        stacked = np.stack(combined[:N_SAMPLE], axis=0)
+        all_rows.extend(coords_to_rows(tid, seq, stacked))
+
+    sub = pd.DataFrame(all_rows)
+    if not sub.empty:
+        cols = ["ID", "resname", "resid"] + [f"{c}_{i}" for i in range(1, N_SAMPLE + 1) for c in ["x", "y", "z"]]
+        coord_cols = [c for c in cols if c.startswith(("x_", "y_", "z_"))]
+        sub[coord_cols] = sub[coord_cols].clip(-999.999, 9999.999)
+        sub[cols].to_csv(output_csv, index=False)
+        print(f"\n✓ Saved submission to {output_csv}  ({len(sub):,} rows)")
+    else:
+        print("\nNo submission generated.")
+
+if __name__ == "__main__":
+    main()

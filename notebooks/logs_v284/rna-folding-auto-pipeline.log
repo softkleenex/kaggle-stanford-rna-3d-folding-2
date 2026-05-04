@@ -1,0 +1,46 @@
+[{"stream_name":"stderr","time":6.377274041,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.377331377,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.377338545,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.377342857,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.956762646,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.956795962,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.956799865,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.956802489,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.010729299,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":10.077485287,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":10.212890448,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":10.212930206,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":11.140133986,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":11.342280916,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":12.236637314,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":12.438780341,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":13.365474258,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":13.567593785,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":14.494593045,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":14.696720782,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":15.658295719,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":15.860523826,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":16.331073415,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":16.533723717,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":17.613860806,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":17.833394153,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":22.708481537,"data":"Running in KAGGLE COMPETITION mode — all test targets will be processed.\n"}
+,{"stream_name":"stderr","time":59.2913593,"data":"/tmp/ipykernel_24/616099929.py:449: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":59.291398734,"data":"  train_coords  = process_labels(pd.concat([pd.read_csv(DEFAULT_TRAIN_LBLS), pd.read_csv(DEFAULT_VAL_LBLS)], ignore_index=True))\n"}
+,{"stream_name":"stderr","time":59.291415404,"data":"\n"}
+,{"stream_name":"stderr","time":59.291420245,"data":"/tmp/ipykernel_24/616099929.py:449: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":59.29142511,"data":"  train_coords  = process_labels(pd.concat([pd.read_csv(DEFAULT_TRAIN_LBLS), pd.read_csv(DEFAULT_VAL_LBLS)], ignore_index=True))\n"}
+,{"stream_name":"stdout","time":1113.774601889,"data":"Saved submission to /kaggle/working/submission.csv\n"}
+,{"stream_name":"stderr","time":1117.436631323,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1117.436658944,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1117.580345741,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1117.580372004,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1118.211329276,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":1118.211367011,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":1118.243406384,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1118.532358121,"data":"[NbConvertApp] Writing 27783 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1120.910017274,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":1120.910044365,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":1120.933885126,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1121.811833709,"data":"[NbConvertApp] Writing 391773 bytes to __results__.html\n"}
+]

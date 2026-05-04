@@ -1,0 +1,1 @@
+STRATEGY: STRATEGY: Implement a 17.5 Å distance constraint between phosphorus atoms P(i) and P(j) of base-paired residues to stabilize the inter-strand backbone separation and reinforce the characteristic A-form helical diameter.

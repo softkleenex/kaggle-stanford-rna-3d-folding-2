@@ -1,0 +1,4 @@
+1. **Fix syntax errors**: Replace Jupyter magic `!pip install` with `os.system("pip install --quiet ...")` to ensure 100% syntactically valid Python 3.12.
+2. **Fix file resolution**: Implement `find_dataset_file` using `Path('/kaggle/input').rglob()` to dynamically find test/train/val CSV files, preventing `FileNotFoundError` during hidden test evaluation.
+3. **Enhance Structural Geometry**: Add `enforce_segment_geometry(coords, segments_map, target_id, bond_length=6.0)` post-processing step before final stacking. This will normalize C1'-C1' distances per chain segment, fixing shrinkage from blending and ensuring realistic geometry.
+4. **Improve A-form fallback**: Update `generate_rna_structure` with accurate parameters (2.81Å rise, 32.7° rotation) and structured noise smoothing for realism.

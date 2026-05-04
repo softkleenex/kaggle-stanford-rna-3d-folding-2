@@ -1,0 +1,12 @@
+Version | Status | Score | Idea
+v37 | FAILED | N/A | Fixed pip install magic commands syntax error in script_v37.py by replacing them with os.system calls.
+v38 | SCORED |  | Reverted dataset path definitions to dynamically use Path('/kaggle/input').rglob() instead of hardcoded strings to prevent FileNotFoundError during hidden test set execution.
+v39 | SCORED | SubmissionStatus.PENDING | Implemented `apply_chain_geometry` coordinate rescaling to normalize consecutive C1' distances to ~6.1Å, and applied it to all predictions before final submission.
+v40 | SCORED |  | Injected physics-inspired `apply_chain_geometry` post-processing to normalize consecutive C1' distances to ~6.1Å across all predictions.
+v41 | SCORED |  | v41: Applied physics-informed geometry constraints (steric clash prevention and Watson-Crick base-pairing distances) globally across all generated structures before formatting.
+v42 | FAILED | N/A | Introduced physics-informed structural variation across models in the de-novo A-form helix fallback generator to ensure realistic geometric diversity, drawing on competitor methods and using ~2.81Å rise and ~32.7° rotation.
+v43 | SCORED |  | Fixed syntax error by replacing jupyter magic `!pip install` with `os.system` calls in script_v43.py.
+v44 | SCORED |  | Applied physics-informed `adaptive_rna_constraints` to Protenix predictions post-stitching to fix geometric distortions caused by linear coordinate blending.
+v45 | FAILED | N/A | Applied 4 passes of rigorous physics-informed adaptive_rna_constraints to Protenix outputs to resolve post-stitching shrinkage and normalize bond lengths, and fixed pip install syntaxes.
+v46 | FAILED | N/A | Fixed NameError by adding import os before os.system calls in notebooks/script_v46.py.
+v47 | SCORED |  | Restored dynamic path resolution using `Path('/kaggle/input').rglob()` to find `test_sequences.csv` to prevent FileNotFoundError during Kaggle hidden test set execution.

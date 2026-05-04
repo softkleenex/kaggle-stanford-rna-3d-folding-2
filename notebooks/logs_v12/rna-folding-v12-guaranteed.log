@@ -1,0 +1,81 @@
+[{"stream_name":"stderr","time":6.2932226270000005,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.293284766,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.293289286,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.293291917,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.857022617,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.857054537,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.8570598480000005,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.857063791,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.06650682,"data":"Installing wheels...\n"}
+,{"stream_name":"stdout","time":23.050896714,"data":"Installing rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":24.682884712,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":24.885055925,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":25.335903697,"data":"Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from rdkit==2025.9.5) (2.0.2)\n"}
+,{"stream_name":"stdout","time":25.337231966,"data":"Requirement already satisfied: Pillow in /usr/local/lib/python3.12/dist-packages (from rdkit==2025.9.5) (11.3.0)\n"}
+,{"stream_name":"stdout","time":25.538036389,"data":"Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from rdkit==2025.9.5) (2.0.2)\n"}
+,{"stream_name":"stdout","time":25.538129294,"data":"Requirement already satisfied: Pillow in /usr/local/lib/python3.12/dist-packages (from rdkit==2025.9.5) (11.3.0)\n"}
+,{"stream_name":"stdout","time":27.22205036,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":27.424366088,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":28.4582247,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":28.660315004,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":28.660349929,"data":"Installing biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":29.554190779,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":29.664986864,"data":"Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from biopython==1.86) (2.0.2)\n"}
+,{"stream_name":"stdout","time":29.756276802,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":29.756308281,"data":"Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from biopython==1.86) (2.0.2)\n"}
+,{"stream_name":"stdout","time":31.532413828,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":31.734582235,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":32.617748616,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":32.819804891,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":32.819835611,"data":"Installing biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":33.714171486,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":33.91636309,"data":"Processing /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":35.021579678,"data":"INFO: pip is looking at multiple versions of biotite to determine which version is compatible with other requirements. This could take a while.\n"}
+,{"stream_name":"stderr","time":35.022169193,"data":"ERROR: Could not find a version that satisfies the requirement biotraj\u003c2.0,\u003e=1.0 (from biotite) (from versions: none)\n"}
+,{"stream_name":"stderr","time":35.022390378,"data":"ERROR: No matching distribution found for biotraj\u003c2.0,\u003e=1.0\n"}
+,{"stream_name":"stdout","time":35.114584805,"data":"INFO: pip is looking at multiple versions of biotite to determine which version is compatible with other requirements. This could take a while.\n"}
+,{"stream_name":"stderr","time":35.115418832,"data":"ERROR: Could not find a version that satisfies the requirement biotraj\u003c2.0,\u003e=1.0 (from biotite) (from versions: none)\n"}
+,{"stream_name":"stderr","time":35.115443761,"data":"ERROR: No matching distribution found for biotraj\u003c2.0,\u003e=1.0\n"}
+,{"stream_name":"stderr","time":35.115450479,"data":"\n"}
+,{"stream_name":"stderr","time":35.11545544,"data":"ERROR: Could not find a version that satisfies the requirement biotraj\u003c2.0,\u003e=1.0 (from biotite) (from versions: none)\n"}
+,{"stream_name":"stderr","time":35.115460358,"data":"ERROR: No matching distribution found for biotraj\u003c2.0,\u003e=1.0\n"}
+,{"stream_name":"stderr","time":35.338594291,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":35.338620666,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":35.338628551,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":35.338667562,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":35.338714863,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":35.338883125,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":35.33919028,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":35.339201733,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":35.339206617,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":35.339211356,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":35.339216675,"data":"CalledProcessError                        Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":35.339222173,"data":"/tmp/ipykernel_25/691628629.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":35.339238019,"data":"      5     if \"biopython\" in wheel or \"biotite\" in wheel or \"rdkit\" in wheel or \"biotraj\" in wheel:\n"}
+,{"stream_name":"stderr","time":35.339242419,"data":"      6         print(f\"Installing {os.path.basename(wheel)}...\")\n"}
+,{"stream_name":"stderr","time":35.339246279,"data":"----\u003e 7         subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", wheel, \"--no-index\"])\n"}
+,{"stream_name":"stderr","time":35.339250291,"data":"      8 \n"}
+,{"stream_name":"stderr","time":35.33925355,"data":"      9 import Bio, biotite, rdkit\n"}
+,{"stream_name":"stderr","time":35.339257297,"data":"\n"}
+,{"stream_name":"stderr","time":35.33926049,"data":"/usr/lib/python3.12/subprocess.py in check_call(*popenargs, **kwargs)\n"}
+,{"stream_name":"stderr","time":35.339263973,"data":"    411         if cmd is None:\n"}
+,{"stream_name":"stderr","time":35.339267269,"data":"    412             cmd = popenargs[0]\n"}
+,{"stream_name":"stderr","time":35.339270626,"data":"--\u003e 413         raise CalledProcessError(retcode, cmd)\n"}
+,{"stream_name":"stderr","time":35.33927416,"data":"    414     return 0\n"}
+,{"stream_name":"stderr","time":35.339277388,"data":"    415 \n"}
+,{"stream_name":"stderr","time":35.33928051,"data":"\n"}
+,{"stream_name":"stderr","time":35.339284271,"data":"CalledProcessError: Command '['/usr/bin/python3', '-m', 'pip', 'install', '/kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl', '--no-index']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":35.339290277,"data":"\n"}
+,{"stream_name":"stderr","time":37.442008054,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":37.442035614,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":37.585453015,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":37.585480844,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":38.168378744,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":38.168412561,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":38.195476014,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":38.482353364,"data":"[NbConvertApp] Writing 7670 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":40.791019455,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":40.791060719,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":40.812343592,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":41.596078235,"data":"[NbConvertApp] Writing 281135 bytes to __results__.html\n"}
+]

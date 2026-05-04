@@ -1,0 +1,301 @@
+[{"stream_name":"stderr","time":6.197647046,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.197717081,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.197721338,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.197723915,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.761291333,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.761328752,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.761334077,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.761337992,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.037399369,"data":"Searching for wheels in /kaggle/input...\n"}
+,{"stream_name":"stdout","time":16.734508045,"data":"Found 16 wheels.\n"}
+,{"stream_name":"stdout","time":16.734545012,"data":"Installing rdkit from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":22.883095572,"data":"Installing requests from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/requests-2.32.5-py3-none-any.whl...\n"}
+,{"stream_name":"stderr","time":25.951290323,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":25.951315264,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":25.951320297,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":25.951324187,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.951328035,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.95133176,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.153942079,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":26.153976402,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":26.153982531,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":26.153987626,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.153991918,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.153996021,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.154000261,"data":"\n"}
+,{"stream_name":"stderr","time":26.154004088,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":26.154025338,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":26.154030355,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":26.154034788,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.154039396,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.154043827,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stdout","time":26.227212953,"data":"Installing biopython from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":30.405435265,"data":"Installing packaging from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/packaging-26.0-py3-none-any.whl...\n"}
+,{"stream_name":"stderr","time":33.871417837,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":33.871448169,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":33.871453346,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":33.871456678,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":33.871459406,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":33.871462159000004,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":33.871464934,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074319283,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":34.074350015,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":34.074356054,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":34.07436051,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074364702,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074369107,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.07437295,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074390659,"data":"\n"}
+,{"stream_name":"stderr","time":34.074393352,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":34.074395955,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":34.07439855,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":34.074401017,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074403395,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074405852,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":34.074408304,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":34.136693812,"data":"Installing numpy from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/numpy-2.4.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stderr","time":40.624641414,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":40.624669722,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":40.624676827,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624681493,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624686378,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624691069,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624695303,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624699087,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.62470304,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.62470692,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624710693,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.624714458,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829874909,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":40.829920094,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":40.829927009,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829931393,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829935271,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829938813,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829942487,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829946885,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829951561,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829955834,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829960391,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829964565,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829969138,"data":"\n"}
+,{"stream_name":"stderr","time":40.829977436,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":40.829981496,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":40.82998563,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829990046,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829994365,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.829998034,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.830001618,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.830006095,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.830010258,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.830014503,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.830019626,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":40.830027846,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":40.888441189,"data":"Installing networkx from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/networkx-3.6.1-py3-none-any.whl...\n"}
+,{"stream_name":"stdout","time":44.001450715,"data":"Installing scipy from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stderr","time":53.989166111,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":53.989192901,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":53.989198042,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":54.191919242,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":54.191953617,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":54.191958181,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":54.191961234,"data":"\n"}
+,{"stream_name":"stderr","time":54.191964647,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":54.191970458,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":54.191974311,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":54.257137431,"data":"Installing biotite from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stderr","time":56.489414273,"data":"ERROR: Could not find a version that satisfies the requirement biotraj\u003c2.0,\u003e=1.0 (from biotite) (from versions: none)\n"}
+,{"stream_name":"stderr","time":56.489697477,"data":"ERROR: No matching distribution found for biotraj\u003c2.0,\u003e=1.0\n"}
+,{"stream_name":"stderr","time":56.693125281,"data":"ERROR: Could not find a version that satisfies the requirement biotraj\u003c2.0,\u003e=1.0 (from biotite) (from versions: none)\n"}
+,{"stream_name":"stderr","time":56.693157752,"data":"ERROR: No matching distribution found for biotraj\u003c2.0,\u003e=1.0\n"}
+,{"stream_name":"stderr","time":56.69316285,"data":"\n"}
+,{"stream_name":"stderr","time":56.693166528,"data":"ERROR: Could not find a version that satisfies the requirement biotraj\u003c2.0,\u003e=1.0 (from biotite) (from versions: none)\n"}
+,{"stream_name":"stderr","time":56.693170763,"data":"ERROR: No matching distribution found for biotraj\u003c2.0,\u003e=1.0\n"}
+,{"stream_name":"stdout","time":56.7734927,"data":"Skipping /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl: Command '['/usr/bin/python3', '-m', 'pip', 'install', '/kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl', '--no-index', '--quiet']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stdout","time":56.773542284,"data":"Installing pillow from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/pillow-12.1.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stderr","time":60.428093774,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":60.428117786,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.428123045,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.428126779,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.428130307,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.631353777,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":60.631384684,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.631390592,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.631396454,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.631399997,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.63140284,"data":"\n"}
+,{"stream_name":"stderr","time":60.631406291,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":60.63141202,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.63141625,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.631421467,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":60.631425887,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":60.694496681,"data":"Installing idna from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/idna-3.11-py3-none-any.whl...\n"}
+,{"stream_name":"stdout","time":63.682887974,"data":"Installing biotraj from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/biotraj-1.2.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":66.824025794,"data":"Installing urllib3 from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/urllib3-2.6.3-py3-none-any.whl...\n"}
+,{"stream_name":"stderr","time":70.046919461,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":70.046949387,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":70.046955158,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":70.046959652,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.046964497,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.046968941,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.046973719,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.046977942,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.04698197,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250038105,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":70.250071729,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":70.250077121,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":70.250081054,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250087005,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250090897,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250093562,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250096186,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250098841,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250101439,"data":"\n"}
+,{"stream_name":"stderr","time":70.250103737,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":70.250106662,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":70.250109179,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":70.250111669,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250126261,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250128991,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250131458,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250133907,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":70.250137237,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":70.311342456,"data":"Installing charset_normalizer from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":73.36459656,"data":"Installing msgpack from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/msgpack-1.1.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl...\n"}
+,{"stream_name":"stdout","time":76.408239993,"data":"Installing certifi from /kaggle/input/datasets/yuriygreben/stanford-rna-protenix-wheels-3-12/protenix_wheels/certifi-2026.1.4-py3-none-any.whl...\n"}
+,{"stream_name":"stdout","time":79.389233628,"data":"Installing biopython from /kaggle/input/datasets/ogurtsov/biopython/biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl...\n"}
+,{"stream_name":"stderr","time":80.188634353,"data":"ERROR: biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":80.391855895,"data":"ERROR: biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stderr","time":80.391884001,"data":"\n"}
+,{"stream_name":"stderr","time":80.391887992,"data":"ERROR: biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl is not a supported wheel on this platform.\n"}
+,{"stream_name":"stdout","time":80.447165484,"data":"Skipping /kaggle/input/datasets/ogurtsov/biopython/biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl: Command '['/usr/bin/python3', '-m', 'pip', 'install', '/kaggle/input/datasets/ogurtsov/biopython/biopython-1.85-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl', '--no-index', '--quiet']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stdout","time":80.447192284,"data":"Found DATA_BASE: /kaggle/input/competitions/stanford-rna-3d-folding-2\n"}
+,{"stream_name":"stdout","time":85.747760337,"data":"Using PROTENIX_CODE_DIR: /kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1\n"}
+,{"stream_name":"stdout","time":86.483792846,"data":"Running in LOCAL mode — only the first 2 test targets will be processed to save time.\n"}
+,{"stream_name":"stderr","time":90.024363655,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024395723,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024402028,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024420216,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024425987,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024429018,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024431407,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024434055,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024436605,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024438865,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024441512,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.02444388,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024446229,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024448827,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024451203,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024453468,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024456157,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024458512,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024462057,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024465857,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024471225,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024474457,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024479047,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.02448326,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024487607,"data":"\n"}
+,{"stream_name":"stderr","time":90.024491674,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024495907,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024503379,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024506821,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024510765,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024514243,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024517526,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024521512,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024524989,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024528356,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024532288,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.02453587,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024540912,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024544194,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024546656,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024548948,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024551608,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024554012,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024556328,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024560124,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024565392,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":90.024569177,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":90.024573837,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":90.024578295,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":90.043354063,"data":"Test targets : 2 (LOCAL MODE)\n"}
+,{"stream_name":"stdout","time":90.043381417,"data":"\n"}
+,{"stream_name":"stdout","time":90.043392905,"data":"Loading training data for TBM …\n"}
+,{"stream_name":"stderr","time":98.137452289,"data":"/tmp/ipykernel_24/1287792418.py:671: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":98.137499652,"data":"  train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)\n"}
+,{"stream_name":"stderr","time":98.137503361,"data":"\n"}
+,{"stream_name":"stderr","time":98.137505835,"data":"/tmp/ipykernel_24/1287792418.py:671: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.\n"}
+,{"stream_name":"stderr","time":98.137508538,"data":"  train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)\n"}
+,{"stream_name":"stdout","time":124.013385218,"data":"Template pool: 5744 sequences, 5744 structures\n"}
+,{"stream_name":"stdout","time":124.013423305,"data":"\n"}
+,{"stream_name":"stdout","time":124.013429412,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":124.013434615,"data":"PHASE 1: Template-Based Modeling\n"}
+,{"stream_name":"stdout","time":124.013439392,"data":"  MIN_SIMILARITY = 0.0  |  MIN_PCT_IDENTITY = 50.0\n"}
+,{"stream_name":"stdout","time":124.013443989,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":124.523068775,"data":"  8ZNQ (30 nt): 2 TBM → need 3 from Protenix\n"}
+,{"stream_name":"stdout","time":125.113946183,"data":"  9IWF (69 nt): all 5 from TBM ✓\n"}
+,{"stream_name":"stdout","time":125.113983332,"data":"\n"}
+,{"stream_name":"stdout","time":125.113989654,"data":"Phase 1 done in 1.3s\n"}
+,{"stream_name":"stdout","time":125.1140021,"data":"  Fully covered by TBM : 1\n"}
+,{"stream_name":"stdout","time":125.114006852,"data":"  Need Protenix        : 1\n"}
+,{"stream_name":"stdout","time":125.114011388,"data":"\n"}
+,{"stream_name":"stdout","time":125.114017772,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":125.114022448,"data":"PHASE 2: Protenix for 1 targets\n"}
+,{"stream_name":"stdout","time":125.114025924,"data":"============================================================\n"}
+,{"stream_name":"stderr","time":127.403494733,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":127.403520132,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":127.403528235,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":127.403602078,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":127.403669358,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":127.4038325,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":127.404145202,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":127.404160867,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":127.404166557,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":127.404171759,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":127.404176499,"data":"ModuleNotFoundError                       Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":127.404181825,"data":"/tmp/ipykernel_24/1287792418.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":127.404198204,"data":"    889 \n"}
+,{"stream_name":"stderr","time":127.404202408,"data":"    890 if __name__ == \"__main__\":\n"}
+,{"stream_name":"stderr","time":127.404206552,"data":"--\u003e 891     main()\n"}
+,{"stream_name":"stderr","time":127.404210175,"data":"    892 \n"}
+,{"stream_name":"stderr","time":127.40421368,"data":"    893 \n"}
+,{"stream_name":"stderr","time":127.404217634,"data":"\n"}
+,{"stream_name":"stderr","time":127.404221397,"data":"/tmp/ipykernel_24/1287792418.py in main()\n"}
+,{"stream_name":"stderr","time":127.404225422,"data":"    701         build_input_json(queue_df, input_json_path)\n"}
+,{"stream_name":"stderr","time":127.40423769,"data":"    702 \n"}
+,{"stream_name":"stderr","time":127.404241508,"data":"--\u003e 703         from protenix.data.inference.infer_dataloader import InferenceDataset\n"}
+,{"stream_name":"stderr","time":127.404245222,"data":"    704         from runner.inference import (InferenceRunner,\n"}
+,{"stream_name":"stderr","time":127.404249232,"data":"    705                                       update_gpu_compatible_configs,\n"}
+,{"stream_name":"stderr","time":127.404252996,"data":"\n"}
+,{"stream_name":"stderr","time":127.404256902,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/__init__.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":127.404261047,"data":"----\u003e 1 from .infer_dataloader import get_inference_dataloader\n"}
+,{"stream_name":"stderr","time":127.40426494,"data":"      2 from .json_maker import cif_to_input_json, merge_covalent_bonds\n"}
+,{"stream_name":"stderr","time":127.40426887,"data":"      3 from .json_parser import (\n"}
+,{"stream_name":"stderr","time":127.404272328,"data":"      4     add_entity_atom_array,\n"}
+,{"stream_name":"stderr","time":127.404275821,"data":"      5     lig_file_to_atom_info,\n"}
+,{"stream_name":"stderr","time":127.404279316,"data":"\n"}
+,{"stream_name":"stderr","time":127.404284374,"data":"/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1/protenix/data/inference/infer_dataloader.py in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":127.404287983,"data":"     22 \n"}
+,{"stream_name":"stderr","time":127.40429139,"data":"     23 import torch\n"}
+,{"stream_name":"stderr","time":127.404293815,"data":"---\u003e 24 from biotite.structure import AtomArray\n"}
+,{"stream_name":"stderr","time":127.404296225,"data":"     25 from torch.utils.data import DataLoader, Dataset, DistributedSampler\n"}
+,{"stream_name":"stderr","time":127.404298625,"data":"     26 \n"}
+,{"stream_name":"stderr","time":127.40430086,"data":"\n"}
+,{"stream_name":"stderr","time":127.404303143,"data":"ModuleNotFoundError: No module named 'biotite'\n"}
+,{"stream_name":"stderr","time":127.404305485,"data":"\n"}
+,{"stream_name":"stderr","time":129.504867254,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":129.50490025,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":129.646832334,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":129.646860122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":130.241509087,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":130.24155507,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":130.272158277,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":130.56779445,"data":"[NbConvertApp] Writing 65211 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":132.988238268,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":132.988274768,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":133.011509982,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":133.935469454,"data":"[NbConvertApp] Writing 478161 bytes to __results__.html\n"}
+]

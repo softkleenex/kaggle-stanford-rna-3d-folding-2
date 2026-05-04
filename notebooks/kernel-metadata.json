@@ -1,0 +1,18 @@
+{
+  "id": "softkleenex/rna-folding-auto-pipeline",
+  "title": "RNA Folding Auto Pipeline",
+  "code_file": "rna_folding_auto.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "false",
+  "enable_internet": "false",
+  "dataset_sources": [
+    "qiweiyin/protenix-v1-adjusted",
+    "yuriygreben/stanford-rna-protenix-wheels-3-12",
+    "kami1976/biopython-cp312",
+    "amirrezaaleyasin/biotite",
+    "amirrezaaleyasin/rdkit-2025-9-5"
+  ],
+  "competition_sources": ["stanford-rna-3d-folding-2"]
+}

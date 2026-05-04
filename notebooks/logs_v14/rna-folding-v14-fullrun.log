@@ -1,0 +1,187 @@
+[{"stream_name":"stderr","time":7.470345483,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.470417133,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.470421014,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.470423533,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.054102327,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.054140502,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.054145558,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.054151161,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.359192044,"data":"--- STEP 1: INSTALLING DEPENDENCIES ---\n"}
+,{"stream_name":"stdout","time":9.359245416,"data":"Found 15 wheels. Installing...\n"}
+,{"stream_name":"stderr","time":32.305820363,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":32.305851117,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.305856916,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.305861996,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305866541,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305871841,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305876575,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305881053,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305885535,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305980505,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305988759,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305993871,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.305998951,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.306003673,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.306008478,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.306025325,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509078423,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":32.509107183,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.50911302,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.509117615,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509121558,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509125391,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509129258,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509133063,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.50913649,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509139995,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509143915,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.50914771,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509151663,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509155038,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509158402,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509161935,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509165682,"data":"\n"}
+,{"stream_name":"stderr","time":32.509168812,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":32.509172348999996,"data":"bigframes 2.31.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.509178245,"data":"google-adk 1.21.0 requires google-cloud-bigquery-storage\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":32.509182495,"data":"ydata-profiling 4.18.1 requires numpy\u003c2.4,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509186702,"data":"ydata-profiling 4.18.1 requires scipy\u003c1.17,\u003e=1.8, but you have scipy 1.17.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509205321,"data":"google-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509209968,"data":"google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.3.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.50921406,"data":"google-colab 1.0.0 requires requests==2.32.4, but you have requests 2.32.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.50921824,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509222505,"data":"opencv-contrib-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509226882,"data":"opencv-python 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509231218,"data":"opencv-python-headless 4.12.0.88 requires numpy\u003c2.3.0,\u003e=2; python_version \u003e= \"3.9\", but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509235789,"data":"tensorflow 2.19.0 requires numpy\u003c2.2.0,\u003e=1.26.0, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509240251,"data":"numba 0.60.0 requires numpy\u003c2.1,\u003e=1.22, but you have numpy 2.4.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509244664,"data":"langchain-core 1.2.7 requires packaging\u003c26.0.0,\u003e=23.2.0, but you have packaging 26.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":32.509248784,"data":"gradio 5.50.0 requires pillow\u003c12.0,\u003e=8.0, but you have pillow 12.1.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":32.714101302,"data":"Verification: ALL libraries imported successfully!\n"}
+,{"stream_name":"stdout","time":32.714138978,"data":"--- STEP 2: RESOLVING PATHS ---\n"}
+,{"stream_name":"stdout","time":32.714142871,"data":"Using DATA_BASE: /kaggle/input/competitions/stanford-rna-3d-folding-2\n"}
+,{"stream_name":"stdout","time":33.48165748,"data":"Running in LOCAL mode — only the first 2 test targets will be processed to save time.\n"}
+,{"stream_name":"stderr","time":36.801698138,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801731618,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801736336,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801739865,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801743854,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801747495,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801751201,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801755441,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801769951,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801773591,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.80177754,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801780828,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801783908,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801787959,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801791413,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801794719,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801798746,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801802211,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801807138,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801811132,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801814618,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801817962,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801821978,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801826165,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.8018297,"data":"\n"}
+,{"stream_name":"stderr","time":36.801833106,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_open_gap_score' was renamed to 'open_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801837653,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801841289,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801844722,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_left_extend_gap_score' was renamed to 'extend_left_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801848586,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801852253,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801855466,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_open_gap_score' was renamed to 'open_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801863743,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801867049,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.80187036,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'query_right_extend_gap_score' was renamed to 'extend_right_deletion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801875171,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801878703,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801882178,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_open_gap_score' was renamed to 'open_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801886841,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801890429,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801893978,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_left_extend_gap_score' was renamed to 'extend_left_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801897866,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801901352,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801904548,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_open_gap_score' was renamed to 'open_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801908699,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.801912488,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":36.801916029,"data":"/usr/local/lib/python3.12/dist-packages/Bio/Align/__init__.py:4414: BiopythonDeprecationWarning: The attribute 'target_right_extend_gap_score' was renamed to 'extend_right_insertion_score'. This was done to be consistent with the\n"}
+,{"stream_name":"stderr","time":36.801919425,"data":"AlignmentCounts object returned by the .counts method of an Alignment object.\n"}
+,{"stream_name":"stderr","time":36.80192324,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":38.331873937,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":38.331905389,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":38.331912552,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":38.332014478,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":38.332050966,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":38.332229512,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":38.332592242,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":38.332605652,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":38.332609792,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":38.332630009,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":38.332634507,"data":"FileNotFoundError                         Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":38.332638648,"data":"/tmp/ipykernel_24/1358022890.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":38.332642532,"data":"    874 \n"}
+,{"stream_name":"stderr","time":38.332645853,"data":"    875 if __name__ == \"__main__\":\n"}
+,{"stream_name":"stderr","time":38.332649274,"data":"--\u003e 876     main()\n"}
+,{"stream_name":"stderr","time":38.332652724,"data":"    877 \n"}
+,{"stream_name":"stderr","time":38.332655967,"data":"    878 \n"}
+,{"stream_name":"stderr","time":38.332659226,"data":"\n"}
+,{"stream_name":"stderr","time":38.332662471,"data":"/tmp/ipykernel_24/1358022890.py in main()\n"}
+,{"stream_name":"stderr","time":38.332665913,"data":"    638 \n"}
+,{"stream_name":"stderr","time":38.332669203,"data":"    639     # ── Load test data ──────────────────────────────────────────────────────\n"}
+,{"stream_name":"stderr","time":38.332675875,"data":"--\u003e 640     test_df_full = pd.read_csv(test_csv)\n"}
+,{"stream_name":"stderr","time":38.332679355,"data":"    641     test_df      = (test_df_full.head(LOCAL_N_SAMPLES) if not IS_KAGGLE\n"}
+,{"stream_name":"stderr","time":38.332682907,"data":"    642                     else test_df_full).reset_index(drop=True)\n"}
+,{"stream_name":"stderr","time":38.332686339,"data":"\n"}
+,{"stream_name":"stderr","time":38.332690646,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in read_csv(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\n"}
+,{"stream_name":"stderr","time":38.332699139,"data":"   1024     kwds.update(kwds_defaults)\n"}
+,{"stream_name":"stderr","time":38.332701739,"data":"   1025 \n"}
+,{"stream_name":"stderr","time":38.332703912,"data":"-\u003e 1026     return _read(filepath_or_buffer, kwds)\n"}
+,{"stream_name":"stderr","time":38.332706224,"data":"   1027 \n"}
+,{"stream_name":"stderr","time":38.332708823,"data":"   1028 \n"}
+,{"stream_name":"stderr","time":38.332711222,"data":"\n"}
+,{"stream_name":"stderr","time":38.332713372,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in _read(filepath_or_buffer, kwds)\n"}
+,{"stream_name":"stderr","time":38.332715815,"data":"    618 \n"}
+,{"stream_name":"stderr","time":38.332717992,"data":"    619     # Create the parser.\n"}
+,{"stream_name":"stderr","time":38.332720264,"data":"--\u003e 620     parser = TextFileReader(filepath_or_buffer, **kwds)\n"}
+,{"stream_name":"stderr","time":38.332722574,"data":"    621 \n"}
+,{"stream_name":"stderr","time":38.332724786,"data":"    622     if chunksize or iterator:\n"}
+,{"stream_name":"stderr","time":38.332727031,"data":"\n"}
+,{"stream_name":"stderr","time":38.332729707,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in __init__(self, f, engine, **kwds)\n"}
+,{"stream_name":"stderr","time":38.332735029,"data":"   1618 \n"}
+,{"stream_name":"stderr","time":38.332737395,"data":"   1619         self.handles: IOHandles | None = None\n"}
+,{"stream_name":"stderr","time":38.332739671,"data":"-\u003e 1620         self._engine = self._make_engine(f, self.engine)\n"}
+,{"stream_name":"stderr","time":38.332742085,"data":"   1621 \n"}
+,{"stream_name":"stderr","time":38.332744217,"data":"   1622     def close(self) -\u003e None:\n"}
+,{"stream_name":"stderr","time":38.332746499,"data":"\n"}
+,{"stream_name":"stderr","time":38.33274861,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/parsers/readers.py in _make_engine(self, f, engine)\n"}
+,{"stream_name":"stderr","time":38.332751013,"data":"   1878                 if \"b\" not in mode:\n"}
+,{"stream_name":"stderr","time":38.332753313,"data":"   1879                     mode += \"b\"\n"}
+,{"stream_name":"stderr","time":38.332755617,"data":"-\u003e 1880             self.handles = get_handle(\n"}
+,{"stream_name":"stderr","time":38.332757953,"data":"   1881                 f,\n"}
+,{"stream_name":"stderr","time":38.332760288,"data":"   1882                 mode,\n"}
+,{"stream_name":"stderr","time":38.332762513,"data":"\n"}
+,{"stream_name":"stderr","time":38.332764664,"data":"/usr/local/lib/python3.12/dist-packages/pandas/io/common.py in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\n"}
+,{"stream_name":"stderr","time":38.332767077,"data":"    871         if ioargs.encoding and \"b\" not in ioargs.mode:\n"}
+,{"stream_name":"stderr","time":38.332769406,"data":"    872             # Encoding\n"}
+,{"stream_name":"stderr","time":38.332771612,"data":"--\u003e 873             handle = open(\n"}
+,{"stream_name":"stderr","time":38.332773861,"data":"    874                 handle,\n"}
+,{"stream_name":"stderr","time":38.33277607,"data":"    875                 ioargs.mode,\n"}
+,{"stream_name":"stderr","time":38.332778315,"data":"\n"}
+,{"stream_name":"stderr","time":38.332780457,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/stanford-rna-3d-folding-2/test_sequences.csv'\n"}
+,{"stream_name":"stderr","time":38.332782799,"data":"\n"}
+,{"stream_name":"stderr","time":40.460720761,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":40.4607573,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":40.607286828,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":40.607341978,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":41.190911066,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":41.190942233,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":41.219971282,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":41.514102589,"data":"[NbConvertApp] Writing 58663 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":43.945164202,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":43.945219119,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":43.967977752,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":44.947482323,"data":"[NbConvertApp] Writing 471602 bytes to __results__.html\n"}
+]

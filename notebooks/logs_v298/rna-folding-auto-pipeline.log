@@ -1,0 +1,42 @@
+[{"stream_name":"stderr","time":7.221202585,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.221284632,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.221289506,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.221292934,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.868807426,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.868838102,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.868842375,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.86884549,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.293726945,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":12.416104267,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":12.496272587,"data":"Processing /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":12.496297825,"data":"Installing collected packages: biopython\n"}
+,{"stream_name":"stdout","time":13.603596995,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":13.806320569,"data":"Successfully installed biopython-1.86\n"}
+,{"stream_name":"stdout","time":14.819172209,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":15.021455401,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":15.758109408,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":15.960593566,"data":"Installing collected packages: biotite\n"}
+,{"stream_name":"stdout","time":17.003303299,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":17.206144602,"data":"Successfully installed biotite-1.6.0\n"}
+,{"stream_name":"stdout","time":18.280437421,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":18.482544205,"data":"Processing /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\n"}
+,{"stream_name":"stdout","time":18.79418035,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":18.996551154,"data":"Installing collected packages: rdkit\n"}
+,{"stream_name":"stdout","time":20.199295733,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":20.402008531,"data":"Successfully installed rdkit-2025.9.5\n"}
+,{"stream_name":"stdout","time":21.464768331,"data":"Running in KAGGLE COMPETITION mode — all test targets will be processed.\n"}
+,{"stream_name":"stdout","time":25.590805988,"data":"Processing 28 sequences...\n"}
+,{"stream_name":"stdout","time":25.590832964,"data":"Submission generated.\n"}
+,{"stream_name":"stderr","time":29.544270633,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":29.544318884,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":29.699793295,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":29.699814975,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":30.413050719,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":30.413090103,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":30.443133245,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":30.771360536,"data":"[NbConvertApp] Writing 42027 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":33.504702035,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":33.504751564,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":33.530509951,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":34.59993,"data":"[NbConvertApp] Writing 415343 bytes to __results__.html\n"}
+]

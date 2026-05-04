@@ -1,0 +1,68 @@
+[{"stream_name":"stderr","time":6.181900779,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.181961707,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.181965756,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.181968289,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.742864084,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.742897184,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.742903253,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.742907207,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":7.95613245,"data":"--- STEP 1: AUTO-RESOLVING RIBONANZANET PATHS ---\n"}
+,{"stream_name":"stdout","time":25.823851733,"data":"DATA_BASE: /kaggle/input/competitions/stanford-rna-3d-folding-2\n"}
+,{"stream_name":"stdout","time":25.823884932,"data":"RIBO_2D: /kaggle/input/datasets/shujun717/ribonanzanet2d-final\n"}
+,{"stream_name":"stdout","time":25.823890239,"data":"RIBO_WEIGHTS: /kaggle/input/ribonanzanet-pretrained-checkpoint\n"}
+,{"stream_name":"stdout","time":25.823895204,"data":"RIBO_3D: /kaggle/input/ribonanzanet-3d-finetune\n"}
+,{"stream_name":"stdout","time":35.228722976,"data":"constructing 9 ConvTransformerEncoderLayers\n"}
+,{"stream_name":"stderr","time":37.130776789,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":37.130802864,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":37.13080769,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":37.130916499,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":37.130956239,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":37.131123228,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":37.131476895,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":37.131488256,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":37.131493347,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":37.131498623,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":37.131503772,"data":"FileNotFoundError                         Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":37.131509,"data":"/tmp/ipykernel_24/626423914.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":37.131514807,"data":"    135 model=finetuned_RibonanzaNet(load_config_from_yaml(f\"{ribo_2d_final}/configs/pairwise.yaml\"),pretrained=False).cuda()\n"}
+,{"stream_name":"stderr","time":37.131520615,"data":"    136 \n"}
+,{"stream_name":"stderr","time":37.131525137,"data":"--\u003e 137 model.load_state_dict(torch.load(f\"{ribo_3d_dir}/RibonanzaNet-3D.pt\"))\n"}
+,{"stream_name":"stderr","time":37.13153011,"data":"    138 \n"}
+,{"stream_name":"stderr","time":37.131534577,"data":"    139 \n"}
+,{"stream_name":"stderr","time":37.131549796,"data":"\n"}
+,{"stream_name":"stderr","time":37.131553373,"data":"/usr/local/lib/python3.12/dist-packages/torch/serialization.py in load(f, map_location, pickle_module, weights_only, mmap, **pickle_load_args)\n"}
+,{"stream_name":"stderr","time":37.131557142,"data":"   1482         pickle_load_args[\"encoding\"] = \"utf-8\"\n"}
+,{"stream_name":"stderr","time":37.131560876,"data":"   1483 \n"}
+,{"stream_name":"stderr","time":37.13156423,"data":"-\u003e 1484     with _open_file_like(f, \"rb\") as opened_file:\n"}
+,{"stream_name":"stderr","time":37.13156799,"data":"   1485         if _is_zipfile(opened_file):\n"}
+,{"stream_name":"stderr","time":37.131571625,"data":"   1486             # The zipfile reader is going to advance the current file position.\n"}
+,{"stream_name":"stderr","time":37.131575433,"data":"\n"}
+,{"stream_name":"stderr","time":37.131578453,"data":"/usr/local/lib/python3.12/dist-packages/torch/serialization.py in _open_file_like(name_or_buffer, mode)\n"}
+,{"stream_name":"stderr","time":37.131581013,"data":"    757 def _open_file_like(name_or_buffer: FileLike, mode: str) -\u003e _opener[IO[bytes]]:\n"}
+,{"stream_name":"stderr","time":37.131583935,"data":"    758     if _is_path(name_or_buffer):\n"}
+,{"stream_name":"stderr","time":37.131587546,"data":"--\u003e 759         return _open_file(name_or_buffer, mode)\n"}
+,{"stream_name":"stderr","time":37.131591058,"data":"    760     else:\n"}
+,{"stream_name":"stderr","time":37.13159349,"data":"    761         if \"w\" in mode:\n"}
+,{"stream_name":"stderr","time":37.131595876,"data":"\n"}
+,{"stream_name":"stderr","time":37.131598052,"data":"/usr/local/lib/python3.12/dist-packages/torch/serialization.py in __init__(self, name, mode)\n"}
+,{"stream_name":"stderr","time":37.131600483,"data":"    738 class _open_file(_opener[IO[bytes]]):\n"}
+,{"stream_name":"stderr","time":37.131602849,"data":"    739     def __init__(self, name: Union[str, os.PathLike[str]], mode: str) -\u003e None:\n"}
+,{"stream_name":"stderr","time":37.131605266,"data":"--\u003e 740         super().__init__(open(name, mode))\n"}
+,{"stream_name":"stderr","time":37.131607618,"data":"    741 \n"}
+,{"stream_name":"stderr","time":37.131609846,"data":"    742     def __exit__(self, *args):\n"}
+,{"stream_name":"stderr","time":37.13161216,"data":"\n"}
+,{"stream_name":"stderr","time":37.131614458,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/ribonanzanet-3d-finetune/RibonanzaNet-3D.pt'\n"}
+,{"stream_name":"stderr","time":37.131616953,"data":"\n"}
+,{"stream_name":"stderr","time":39.150782774,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":39.150812704,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":39.295535466,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":39.295562713,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":39.866938755,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":39.866972479,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":39.89545121,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":40.184836293,"data":"[NbConvertApp] Writing 16839 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":42.54979367,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":42.549833613,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":42.570972394,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":43.373057797,"data":"[NbConvertApp] Writing 313402 bytes to __results__.html\n"}
+]

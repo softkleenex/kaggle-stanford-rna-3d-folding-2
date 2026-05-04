@@ -1,0 +1,676 @@
+import os
+import sys
+import pandas as pd
+
+# Fix for missing modules in Kaggle
+os.system("pip install --no-index --no-deps /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl")
+os.system("pip install --no-index --no-deps /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl")
+os.system("pip install --no-index --no-deps /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl")
+
+IS_KAGGLE = True
+LOCAL_N_SAMPLES = None
+
+if IS_KAGGLE:
+    print("Running in KAGGLE COMPETITION mode")
+else:
+    print(f"Running in LOCAL mode")
+
+import gc
+import json
+import time
+from pathlib import Path
+import numpy as np
+import torch
+from Bio.Align import PairwiseAligner
+from tqdm import tqdm
+
+os.environ["LAYERNORM_TYPE"] = "torch"
+os.environ.setdefault("RNA_MSA_DEPTH_LIMIT", "512")
+
+DATA_BASE = "/kaggle/input/stanford-rna-3d-folding-2"
+DEFAULT_TEST_CSV = f"{DATA_BASE}/test_sequences.csv"
+DEFAULT_TRAIN_CSV = f"{DATA_BASE}/train_sequences.csv"
+DEFAULT_TRAIN_LBLS = f"{DATA_BASE}/train_labels.csv"
+DEFAULT_VAL_CSV = f"{DATA_BASE}/validation_sequences.csv"
+DEFAULT_VAL_LBLS = f"{DATA_BASE}/validation_labels.csv"
+DEFAULT_OUTPUT = "/kaggle/working/submission.csv"
+
+DEFAULT_CODE_DIR = "/kaggle/input/datasets/qiweiyin/protenix-v1-adjusted/Protenix-v1-adjust-v2/Protenix-v1-adjust-v2/Protenix-v1"
+DEFAULT_ROOT_DIR = DEFAULT_CODE_DIR
+
+MODEL_NAME = "protenix_base_20250630_v1.0.0"
+N_SAMPLE = 5
+SEED = 42
+MAX_SEQ_LEN = int(os.environ.get("MAX_SEQ_LEN", "512"))
+CHUNK_OVERLAP = int(os.environ.get("CHUNK_OVERLAP", "128"))
+
+MIN_SIMILARITY = float(os.environ.get("MIN_SIMILARITY", "0.0"))
+MIN_PERCENT_IDENTITY = float(os.environ.get("MIN_PERCENT_IDENTITY", "50.0"))
+
+USE_PROTENIX = True
+USE_MSA = "false"
+USE_TEMPLATE = "false"
+USE_RNA_MSA = "true"
+MODEL_N_SAMPLE = N_SAMPLE
+
+def seed_everything(seed: int) -> None:
+    os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    torch.use_deterministic_algorithms(True)
+
+def resolve_paths():
+    test_csv = os.environ.get("TEST_CSV", DEFAULT_TEST_CSV)
+    output_csv = os.environ.get("SUBMISSION_CSV", DEFAULT_OUTPUT)
+    code_dir = os.environ.get("PROTENIX_CODE_DIR", DEFAULT_CODE_DIR)
+    root_dir = os.environ.get("PROTENIX_ROOT_DIR", DEFAULT_ROOT_DIR)
+    return test_csv, output_csv, code_dir, root_dir
+
+def build_input_json(df: pd.DataFrame, json_path: str) -> None:
+    data = [
+        {"name": row["target_id"], "covalent_bonds": [], "sequences": [{"rnaSequence": {"sequence": row["sequence"], "count": 1}}]}
+        for _, row in df.iterrows()
+    ]
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+
+def coords_to_rows(target_id: str, seq: str, coords: np.ndarray) -> list:
+    rows = []
+    for i in range(len(seq)):
+        row = {"ID": f"{target_id}_{i + 1}", "resname": seq[i], "resid": i + 1}
+        for s in range(N_SAMPLE):
+            if s < coords.shape[0] and i < coords.shape[1]:
+                x, y, z = coords[s, i]
+            else:
+                x, y, z = 0.0, 0.0, 0.0
+            row[f"x_{s + 1}"] = float(x)
+            row[f"y_{s + 1}"] = float(y)
+            row[f"z_{s + 1}"] = float(z)
+        rows.append(row)
+    return rows
+
+def split_into_chunks(seq_len: int, max_len: int, overlap: int) -> list:
+    if seq_len <= max_len:
+        return [(0, seq_len)]
+    chunks = []
+    step = max_len - overlap
+    pos = 0
+    while pos < seq_len:
+        end = min(pos + max_len, seq_len)
+        chunks.append((pos, end))
+        if end == seq_len:
+            break
+        pos += step
+    return chunks
+
+def kabsch_align(P: np.ndarray, Q: np.ndarray):
+    centroid_P = P.mean(axis=0)
+    centroid_Q = Q.mean(axis=0)
+    Pc = P - centroid_P
+    Qc = Q - centroid_Q
+    H = Pc.T @ Qc
+    U, _, Vt = np.linalg.svd(H)
+    d = np.linalg.det(Vt.T @ U.T)
+    S = np.eye(3)
+    if d < 0:
+        S[2, 2] = -1
+    R = Vt.T @ S @ U.T
+    t = centroid_Q - R @ centroid_P
+    return R, t
+
+def enforce_spring_geometry(coords: np.ndarray, iterations=50, alpha_bond=0.3, alpha_angle=0.15, tether_strength=0.05) -> np.ndarray:
+    """Iterative Spring Geometry Enforcement (ISGE) to fix stitching shrinkage."""
+    X = coords.copy()
+    X_orig = coords.copy()
+    L = len(X)
+    if L < 3: return X
+    
+    for _ in range(iterations):
+        # Bond length ~ 5.95
+        d1 = X[1:] - X[:-1]
+        dist1 = np.linalg.norm(d1, axis=1) + 1e-8
+        err1 = (dist1 - 5.95) / dist1
+        shift1 = d1 * err1[:, None] * alpha_bond
+        X[:-1] += shift1 * 0.5
+        X[1:] -= shift1 * 0.5
+        
+        # Bond angle proxy ~ 10.2
+        if L >= 3:
+            d2 = X[2:] - X[:-2]
+            dist2 = np.linalg.norm(d2, axis=1) + 1e-8
+            err2 = (dist2 - 10.2) / dist2
+            shift2 = d2 * err2[:, None] * alpha_angle
+            X[:-2] += shift2 * 0.5
+            X[2:] -= shift2 * 0.5
+        
+        # Soft tether to original structure to prevent global drift
+        X += (X_orig - X) * tether_strength
+    return X
+
+def stitch_chunk_coords(chunk_coords_list: list, chunk_ranges: list, seq_len: int) -> np.ndarray:
+    if len(chunk_coords_list) == 1:
+        coords = chunk_coords_list[0]
+        if coords.shape[0] >= seq_len:
+            out = coords[:seq_len]
+        else:
+            out = np.zeros((seq_len, 3), dtype=coords.dtype)
+            out[:coords.shape[0]] = coords
+        return enforce_spring_geometry(out)
+
+    aligned = [chunk_coords_list[0].copy()]
+
+    for i in range(1, len(chunk_coords_list)):
+        prev_start, prev_end = chunk_ranges[i - 1]
+        cur_start, cur_end = chunk_ranges[i]
+
+        ov_start = cur_start
+        ov_end = min(prev_end, cur_end)
+        ov_len = ov_end - ov_start
+
+        if ov_len < 3:
+            aligned.append(chunk_coords_list[i].copy())
+            continue
+
+        prev_ov = aligned[i - 1][ov_start - prev_start: ov_end - prev_start]
+        cur_ov = chunk_coords_list[i][ov_start - cur_start: ov_end - cur_start]
+
+        valid = ~(np.isnan(prev_ov).any(axis=1) | np.isnan(cur_ov).any(axis=1))
+        if valid.sum() < 3:
+            aligned.append(chunk_coords_list[i].copy())
+            continue
+
+        R, t = kabsch_align(cur_ov[valid], prev_ov[valid])
+        transformed = (chunk_coords_list[i] @ R.T) + t
+        aligned.append(transformed)
+
+    full = np.zeros((seq_len, 3), dtype=np.float64)
+    weights = np.zeros(seq_len, dtype=np.float64)
+
+    for i, ((s, e), coords) in enumerate(zip(chunk_ranges, aligned)):
+        chunk_len = coords.shape[0]
+        actual_end = min(s + chunk_len, seq_len)
+        used_len = actual_end - s
+
+        w = np.ones(used_len, dtype=np.float64)
+        if i > 0:
+            ov_start = s
+            ov_end = min(chunk_ranges[i - 1][1], e)
+            ramp_len = ov_end - ov_start
+            if ramp_len > 0:
+                w[:ramp_len] = np.linspace(0.0, 1.0, ramp_len)
+
+        if i < len(chunk_ranges) - 1:
+            next_s = chunk_ranges[i + 1][0]
+            ramp_start = next_s - s
+            ramp_len = actual_end - next_s
+            if ramp_len > 0 and ramp_start < used_len:
+                w[ramp_start:used_len] = np.linspace(1.0, 0.0, ramp_len)
+
+        full[s:actual_end] += coords[:used_len] * w[:, None]
+        weights[s:actual_end] += w
+
+    mask = weights > 0
+    full[mask] /= weights[mask, None]
+
+    # Apply structural geometry enforcement
+    return enforce_spring_geometry(full)
+
+
+_aligner = PairwiseAligner()
+_aligner.mode = "global"
+_aligner.match_score = 2
+_aligner.mismatch_score = -1.5
+_aligner.open_gap_score = -8
+_aligner.extend_gap_score = -0.4
+_aligner.query_left_open_gap_score = -8
+_aligner.query_left_extend_gap_score = -0.4
+_aligner.query_right_open_gap_score = -8
+_aligner.query_right_extend_gap_score = -0.4
+_aligner.target_left_open_gap_score = -8
+_aligner.target_left_extend_gap_score = -0.4
+_aligner.target_right_open_gap_score = -8
+_aligner.target_right_extend_gap_score = -0.4
+
+def parse_stoichiometry(stoich: str) -> list:
+    if pd.isna(stoich) or str(stoich).strip() == "": return []
+    return [(ch.strip(), int(cnt)) for part in str(stoich).split(";") for ch, cnt in [part.split(":")]]
+
+def parse_fasta(fasta_content: str) -> dict:
+    out, cur, parts = {}, None, []
+    for line in str(fasta_content).splitlines():
+        line = line.strip()
+        if not line: continue
+        if line.startswith(">"):
+            if cur is not None: out[cur] = "".join(parts)
+            cur = line[1:].split()[0]
+            parts = []
+        else:
+            parts.append(line.replace(" ", ""))
+    if cur is not None: out[cur] = "".join(parts)
+    return out
+
+def get_chain_segments(row) -> list:
+    seq, stoich, all_sq = row["sequence"], row.get("stoichiometry", ""), row.get("all_sequences", "")
+    if pd.isna(stoich) or pd.isna(all_sq) or str(stoich).strip() == "" or str(all_sq).strip() == "": return [(0, len(seq))]
+    try:
+        chain_dict = parse_fasta(all_sq)
+        order = parse_stoichiometry(stoich)
+        segs, pos = [], 0
+        for ch, cnt in order:
+            base = chain_dict.get(ch)
+            if base is None: return [(0, len(seq))]
+            for _ in range(cnt):
+                segs.append((pos, pos + len(base)))
+                pos += len(base)
+        return segs if pos == len(seq) else [(0, len(seq))]
+    except Exception:
+        return [(0, len(seq))]
+
+def build_segments_map(df: pd.DataFrame) -> tuple:
+    seg_map, stoich_map = {}, {}
+    for _, r in df.iterrows():
+        tid = r["target_id"]
+        seg_map[tid] = get_chain_segments(r)
+        stoich_map[tid] = "" if pd.isna(r.get("stoichiometry", "")) else str(r.get("stoichiometry", ""))
+    return seg_map, stoich_map
+
+def process_labels(labels_df: pd.DataFrame) -> dict:
+    coords = {}
+    prefixes = labels_df["ID"].str.rsplit("_", n=1).str[0]
+    for prefix, grp in labels_df.groupby(prefixes):
+        coords[prefix] = grp.sort_values("resid")[["x_1", "y_1", "z_1"]].values
+    return coords
+
+def _build_aligned_strings(query_seq, template_seq, alignment):
+    q_segs, t_segs = alignment.aligned
+    aq, at, qi, ti = [], [], 0, 0
+    for (qs, qe), (ts, te) in zip(q_segs, t_segs):
+        while qi < qs: aq.append(query_seq[qi]); at.append("-"); qi += 1
+        while ti < ts: aq.append("-"); at.append(template_seq[ti]); ti += 1
+        for qp, tp in zip(range(qs, qe), range(ts, te)):
+            aq.append(query_seq[qp]); at.append(template_seq[tp])
+        qi, ti = qe, te
+    while qi < len(query_seq): aq.append(query_seq[qi]); at.append("-"); qi += 1
+    while ti < len(template_seq): aq.append("-"); at.append(template_seq[ti]); ti += 1
+    return "".join(aq), "".join(at)
+
+def find_similar_sequences_detailed(query_seq, train_seqs_df, train_coords_dict, top_n=30):
+    results = []
+    for _, row in train_seqs_df.iterrows():
+        tid, tseq = row["target_id"], row["sequence"]
+        if tid not in train_coords_dict: continue
+        if abs(len(tseq) - len(query_seq)) / max(len(tseq), len(query_seq)) > 0.3: continue
+        aln = next(iter(_aligner.align(query_seq, tseq)))
+        norm_s = aln.score / (2 * min(len(query_seq), len(tseq)))
+        identical = sum(1 for (qs, qe), (ts, te) in zip(*aln.aligned) for qp, tp in zip(range(qs, qe), range(ts, te)) if query_seq[qp] == tseq[tp])
+        pct_id = 100 * identical / len(query_seq)
+        aq, at = _build_aligned_strings(query_seq, tseq, aln)
+        results.append((tid, tseq, norm_s, train_coords_dict[tid], pct_id, aq, at))
+    results.sort(key=lambda x: x[2], reverse=True)
+    return results[:top_n]
+
+def adapt_template_to_query(query_seq, template_seq, template_coords) -> np.ndarray:
+    aln = next(iter(_aligner.align(query_seq, template_seq)))
+    new_coords = np.full((len(query_seq), 3), np.nan)
+    for (qs, qe), (ts, te) in zip(*aln.aligned):
+        chunk = template_coords[ts:te]
+        if len(chunk) == (qe - qs): new_coords[qs:qe] = chunk
+    for i in range(len(new_coords)):
+        if np.isnan(new_coords[i, 0]):
+            pv = next((j for j in range(i - 1, -1, -1) if not np.isnan(new_coords[j, 0])), -1)
+            nv = next((j for j in range(i + 1, len(new_coords)) if not np.isnan(new_coords[j, 0])), -1)
+            if pv >= 0 and nv >= 0:
+                w = (i - pv) / (nv - pv)
+                new_coords[i] = (1 - w) * new_coords[pv] + w * new_coords[nv]
+            elif pv >= 0: new_coords[i] = new_coords[pv] + [3, 0, 0]
+            elif nv >= 0: new_coords[i] = new_coords[nv] + [3, 0, 0]
+            else: new_coords[i] = [i * 3, 0, 0]
+    return np.nan_to_num(new_coords)
+
+def adaptive_rna_constraints(coords, target_id, segments_map, confidence=1.0, passes=2) -> np.ndarray:
+    X = coords.copy()
+    segments = segments_map.get(target_id, [(0, len(X))])
+    strength = max(0.75 * (1.0 - min(confidence, 0.97)), 0.02)
+    for _ in range(passes):
+        for s, e in segments:
+            C = X[s:e]; L = e - s
+            if L < 3: continue
+            d = C[1:] - C[:-1]; dist = np.linalg.norm(d, axis=1) + 1e-6
+            adj = d * ((5.95 - dist) / dist)[:, None] * (0.22 * strength)
+            C[:-1] -= adj; C[1:] += adj
+            d2 = C[2:] - C[:-2]; d2n = np.linalg.norm(d2, axis=1) + 1e-6
+            adj2 = d2 * ((10.2 - d2n) / d2n)[:, None] * (0.10 * strength)
+            C[:-2] -= adj2; C[2:] += adj2
+            C[1:-1] += (0.06 * strength) * (0.5 * (C[:-2] + C[2:]) - C[1:-1])
+            if L >= 25:
+                idx = np.linspace(0, L - 1, min(L, 160)).astype(int) if L > 220 else np.arange(L)
+                P = C[idx]; diff = P[:, None, :] - P[None, :, :]
+                dm = np.linalg.norm(diff, axis=2) + 1e-6
+                sep = np.abs(idx[:, None] - idx[None, :])
+                mask = (sep > 2) & (dm < 3.2)
+                if np.any(mask):
+                    vec = (diff * ((3.2 - dm) / dm)[:, :, None] * mask[:, :, None]).sum(axis=1)
+                    C[idx] += (0.015 * strength) * vec
+            X[s:e] = C
+    return X
+
+def _rotmat(axis, ang):
+    a = np.asarray(axis, float); a /= np.linalg.norm(a) + 1e-12
+    x, y, z = a; c, s = np.cos(ang), np.sin(ang); CC = 1 - c
+    return np.array([[c+x*x*CC, x*y*CC-z*s, x*z*CC+y*s], [y*x*CC+z*s, c+y*y*CC, y*z*CC-x*s], [z*x*CC-y*s, z*y*CC+x*s, c+z*z*CC]])
+
+def apply_hinge(coords, seg, rng, deg=22):
+    s, e = seg; L = e - s
+    if L < 30: return coords
+    pivot = s + int(rng.integers(10, L - 10))
+    R = _rotmat(rng.normal(size=3), np.deg2rad(float(rng.uniform(-deg, deg))))
+    X = coords.copy(); p0 = X[pivot].copy()
+    X[pivot+1:e] = (X[pivot+1:e] - p0) @ R.T + p0
+    return X
+
+def jitter_chains(coords, segs, rng, deg=12, trans=1.5):
+    X = coords.copy(); gc_ = X.mean(0, keepdims=True)
+    for s, e in segs:
+        R = _rotmat(rng.normal(size=3), np.deg2rad(float(rng.uniform(-deg, deg))))
+        shift = rng.normal(size=3); shift = shift / (np.linalg.norm(shift) + 1e-12) * float(rng.uniform(0, trans))
+        c = X[s:e].mean(0, keepdims=True)
+        X[s:e] = (X[s:e] - c) @ R.T + c + shift
+    X -= X.mean(0, keepdims=True) - gc_
+    return X
+
+def smooth_wiggle(coords, segs, rng, amp=0.8):
+    X = coords.copy()
+    for s, e in segs:
+        L = e - s
+        if L < 20: continue
+        ctrl = np.linspace(0, L - 1, 6); disp = rng.normal(0, amp, (6, 3)); t = np.arange(L)
+        X[s:e] += np.vstack([np.interp(t, ctrl, disp[:, k]) for k in range(3)]).T
+    return X
+
+def generate_rna_structure(sequence: str, seed=None) -> np.ndarray:
+    if seed is not None: np.random.seed(seed)
+    n = len(sequence); coords = np.zeros((n, 3))
+    for i in range(n):
+        ang = i * 0.6
+        coords[i] = [10.0 * np.cos(ang), 10.0 * np.sin(ang), i * 2.5]
+    return enforce_spring_geometry(coords, iterations=50)
+
+def tbm_phase(test_df, train_seqs_df, train_coords_dict, segments_map):
+    print(f"\nPHASE 1: Template-Based Modeling")
+    t0 = time.time()
+    template_predictions = {}
+    protenix_queue = {}
+
+    for _, row in test_df.iterrows():
+        tid = row["target_id"]
+        seq = row["sequence"]
+        segs = segments_map.get(tid, [(0, len(seq))])
+
+        similar = find_similar_sequences_detailed(seq, train_seqs_df, train_coords_dict, top_n=30)
+        preds = []
+        used = set()
+
+        for i, (tmpl_id, tmpl_seq, sim, tmpl_coords, pct_id, _, _) in enumerate(similar):
+            if len(preds) >= N_SAMPLE: break
+            if sim < MIN_SIMILARITY or pct_id < MIN_PERCENT_IDENTITY: break
+            if tmpl_id in used: continue
+
+            rng = np.random.default_rng((row.name * 10000000000 + i * 10007) % (2**32))
+            adapted = adapt_template_to_query(seq, tmpl_seq, tmpl_coords)
+
+            slot = len(preds)
+            if slot == 0: X = adapted
+            elif slot == 1: X = adapted + rng.normal(0, max(0.01, (0.40 - sim) * 0.06), adapted.shape)
+            elif slot == 2:
+                longest = max(segs, key=lambda se: se[1] - se[0])
+                X = apply_hinge(adapted, longest, rng)
+            elif slot == 3: X = jitter_chains(adapted, segs, rng)
+            else: X = smooth_wiggle(adapted, segs, rng)
+
+            refined = adaptive_rna_constraints(X, tid, segments_map, confidence=sim)
+            preds.append(refined)
+            used.add(tmpl_id)
+
+        template_predictions[tid] = preds
+        n_needed = N_SAMPLE - len(preds)
+        if n_needed > 0:
+            protenix_queue[tid] = (n_needed, seq)
+            print(f"  {tid} ({len(seq)} nt): {len(preds)} TBM -> need {n_needed} from Protenix")
+        else:
+            print(f"  {tid} ({len(seq)} nt): all {N_SAMPLE} from TBM")
+
+    print(f"\nPhase 1 done in {time.time() - t0:.1f}s")
+    return template_predictions, protenix_queue
+
+def run_pipeline(test_df, combined_seqs, train_coords, segments_map, code_dir, root_dir):
+    template_preds, protenix_queue = tbm_phase(test_df, combined_seqs, train_coords, segments_map)
+    protenix_preds = {}
+
+    if protenix_queue and USE_PROTENIX:
+        print(f"\nPHASE 2: Protenix for {len(protenix_queue)} targets")
+        work_dir = Path("/kaggle/working")
+        work_dir.mkdir(parents=True, exist_ok=True)
+        
+        if code_dir not in sys.path:
+            sys.path.append(code_dir)
+            
+        try:
+            import importlib
+            from configs.configs_base import configs as configs_base
+            from configs.configs_data import data_configs
+            from configs.configs_inference import inference_configs
+            from configs.configs_model_type import model_configs
+            from protenix.config.config import parse_configs
+
+            def build_configs(input_json_path: str, dump_dir: str, model_name: str):
+                base = {**configs_base, **{"data": data_configs}, **inference_configs}
+                def deep_update(t, p):
+                    for k, v in p.items():
+                        if isinstance(v, dict) and k in t and isinstance(t[k], dict):
+                            deep_update(t[k], v)
+                        else:
+                            t[k] = v
+                deep_update(base, model_configs[model_name])
+                arg_str = f"--model_name {model_name} --input_json_path {input_json_path} --dump_dir {dump_dir} --use_msa {USE_MSA} --use_template {USE_TEMPLATE} --use_rna_msa {USE_RNA_MSA} --sample_diffusion.N_sample {MODEL_N_SAMPLE} --seeds {SEED}"
+                return parse_configs(configs=base, arg_str=arg_str, fill_required_with_null=True)
+
+            tasks = []
+            chunk_info = {}
+            for target_id, (n_needed, full_seq) in protenix_queue.items():
+                seq_len = len(full_seq)
+                if seq_len <= MAX_SEQ_LEN:
+                    tasks.append({"target_id": target_id, "sequence": full_seq})
+                    chunk_info[target_id] = [{"name": target_id, "range": (0, seq_len)}]
+                else:
+                    chunks = split_into_chunks(seq_len, MAX_SEQ_LEN, CHUNK_OVERLAP)
+                    chunk_info[target_id] = []
+                    for ci, (cs, ce) in enumerate(chunks):
+                        chunk_name = f"{target_id}_chunk{ci}"
+                        sub_seq = full_seq[cs:ce]
+                        tasks.append({"target_id": chunk_name, "sequence": sub_seq})
+                        chunk_info[target_id].append({"name": chunk_name, "range": (cs, ce)})
+
+            tasks_df = pd.DataFrame(tasks)
+            input_json_path = str(work_dir / "protenix_queue_input.json")
+            build_input_json(tasks_df, input_json_path)
+
+            from protenix.data.inference.infer_dataloader import InferenceDataset
+            from runner.inference import InferenceRunner, update_gpu_compatible_configs, update_inference_configs
+
+            configs = build_configs(input_json_path, str(work_dir / "outputs"), MODEL_NAME)
+            configs = update_gpu_compatible_configs(configs)
+            runner = InferenceRunner(configs)
+            dataset = InferenceDataset(configs)
+
+            raw_predictions = {}
+            for i in range(len(dataset)):
+                data, atom_array, err = dataset[i]
+                sample_name = data.get("sample_name", f"sample_{i}")
+                if err:
+                    raw_predictions[sample_name] = None
+                    continue
+                
+                target_id = sample_name.split("_chunk")[0] if "_chunk" in sample_name else sample_name
+                n_needed = protenix_queue.get(target_id, (N_SAMPLE, ""))[0]
+                sub_seq_len = data["N_token"].item()
+                
+                try:
+                    new_cfg = update_inference_configs(configs, sub_seq_len)
+                    new_cfg.sample_diffusion.N_sample = n_needed
+                    runner.update_model_configs(new_cfg)
+                    pred = runner.predict(data)
+                    raw_coords = pred["coordinate"]
+                    
+                    feat = data["input_feature_dict"]
+                    if "centre_atom_mask" in feat:
+                        mask = (feat["centre_atom_mask"] == 1).to(raw_coords.device)
+                    elif "atom_to_tokatom_idx" in feat:
+                        mask = (feat["atom_to_tokatom_idx"] == 11).to(raw_coords.device)
+                    else:
+                        mask = torch.zeros(raw_coords.shape[1], dtype=torch.bool, device=raw_coords.device)
+                    
+                    coords = raw_coords[:, mask, :].detach().cpu().numpy()
+                    if coords.shape[1] != sub_seq_len:
+                        padded = np.zeros((coords.shape[0], sub_seq_len, 3), dtype=np.float32)
+                        ml = min(coords.shape[1], sub_seq_len)
+                        padded[:, :ml, :] = coords[:, :ml, :]
+                        coords = padded
+                    raw_predictions[sample_name] = coords
+                except Exception as exc:
+                    raw_predictions[sample_name] = None
+
+            for target_id, (n_needed, full_seq) in protenix_queue.items():
+                seq_len = len(full_seq)
+                chunks = chunk_info.get(target_id, [])
+                if not chunks: continue
+                if len(chunks) == 1:
+                    protenix_preds[target_id] = raw_predictions.get(target_id)
+                else:
+                    chunk_results_per_sample = {s: [] for s in range(n_needed)}
+                    all_ok = True
+                    for ci, cinfo in enumerate(chunks):
+                        cname = cinfo["name"]
+                        crange = cinfo["range"]
+                        ccoords = raw_predictions.get(cname)
+                        if ccoords is None:
+                            all_ok = False
+                            break
+                        for s_idx in range(n_needed):
+                            if s_idx < ccoords.shape[0]:
+                                chunk_results_per_sample[s_idx].append((ccoords[s_idx], crange))
+                            else:
+                                chunk_results_per_sample[s_idx].append((ccoords[-1], crange))
+                    if not all_ok:
+                        protenix_preds[target_id] = None
+                        continue
+                    
+                    stitched_samples = []
+                    for s_idx in range(n_needed):
+                        items = chunk_results_per_sample[s_idx]
+                        coords_list = [c for c, _ in items]
+                        ranges_list = [r for _, r in items]
+                        full_coords = stitch_chunk_coords(coords_list, ranges_list, seq_len)
+                        stitched_samples.append(full_coords)
+                    protenix_preds[target_id] = np.stack(stitched_samples, axis=0)
+        except ImportError:
+            print("Protenix modules not found. Mocking Protenix phase.")
+            for target_id, (n_needed, full_seq) in protenix_queue.items():
+                seq_len = len(full_seq)
+                protenix_preds[target_id] = np.stack([generate_rna_structure(full_seq, seed=i) for i in range(n_needed)])
+
+    print(f"\nPHASE 3: Combine TBM + Protenix + de-novo fallback")
+    all_rows = []
+    output_coords = {}
+
+    for _, row in test_df.iterrows():
+        tid = row["target_id"]
+        seq = row["sequence"]
+        combined = list(template_preds.get(tid, []))
+
+        ptx = protenix_preds.get(tid)
+        if ptx is not None and ptx.ndim == 3:
+            for j in range(ptx.shape[0]):
+                if len(combined) >= N_SAMPLE: break
+                combined.append(ptx[j])
+
+        while len(combined) < N_SAMPLE:
+            seed_val = row.name * 1000000 + len(combined) * 1000
+            dn = generate_rna_structure(seq, seed=seed_val)
+            combined.append(adaptive_rna_constraints(dn, tid, segments_map, confidence=0.2))
+
+        stacked = np.stack(combined[:N_SAMPLE], axis=0)
+        output_coords[tid] = stacked
+        all_rows.extend(coords_to_rows(tid, seq, stacked))
+        
+    return all_rows, output_coords
+
+def score_rmsd(pred_coords_dict, true_coords_dict):
+    rmsds = []
+    for tid, pred_tensor in pred_coords_dict.items():
+        if tid not in true_coords_dict:
+            continue
+        # Using 1st model (index 0) for score approximation
+        P = pred_tensor[0]
+        Q = true_coords_dict[tid]
+        min_len = min(len(P), len(Q))
+        P = P[:min_len]
+        Q = Q[:min_len]
+        
+        R, t = kabsch_align(P, Q)
+        P_aligned = (P @ R.T) + t
+        rmsd = np.sqrt(np.mean(np.sum((P_aligned - Q)**2, axis=1)))
+        rmsds.append(rmsd)
+    return np.mean(rmsds) if rmsds else 0.0
+
+def main() -> None:
+    test_csv, output_csv, code_dir, root_dir = resolve_paths()
+    os.environ["PROTENIX_ROOT_DIR"] = root_dir
+    seed_everything(SEED)
+
+    train_seqs = pd.read_csv(DEFAULT_TRAIN_CSV)
+    val_seqs = pd.read_csv(DEFAULT_VAL_CSV)
+    train_labels = pd.read_csv(DEFAULT_TRAIN_LBLS)
+    val_labels = pd.read_csv(DEFAULT_VAL_LBLS)
+    
+    combined_seqs = pd.concat([train_seqs, val_seqs], ignore_index=True)
+    combined_labels = pd.concat([train_labels, val_labels], ignore_index=True)
+    train_coords = process_labels(combined_labels)
+
+    # Local validation split to compute RMSD safely
+    print("\n--- LOCAL VALIDATION RUN ---")
+    val_df = combined_seqs.sample(n=3, random_state=42).reset_index(drop=True)
+    train_pool = combined_seqs[~combined_seqs['target_id'].isin(val_df['target_id'])]
+    train_pool_coords = {k: v for k, v in train_coords.items() if k in train_pool['target_id'].values}
+    val_segments_map, _ = build_segments_map(val_df)
+    
+    _, val_output_coords = run_pipeline(val_df, train_pool, train_pool_coords, val_segments_map, code_dir, root_dir)
+    val_rmsd = score_rmsd(val_output_coords, train_coords)
+    print(f"\nLOCAL_VALIDATION_RMSD: {val_rmsd:.5f}\n")
+
+    # Main inference
+    print("\n--- MAIN INFERENCE RUN ---")
+    
+    try:
+        test_df_full = pd.read_csv(test_csv)
+    except FileNotFoundError:
+        # Check standard Kaggle path if environment variable is wrong
+        test_df_full = pd.read_csv("/kaggle/input/stanford-rna-3d-folding-2/test_sequences.csv")
+        
+    test_df = (test_df_full.head(LOCAL_N_SAMPLES) if not IS_KAGGLE else test_df_full).reset_index(drop=True)
+    segments_map, _ = build_segments_map(test_df)
+    
+    all_rows, _ = run_pipeline(test_df, combined_seqs, train_coords, segments_map, code_dir, root_dir)
+
+    sub = pd.DataFrame(all_rows)
+    cols = ["ID", "resname", "resid"] + [f"{c}_{i}" for i in range(1, N_SAMPLE + 1) for c in ["x", "y", "z"]]
+    coord_cols = [c for c in cols if c.startswith(("x_", "y_", "z_"))]
+    sub[coord_cols] = sub[coord_cols].clip(-999.999, 9999.999)
+    sub[cols].to_csv(output_csv, index=False)
+    print(f"\n✓ Saved submission to {output_csv} ({len(sub):,} rows)")
+
+if __name__ == "__main__":
+    main()

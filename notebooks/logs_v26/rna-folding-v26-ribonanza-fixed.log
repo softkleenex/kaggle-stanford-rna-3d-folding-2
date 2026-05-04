@@ -1,0 +1,154 @@
+[{"stream_name":"stderr","time":6.5620096199999995,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.562050386,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.562054396,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.562056999,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.140537564,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.140583181,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.140592138,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.140596883,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.381864254,"data":"--- STEP 1: AUTO-RESOLVING RIBONANZANET PATHS ---\n"}
+,{"stream_name":"stdout","time":27.705680457,"data":"DATA_BASE: /kaggle/input/competitions/stanford-rna-3d-folding-2\n"}
+,{"stream_name":"stdout","time":27.705718785,"data":"RIBO_2D: /kaggle/input/datasets/shujun717/ribonanzanet2d-final\n"}
+,{"stream_name":"stdout","time":27.705724762,"data":"RIBO_WEIGHTS: /kaggle/input/ribonanzanet-pretrained-checkpoint\n"}
+,{"stream_name":"stdout","time":27.705729612,"data":"RIBO_3D: /kaggle/input/notebooks/shujun717/ribonanzanet-3d-finetune\n"}
+,{"stream_name":"stdout","time":36.845901035,"data":"constructing 9 ConvTransformerEncoderLayers\n"}
+,{"stream_name":"stderr","time":37.989635601,"data":"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py:1044: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.\n"}
+,{"stream_name":"stderr","time":37.98967075,"data":"  return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":37.989703175,"data":"/usr/local/lib/python3.12/dist-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None\n"}
+,{"stream_name":"stderr","time":37.989711315,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":37.98971631,"data":"\n"}
+,{"stream_name":"stderr","time":37.98972105,"data":"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py:1044: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.\n"}
+,{"stream_name":"stderr","time":37.989727131,"data":"  return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":37.98973198,"data":"/usr/local/lib/python3.12/dist-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None\n"}
+,{"stream_name":"stderr","time":37.989738618,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":41.619900289,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":41.619930115,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":41.619949777,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":41.620060527,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":41.620068919,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":41.620230395,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":41.620843394,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":41.620857562,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":41.620862361,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":41.620866473,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":41.620870521,"data":"OutOfMemoryError                          Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":41.62087458,"data":"/tmp/ipykernel_24/2188792794.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":41.620878577,"data":"    151     for i in range(4):\n"}
+,{"stream_name":"stderr","time":41.620882804,"data":"    152         with torch.no_grad():\n"}
+,{"stream_name":"stderr","time":41.620886918,"data":"--\u003e 153             xyz=model(src).squeeze()\n"}
+,{"stream_name":"stderr","time":41.62089107,"data":"    154         tmp.append(xyz.cpu().numpy())\n"}
+,{"stream_name":"stderr","time":41.620895433,"data":"    155 \n"}
+,{"stream_name":"stderr","time":41.620898855,"data":"\n"}
+,{"stream_name":"stderr","time":41.620902194,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.620906385,"data":"   1773             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":41.620910032,"data":"   1774         else:\n"}
+,{"stream_name":"stderr","time":41.620913345,"data":"-\u003e 1775             return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.620916921,"data":"   1776 \n"}
+,{"stream_name":"stderr","time":41.620920229,"data":"   1777     # torchrec tests the code consistency with the following code\n"}
+,{"stream_name":"stderr","time":41.620923855,"data":"\n"}
+,{"stream_name":"stderr","time":41.620927049,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.620930563,"data":"   1784                 or _global_backward_pre_hooks or _global_backward_hooks\n"}
+,{"stream_name":"stderr","time":41.620934035,"data":"   1785                 or _global_forward_hooks or _global_forward_pre_hooks):\n"}
+,{"stream_name":"stderr","time":41.620937555,"data":"-\u003e 1786             return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.620942835,"data":"   1787 \n"}
+,{"stream_name":"stderr","time":41.620946696,"data":"   1788         result = None\n"}
+,{"stream_name":"stderr","time":41.620949072,"data":"\n"}
+,{"stream_name":"stderr","time":41.620951294,"data":"/tmp/ipykernel_24/2188792794.py in forward(self, src)\n"}
+,{"stream_name":"stderr","time":41.620953551,"data":"    127 \n"}
+,{"stream_name":"stderr","time":41.620955677,"data":"    128         #with torch.no_grad():\n"}
+,{"stream_name":"stderr","time":41.620957917,"data":"--\u003e 129         sequence_features, pairwise_features=self.get_embeddings(src, torch.ones_like(src).long().to(src.device))\n"}
+,{"stream_name":"stderr","time":41.620967896,"data":"    130 \n"}
+,{"stream_name":"stderr","time":41.620971378,"data":"    131         xyz=self.xyz_predictor(sequence_features)\n"}
+,{"stream_name":"stderr","time":41.620975472,"data":"\n"}
+,{"stream_name":"stderr","time":41.620979438,"data":"/kaggle/input/datasets/shujun717/ribonanzanet2d-final/Network.py in get_embeddings(self, src, src_mask, return_aw)\n"}
+,{"stream_name":"stderr","time":41.620984083,"data":"    525         if self.use_gradient_checkpoint:\n"}
+,{"stream_name":"stderr","time":41.620988132,"data":"    526             #print(\"using grad checkpointing\")\n"}
+,{"stream_name":"stderr","time":41.620991636,"data":"--\u003e 527             pairwise_features=checkpoint.checkpoint(self.custom(self.outer_product_mean), src)\n"}
+,{"stream_name":"stderr","time":41.62099523,"data":"    528             pairwise_features=pairwise_features+self.pos_encoder(src)\n"}
+,{"stream_name":"stderr","time":41.620998782,"data":"    529         else:\n"}
+,{"stream_name":"stderr","time":41.621002102,"data":"\n"}
+,{"stream_name":"stderr","time":41.621005966,"data":"/usr/local/lib/python3.12/dist-packages/torch/_compile.py in inner(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621009525,"data":"     51                 fn.__dynamo_disable = disable_fn  # type: ignore[attr-defined]\n"}
+,{"stream_name":"stderr","time":41.62101309,"data":"     52 \n"}
+,{"stream_name":"stderr","time":41.621016337,"data":"---\u003e 53             return disable_fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621019805,"data":"     54 \n"}
+,{"stream_name":"stderr","time":41.621023106,"data":"     55         return inner\n"}
+,{"stream_name":"stderr","time":41.621026444,"data":"\n"}
+,{"stream_name":"stderr","time":41.621029578,"data":"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py in _fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621033099,"data":"   1042                 _maybe_set_eval_frame(_callback_from_stance(self.callback))\n"}
+,{"stream_name":"stderr","time":41.621036637,"data":"   1043                 try:\n"}
+,{"stream_name":"stderr","time":41.6210405,"data":"-\u003e 1044                     return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621045461,"data":"   1045                 finally:\n"}
+,{"stream_name":"stderr","time":41.621048217,"data":"   1046                     set_eval_frame(None)\n"}
+,{"stream_name":"stderr","time":41.621050459,"data":"\n"}
+,{"stream_name":"stderr","time":41.62105308,"data":"/usr/local/lib/python3.12/dist-packages/torch/utils/checkpoint.py in checkpoint(function, use_reentrant, context_fn, determinism_check, debug, early_stop, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621058879,"data":"    494                 \"use_reentrant=False.\"\n"}
+,{"stream_name":"stderr","time":41.621062829,"data":"    495             )\n"}
+,{"stream_name":"stderr","time":41.621066483,"data":"--\u003e 496         return CheckpointFunction.apply(function, preserve, *args)\n"}
+,{"stream_name":"stderr","time":41.62107108,"data":"    497     else:\n"}
+,{"stream_name":"stderr","time":41.621075211,"data":"    498         gen = _checkpoint_without_reentrant_generator(\n"}
+,{"stream_name":"stderr","time":41.62107911,"data":"\n"}
+,{"stream_name":"stderr","time":41.621082354,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py in apply(cls, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621085833,"data":"    579             # See NOTE: [functorch vjp and autograd interaction]\n"}
+,{"stream_name":"stderr","time":41.621092487,"data":"    580             args = _functorch.utils.unwrap_dead_wrappers(args)\n"}
+,{"stream_name":"stderr","time":41.621096032,"data":"--\u003e 581             return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":41.62109964,"data":"    582 \n"}
+,{"stream_name":"stderr","time":41.6211029,"data":"    583         if not is_setup_ctx_defined:\n"}
+,{"stream_name":"stderr","time":41.621106275,"data":"\n"}
+,{"stream_name":"stderr","time":41.621109435,"data":"/usr/local/lib/python3.12/dist-packages/torch/utils/checkpoint.py in forward(ctx, run_function, preserve_rng_state, *args)\n"}
+,{"stream_name":"stderr","time":41.621113019,"data":"    260 \n"}
+,{"stream_name":"stderr","time":41.62111627,"data":"    261         with torch.no_grad():\n"}
+,{"stream_name":"stderr","time":41.621119624,"data":"--\u003e 262             outputs = run_function(*args)\n"}
+,{"stream_name":"stderr","time":41.621123087,"data":"    263         return outputs\n"}
+,{"stream_name":"stderr","time":41.621126503,"data":"    264 \n"}
+,{"stream_name":"stderr","time":41.621129826,"data":"\n"}
+,{"stream_name":"stderr","time":41.621134584,"data":"/kaggle/input/datasets/shujun717/ribonanzanet2d-final/Network.py in custom_forward(*inputs)\n"}
+,{"stream_name":"stderr","time":41.621137437,"data":"    473     def custom(self, module):\n"}
+,{"stream_name":"stderr","time":41.621139723,"data":"    474         def custom_forward(*inputs):\n"}
+,{"stream_name":"stderr","time":41.621142334,"data":"--\u003e 475             inputs = module(inputs[0])\n"}
+,{"stream_name":"stderr","time":41.621146113,"data":"    476             return inputs\n"}
+,{"stream_name":"stderr","time":41.621151317,"data":"    477         return custom_forward\n"}
+,{"stream_name":"stderr","time":41.621155388,"data":"\n"}
+,{"stream_name":"stderr","time":41.621159429,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.62116466,"data":"   1773             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":41.621168776,"data":"   1774         else:\n"}
+,{"stream_name":"stderr","time":41.621172132,"data":"-\u003e 1775             return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621175584,"data":"   1776 \n"}
+,{"stream_name":"stderr","time":41.621178774,"data":"   1777     # torchrec tests the code consistency with the following code\n"}
+,{"stream_name":"stderr","time":41.621182299,"data":"\n"}
+,{"stream_name":"stderr","time":41.62118561,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621189242,"data":"   1784                 or _global_backward_pre_hooks or _global_backward_hooks\n"}
+,{"stream_name":"stderr","time":41.621192706,"data":"   1785                 or _global_forward_hooks or _global_forward_pre_hooks):\n"}
+,{"stream_name":"stderr","time":41.621196184,"data":"-\u003e 1786             return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":41.621199646,"data":"   1787 \n"}
+,{"stream_name":"stderr","time":41.621202926,"data":"   1788         result = None\n"}
+,{"stream_name":"stderr","time":41.621206262,"data":"\n"}
+,{"stream_name":"stderr","time":41.621209443,"data":"/kaggle/input/datasets/shujun717/ribonanzanet2d-final/Network.py in forward(self, seq_rep, pair_rep)\n"}
+,{"stream_name":"stderr","time":41.62121307,"data":"    335     def forward(self,seq_rep, pair_rep=None):\n"}
+,{"stream_name":"stderr","time":41.621219387,"data":"    336         seq_rep=self.proj_down1(seq_rep)\n"}
+,{"stream_name":"stderr","time":41.621224472,"data":"--\u003e 337         outer_product = torch.einsum('bid,bjc -\u003e bijcd', seq_rep, seq_rep)\n"}
+,{"stream_name":"stderr","time":41.62122739,"data":"    338         outer_product = rearrange(outer_product, 'b i j c d -\u003e b i j (c d)')\n"}
+,{"stream_name":"stderr","time":41.621229814,"data":"    339         outer_product = self.proj_down2(outer_product)\n"}
+,{"stream_name":"stderr","time":41.621232243,"data":"\n"}
+,{"stream_name":"stderr","time":41.621235382,"data":"/usr/local/lib/python3.12/dist-packages/torch/functional.py in einsum(*args)\n"}
+,{"stream_name":"stderr","time":41.621240581,"data":"    371         # the path for contracting 0 or 1 time(s) is already optimized\n"}
+,{"stream_name":"stderr","time":41.621244555,"data":"    372         # or the user has disabled using opt_einsum\n"}
+,{"stream_name":"stderr","time":41.621248717,"data":"--\u003e 373         return _VF.einsum(equation, operands)  # type: ignore[attr-defined]\n"}
+,{"stream_name":"stderr","time":41.621253006,"data":"    374 \n"}
+,{"stream_name":"stderr","time":41.621257205,"data":"    375     path = None\n"}
+,{"stream_name":"stderr","time":41.621260602,"data":"\n"}
+,{"stream_name":"stderr","time":41.621264628,"data":"OutOfMemoryError: CUDA out of memory. Tried to allocate 82.13 GiB. GPU 0 has a total capacity of 15.89 GiB of which 15.52 GiB is free. Process 4761 has 374.00 MiB memory in use. Of the allocated memory 57.46 MiB is allocated by PyTorch, and 18.54 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"}
+,{"stream_name":"stderr","time":41.621273405,"data":"\n"}
+,{"stream_name":"stderr","time":43.680440258,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":43.680470027,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":43.82345629,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":43.823485039,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":44.405416059,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":44.405447788,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":44.433126457,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":44.723371995,"data":"[NbConvertApp] Writing 31437 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":47.03268778,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":47.032723509,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":47.053959344,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":47.860666533,"data":"[NbConvertApp] Writing 327545 bytes to __results__.html\n"}
+]

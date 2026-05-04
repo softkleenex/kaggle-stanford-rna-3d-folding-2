@@ -1,0 +1,41 @@
+[{"stream_name":"stderr","time":5.578227428,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.57829628,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.578304067,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.578306979,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.149269226,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.149296324,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.149301489,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.149305228,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.454862441,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":7.454890074,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":7.454896946,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":7.4549606090000005,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":7.454976412,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":7.455145936,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":7.45538444,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":7.455394272,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":7.455398388,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":7.455401849,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":7.45540546,"data":"NameError                                 Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":7.455408962,"data":"/tmp/ipykernel_24/2637572601.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":7.455412622,"data":"----\u003e 1 os.system(\"pip install --no-index --no-deps /kaggle/input/datasets/kami1976/biopython-cp312/biopython-1.86-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\")\n"}
+,{"stream_name":"stderr","time":7.455433865,"data":"      2 \n"}
+,{"stream_name":"stderr","time":7.455438018,"data":"      3 os.system(\"pip install --no-index --no-deps /kaggle/input/datasets/amirrezaaleyasin/biotite/biotite-1.6.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl\")\n"}
+,{"stream_name":"stderr","time":7.455442158,"data":"      4 \n"}
+,{"stream_name":"stderr","time":7.455445547,"data":"      5 os.system(\"pip install --no-index --no-deps /kaggle/input/datasets/amirrezaaleyasin/rdkit-2025-9-5/rdkit-2025.9.5-cp312-cp312-manylinux_2_28_x86_64.whl\")\n"}
+,{"stream_name":"stderr","time":7.455449437,"data":"\n"}
+,{"stream_name":"stderr","time":7.455453001,"data":"NameError: name 'os' is not defined\n"}
+,{"stream_name":"stderr","time":7.455456472,"data":"\n"}
+,{"stream_name":"stderr","time":9.474342396,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9.474386382,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":9.61247585,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":9.612503128,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":10.223683911,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":10.223715205,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":10.270467575,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":10.56032164,"data":"[NbConvertApp] Writing 51006 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":12.970796789,"data":"/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.\n"}
+,{"stream_name":"stderr","time":12.970834325,"data":"  warn(\n"}
+,{"stream_name":"stderr","time":12.994632976,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":13.966207226,"data":"[NbConvertApp] Writing 478361 bytes to __results__.html\n"}
+]

@@ -1,0 +1,13 @@
+[2026-03-04 22:57:13] | Kernel: softkleenex/rna-folding-v21-no-hash | Status: COMPLETE | Score: 0.397
+[2026-03-04 23:47:33] | Kernel: softkleenex/rna-folding-v23-exact-diff | Status: COMPLETE | Score: 
+Thu Mar  5 22:19:21 KST 2026 | softkleenex/rna-folding-v28-diverse-tbm | COMPLETE | Score: 
+Thu Mar  5 23:58:21 KST 2026 | softkleenex/rna-folding-v28-diverse-tbm | COMPLETE | Score: 0.424
+Thu Mar  5 23:58:27 KST 2026 | softkleenex/rna-folding-v28-diverse-tbm | COMPLETE | Score: 0.424
+Fri Mar  6 09:48:04 KST 2026 | v29 | COMPLETE | Score: 
+Fri Mar  6 11:32:09 KST 2026 | v30 | COMPLETE | Score: 
+Fri Mar  6 13:12:55 KST 2026 | v31 | COMPLETE | Score: 
+Fri Mar  6 15:00:54 KST 2026 | v32 | COMPLETE | Score: 
+Fri Mar  6 15:29:32 KST 2026 | v33 | COMPLETE | Score: 
+v34 | SCORED |  | Unknown Strategy
+v35 | FAILED | N/A | Unknown Strategy
+v36 | FAILED | N/A | Refined physical priors: updated C1'-C1' distance to 5.4 A, fixed self-avoidance for all seq lengths, and applied cosine chunk blending & constraint refinement to Protenix outputs.
