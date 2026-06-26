@@ -82,3 +82,11 @@ The workspace has been refactored and sanitized for portfolio presentation:
 
 ---
 *This repository stands as an empirical case study in the future of Autonomous Data Science—highlighting the immense power of agentic MLOps, while underscoring the indispensable need for human-guided architectural vision when dealing with complex, multi-dimensional physical constraints.*
+
+<!-- BLOG-URL:START -->
+
+## Blog
+
+- Blog note: [🧬 LLM-Driven Autonomous MLOps: RNA 3D Structure Prediction](https://softkleenex.github.io/coding_training/kaggle/kaggle-stanford-rna-3d-folding-2)
+
+<!-- BLOG-URL:END -->
