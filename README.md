@@ -87,6 +87,6 @@ The workspace has been refactored and sanitized for portfolio presentation:
 
 ## Blog
 
-- Blog note: [🧬 LLM-Driven Autonomous MLOps: RNA 3D Structure Prediction](https://softkleenex.github.io/coding_training/kaggle/kaggle-stanford-rna-3d-folding-2)
+- Blog note: [🧬 LLM-Driven Autonomous MLOps: RNA 3D Structure Prediction](https://softkleenex.github.io/posts/kaggle-stanford-rna-3d-folding-2/)
 
 <!-- BLOG-URL:END -->
