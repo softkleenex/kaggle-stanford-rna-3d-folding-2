@@ -15,3 +15,10 @@ __pycache__/
 venv/
 submissions/
 kaggle.json
+
+# Credentials
+api_keys.txt
+*api_key*
+*secret*
+*credentials*
+*.pem
